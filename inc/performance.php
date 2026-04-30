@@ -7,7 +7,7 @@
  * Dequeues styles that are not needed on the frontend.
  * Runs at priority 100 to ensure it fires after all other enqueue hooks.
  */
-function digid_dequeue_unused_styles() {
+function erlebnisbad_dequeue_unused_styles() {
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
 	wp_dequeue_style( 'wc-blocks-style' );
@@ -15,21 +15,21 @@ function digid_dequeue_unused_styles() {
 	wp_dequeue_style( 'classic-theme-styles' );
 }
 
-add_action( 'wp_enqueue_scripts', 'digid_dequeue_unused_styles', 100 );
+add_action( 'wp_enqueue_scripts', 'erlebnisbad_dequeue_unused_styles', 100 );
 
 /**
  * Dequeues the wp-embed script — embedding WP posts in external sites is rarely needed.
  */
-function digid_dequeue_unused_scripts() {
+function erlebnisbad_dequeue_unused_scripts() {
 	wp_dequeue_script( 'wp-embed' );
 }
 
-add_action( 'wp_footer', 'digid_dequeue_unused_scripts' );
+add_action( 'wp_footer', 'erlebnisbad_dequeue_unused_scripts' );
 
 /**
  * Removes unnecessary links and meta tags from wp_head.
  */
-function digid_clean_head() {
+function erlebnisbad_clean_head() {
 	remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );
 	remove_action( 'wp_head', 'wp_generator' );
@@ -40,12 +40,12 @@ function digid_clean_head() {
 	remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 }
 
-add_action( 'init', 'digid_clean_head' );
+add_action( 'init', 'erlebnisbad_clean_head' );
 
 /**
  * Disables the WordPress emoji detection script and styles.
  */
-function digid_disable_emojis() {
+function erlebnisbad_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -53,11 +53,11 @@ function digid_disable_emojis() {
 	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
 	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-	add_filter( 'tiny_mce_plugins', 'digid_disable_emojis_tinymce' );
-	add_filter( 'wp_resource_hints', 'digid_disable_emojis_dns_prefetch', 10, 2 );
+	add_filter( 'tiny_mce_plugins', 'erlebnisbad_disable_emojis_tinymce' );
+	add_filter( 'wp_resource_hints', 'erlebnisbad_disable_emojis_dns_prefetch', 10, 2 );
 }
 
-add_action( 'init', 'digid_disable_emojis' );
+add_action( 'init', 'erlebnisbad_disable_emojis' );
 
 /**
  * Removes the wpemoji TinyMCE plugin.
@@ -65,7 +65,7 @@ add_action( 'init', 'digid_disable_emojis' );
  * @param array $plugins Active TinyMCE plugins.
  * @return array
  */
-function digid_disable_emojis_tinymce( $plugins ) {
+function erlebnisbad_disable_emojis_tinymce( $plugins ) {
 	if ( is_array( $plugins ) ) {
 		return array_diff( $plugins, array( 'wpemoji' ) );
 	}
@@ -79,7 +79,7 @@ function digid_disable_emojis_tinymce( $plugins ) {
  * @param string $relation_type Hint type (dns-prefetch, preconnect, etc.).
  * @return array
  */
-function digid_disable_emojis_dns_prefetch( $urls, $relation_type ) {
+function erlebnisbad_disable_emojis_dns_prefetch( $urls, $relation_type ) {
 	if ( 'dns-prefetch' === $relation_type ) {
 		$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
 		$urls          = array_diff( $urls, array( $emoji_svg_url ) );
@@ -92,7 +92,7 @@ function digid_disable_emojis_dns_prefetch( $urls, $relation_type ) {
  *
  * @param array $links List of URLs to ping.
  */
-function digid_disable_self_pingbacks( &$links ) {
+function erlebnisbad_disable_self_pingbacks( &$links ) {
 	foreach ( $links as $l => $link ) {
 		if ( str_starts_with( $link, get_option( 'home' ) ) ) {
 			unset( $links[ $l ] );
@@ -100,4 +100,4 @@ function digid_disable_self_pingbacks( &$links ) {
 	}
 }
 
-add_action( 'pre_ping', 'digid_disable_self_pingbacks' );
+add_action( 'pre_ping', 'erlebnisbad_disable_self_pingbacks' );

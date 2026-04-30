@@ -3,27 +3,27 @@
  * Enqueue scripts and styles.
  */
 
-if ( ! function_exists( 'digid_enqueue_fonts' ) ) :
+if ( ! function_exists( 'erlebnisbad_enqueue_fonts' ) ) :
 	/**
 	 * Enqueues web fonts based on the provider configured in functions.php.
 	 * Supports 'google', 'adobe' (Typekit), or 'none'.
 	 */
-	function digid_enqueue_fonts() {
-		$provider = defined( 'DIGID_FONT_PROVIDER' ) ? DIGID_FONT_PROVIDER : 'none';
+	function erlebnisbad_enqueue_fonts() {
+		$provider = defined( 'erlebnisbad_FONT_PROVIDER' ) ? erlebnisbad_FONT_PROVIDER : 'none';
 
-		if ( 'google' === $provider && defined( 'DIGID_GOOGLE_FONTS_URL' ) && DIGID_GOOGLE_FONTS_URL ) {
+		if ( 'google' === $provider && defined( 'erlebnisbad_GOOGLE_FONTS_URL' ) && erlebnisbad_GOOGLE_FONTS_URL ) {
 			wp_enqueue_style(
-				'digid-fonts',
-				DIGID_GOOGLE_FONTS_URL,
+				'erlebnisbad-fonts',
+				erlebnisbad_GOOGLE_FONTS_URL,
 				array(),
 				null
 			);
 		}
 
-		if ( 'adobe' === $provider && defined( 'DIGID_ADOBE_FONTS_ID' ) && DIGID_ADOBE_FONTS_ID ) {
+		if ( 'adobe' === $provider && defined( 'erlebnisbad_ADOBE_FONTS_ID' ) && erlebnisbad_ADOBE_FONTS_ID ) {
 			wp_enqueue_style(
-				'digid-fonts',
-				'https://use.typekit.net/' . DIGID_ADOBE_FONTS_ID . '.css',
+				'erlebnisbad-fonts',
+				'https://use.typekit.net/' . erlebnisbad_ADOBE_FONTS_ID . '.css',
 				array(),
 				null
 			);
@@ -31,9 +31,9 @@ if ( ! function_exists( 'digid_enqueue_fonts' ) ) :
 	}
 endif;
 
-add_action( 'wp_enqueue_scripts', 'digid_enqueue_fonts' );
+add_action( 'wp_enqueue_scripts', 'erlebnisbad_enqueue_fonts' );
 
-if ( ! function_exists( 'digid_font_resource_hints' ) ) :
+if ( ! function_exists( 'erlebnisbad_font_resource_hints' ) ) :
 	/**
 	 * Adds preconnect resource hints for the configured font provider
 	 * via the native WordPress resource hints API.
@@ -42,12 +42,12 @@ if ( ! function_exists( 'digid_font_resource_hints' ) ) :
 	 * @param string $relation_type Hint type (preconnect, dns-prefetch, etc.).
 	 * @return array
 	 */
-	function digid_font_resource_hints( $urls, $relation_type ) {
+	function erlebnisbad_font_resource_hints( $urls, $relation_type ) {
 		if ( 'preconnect' !== $relation_type ) {
 			return $urls;
 		}
 
-		$provider = defined( 'DIGID_FONT_PROVIDER' ) ? DIGID_FONT_PROVIDER : 'none';
+		$provider = defined( 'erlebnisbad_FONT_PROVIDER' ) ? erlebnisbad_FONT_PROVIDER : 'none';
 
 		if ( 'google' === $provider ) {
 			$urls[] = 'https://fonts.googleapis.com';
@@ -62,16 +62,16 @@ if ( ! function_exists( 'digid_font_resource_hints' ) ) :
 	}
 endif;
 
-add_filter( 'wp_resource_hints', 'digid_font_resource_hints', 10, 2 );
+add_filter( 'wp_resource_hints', 'erlebnisbad_font_resource_hints', 10, 2 );
 
-if ( ! function_exists( 'digid_enqueue_google_maps' ) ) :
+if ( ! function_exists( 'erlebnisbad_enqueue_google_maps' ) ) :
 	/**
 	 * Enqueues Google Maps API and init script on specific page templates.
-	 * Requires DIGID_GOOGLE_MAPS_API_KEY to be set in functions.php.
+	 * Requires erlebnisbad_GOOGLE_MAPS_API_KEY to be set in functions.php.
 	 * Add page templates to $templates as needed per project.
 	 */
-	function digid_enqueue_google_maps() {
-		if ( ! defined( 'DIGID_GOOGLE_MAPS_API_KEY' ) || ! DIGID_GOOGLE_MAPS_API_KEY ) {
+	function erlebnisbad_enqueue_google_maps() {
+		if ( ! defined( 'erlebnisbad_GOOGLE_MAPS_API_KEY' ) || ! erlebnisbad_GOOGLE_MAPS_API_KEY ) {
 			return;
 		}
 
@@ -86,7 +86,7 @@ if ( ! function_exists( 'digid_enqueue_google_maps' ) ) :
 		$theme_version = wp_get_theme()->get( 'Version' );
 
 		wp_enqueue_script(
-			'digid-google-maps-init',
+			'erlebnisbad-google-maps-init',
 			get_theme_file_uri( '/assets/js/google-maps.js' ),
 			array(),
 			$theme_version,
@@ -94,28 +94,28 @@ if ( ! function_exists( 'digid_enqueue_google_maps' ) ) :
 		);
 
 		wp_enqueue_script(
-			'digid-google-maps-api',
+			'erlebnisbad-google-maps-api',
 			add_query_arg(
 				array(
-					'key'      => DIGID_GOOGLE_MAPS_API_KEY,
+					'key'      => erlebnisbad_GOOGLE_MAPS_API_KEY,
 					'callback' => 'initMap',
 					'loading'  => 'async',
 				),
 				'https://maps.googleapis.com/maps/api/js'
 			),
-			array( 'digid-google-maps-init' ),
+			array( 'erlebnisbad-google-maps-init' ),
 			null,
 			true
 		);
 	}
 endif;
 
-add_action( 'wp_enqueue_scripts', 'digid_enqueue_google_maps' );
+add_action( 'wp_enqueue_scripts', 'erlebnisbad_enqueue_google_maps' );
 
 /**
  * Registers and enqueues the theme's main CSS and JS.
  */
-function digid_enqueue_assets() {
+function erlebnisbad_enqueue_assets() {
 
 	// Get the theme data.
 	$the_theme     = wp_get_theme();
@@ -138,4 +138,4 @@ function digid_enqueue_assets() {
 	);
 }
 
-add_action( 'wp_enqueue_scripts', 'digid_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'erlebnisbad_enqueue_assets' );

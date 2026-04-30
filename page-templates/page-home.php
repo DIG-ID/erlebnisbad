@@ -3,7 +3,7 @@
  *
  * Template Name: Home Template
  *
- * @package digid
+ * @package erlebnisbad
  * @subpackage Template
  * @since 1.0.0
  */

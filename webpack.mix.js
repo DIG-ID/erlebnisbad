@@ -31,7 +31,7 @@ mix
 
   .browserSync({
     proxy: {
-      target: "https://project-name.digid/", // replace with local dev URL
+      target: "https://erlebnisbad.digid/",
       ws: true,
     },
     https: true,

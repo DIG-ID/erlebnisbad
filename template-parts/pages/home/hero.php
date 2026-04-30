@@ -2,7 +2,7 @@
 /**
  * Hero Section in the Home Page Template.
  *
- * @package digid
+ * @package erlebnisbad
  * @subpackage Section
  * @since 1.0.0
  */
