@@ -11,15 +11,6 @@ if ( ! function_exists( 'erlebnisbad_enqueue_fonts' ) ) :
 	function erlebnisbad_enqueue_fonts() {
 		$provider = defined( 'erlebnisbad_FONT_PROVIDER' ) ? erlebnisbad_FONT_PROVIDER : 'none';
 
-		if ( 'google' === $provider && defined( 'erlebnisbad_GOOGLE_FONTS_URL' ) && erlebnisbad_GOOGLE_FONTS_URL ) {
-			wp_enqueue_style(
-				'erlebnisbad-fonts',
-				erlebnisbad_GOOGLE_FONTS_URL,
-				array(),
-				null
-			);
-		}
-
 		if ( 'adobe' === $provider && defined( 'erlebnisbad_ADOBE_FONTS_ID' ) && erlebnisbad_ADOBE_FONTS_ID ) {
 			wp_enqueue_style(
 				'erlebnisbad-fonts',

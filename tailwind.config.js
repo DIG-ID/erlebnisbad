@@ -8,8 +8,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      primary: ['Inter', 'sans-serif'],   // replace per project
-      secondary: ['Inter', 'sans-serif'], // replace per project
+      raleway: ['raleway', 'sans-serif'],
+      openSans: ['open-sans', 'sans-serif'],
+      dmSans: ['dm-sans', 'sans-serif'],
     },
 
     extend: {
@@ -18,8 +19,20 @@ module.exports = {
         // wider: '.06em',
       },
       colors: {
-        // project colors go here
-        // example: 'brand-blue': '#1a3c5e',
+        // Brand palette
+        'Mint1': '#BCEBDF',
+        'Mint2': '#A1DBD0',
+        'Mint3': '#96DAC8',
+        'Mint': '#66C2B0',
+        'DarkGreen': '#0C3B38',
+        'Black': '#131313',
+        'Red': '#E02E52',
+        // UI / functional
+        'Dark': '#25211E',
+        'Brown': '#766A66',
+        'LightGray': '#E7E5E5',
+        'OffWhite': '#F3F3F3',
+        'BgLight': '#F0F0F0',
       },
       transitionTimingFunction: {
         'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
