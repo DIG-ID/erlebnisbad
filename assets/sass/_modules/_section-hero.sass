@@ -1,0 +1,32 @@
+.section-hero
+  position: relative
+  isolation: isolate
+
+  // Background image + dark overlay, masked into a wave shape at the bottom.
+  // Mobile/tablet share the same wave; desktop uses a subtler curve.
+  &::before
+    content: ''
+    position: absolute
+    inset: 0
+    background-image: linear-gradient(rgba(19, 19, 19, 0.55), rgba(19, 19, 19, 0.55)), var(--hero-bg, none)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-mobile.svg')
+    mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-mobile.svg')
+    -webkit-mask-repeat: no-repeat
+    mask-repeat: no-repeat
+    -webkit-mask-position: top
+    mask-position: top
+    -webkit-mask-size: 100% 100%
+    mask-size: 100% 100%
+    z-index: -1
+    pointer-events: none
+
+    @media (min-width: 768px)
+      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-tablet.svg')
+      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-tablet.svg')
+
+    @media (min-width: 1280px)
+      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask.svg')
+      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask.svg')

@@ -1,0 +1,67 @@
+// Circular image rendered on top of an organic SVG shape used as a coloured
+// background. Wrap an <img> with `.image-fill.image-fill--{n}`. The shape
+// colour is driven by `--image-fill-color` so the same SVG can be reused
+// across sections with different backgrounds.
+
+.image-fill
+  --image-fill-color: var(--color-mint-1)
+
+  position: relative
+  display: grid
+  place-items: center
+  width: 100%
+
+  &::before
+    content: ''
+    position: absolute
+    inset: 0
+    background-color: var(--image-fill-color)
+    -webkit-mask-position: center
+    mask-position: center
+    -webkit-mask-repeat: no-repeat
+    mask-repeat: no-repeat
+    -webkit-mask-size: 100% 100%
+    mask-size: 100% 100%
+    pointer-events: none
+
+  > img
+    position: relative
+    width: 92%
+    aspect-ratio: 1 / 1
+    object-fit: cover
+    border-radius: 50%
+
+  &--1
+    aspect-ratio: 639 / 660
+
+    &::before
+      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-1.svg')
+      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-1.svg')
+
+  &--2
+    aspect-ratio: 636 / 641
+
+    &::before
+      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-2.svg')
+      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-2.svg')
+
+  &--3
+    aspect-ratio: 704 / 623
+
+    &::before
+      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-3.svg')
+      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-3.svg')
+
+  &--4
+    aspect-ratio: 658 / 693
+
+    &::before
+      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-4.svg')
+      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-4.svg')
+
+  &--5
+    aspect-ratio: 665 / 652
+
+    &::before
+      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-5.svg')
+      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-5.svg')

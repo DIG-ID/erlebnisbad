@@ -1,0 +1,18 @@
+.section-wave
+  svg
+    width: 100%
+    height: auto
+    display: block
+
+  &--intro
+    svg path
+      fill: none
+      vector-effect: non-scaling-stroke
+      // Mobile-first: thicker on small screens
+      stroke-width: 3
+
+      @media (min-width: 768px)
+        stroke-width: 2
+
+      @media (min-width: 1280px)
+        stroke-width: 1
