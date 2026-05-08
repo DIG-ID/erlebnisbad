@@ -30,11 +30,15 @@ mix
   })
 
   .browserSync({
-    proxy: {
-      target: "https://erlebnisbad.digid/",
-      ws: true,
+    proxy: "https://erlebnisbad.digid/",
+    host: "erlebnisbad.digid",
+    open: "external",
+    port: 3000,
+    ws: true,
+    https: {
+      key: path.join(certPath, 'erlebnisbad.digid.key'),
+      cert: path.join(certPath, 'erlebnisbad.digid.crt'),
     },
-    https: true,
     files: ["./**/*.php", "./dist/js/*.js", "./dist/css/*.css"]
   })
   .disableNotifications();
