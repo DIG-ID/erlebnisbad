@@ -37,13 +37,13 @@
                 $link_target = $partner_link['target'] ? $partner_link['target'] : '_self';
                 ?>
                 <a class="section-partners__item" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" aria-label="<?php echo esc_attr( $link_title ); ?>">
-                  <?php echo $partner_image; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                  <?php echo $partner_image; ?>
                 </a>
                 <?php
             else :
                 ?>
                 <div class="section-partners__item">
-                  <?php echo $partner_image; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                  <?php echo $partner_image; ?>
                 </div>
                 <?php
             endif;
