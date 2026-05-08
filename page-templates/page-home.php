@@ -13,11 +13,15 @@ if ( have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
 		do_action( 'before_main_content' );
-			get_template_part( 'template-parts/modules/hero' );		
-			get_template_part( 'template-parts/pages/home/intro' );	
+			get_template_part( 'template-parts/modules/hero' );
+			get_template_part( 'template-parts/pages/home/intro' );
 			get_template_part( 'template-parts/pages/home/wellness' );
 			get_template_part( 'template-parts/pages/home/waterpark' );
 			get_template_part( 'template-parts/pages/home/kids-family' );
+			get_template_part( 'template-parts/pages/home/opening-hours');
+			get_template_part( 'template-parts/pages/home/courses-activities' );
+			get_template_part( 'template-parts/pages/home/bistro' );
+			get_template_part( 'template-parts/pages/home/partners' );
 		do_action( 'after_main_content' );
 	endwhile;
 endif;

@@ -11,19 +11,19 @@
 <section id="section-kids-family" class="section-kids-family bg-Mint">
   <div class="theme-container pt-36 md:pt-24 xl:pt-10 pb-32 md:pb-24 xl:pb-36">
     <div class="theme-grid items-center">
-      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5">
+      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 order-2 md:order-none">
         <?php
         $img_id = get_field( 'kids_family_image' );
         if ( $img_id ) :
           ?>
-          <div class="image-fill image-fill--1">
+          <div class="image-fill image-fill--5 image-fill--mint-2">
             <?php
             echo wp_get_attachment_image(
               $img_id,
               'full',
               false,
               array(
-                'class' => 'w-full h-full object-cover',
+                'class' => 'object-cover',
               )
             );
             ?>

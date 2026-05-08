@@ -1,14 +1,20 @@
 // Circular image rendered on top of an organic SVG shape used as a coloured
-// background. Wrap an <img> with `.image-fill.image-fill--{n}`. The shape
-// colour is driven by `--image-fill-color` so the same SVG can be reused
-// across sections with different backgrounds.
+// background. Wrap an <img> with `.image-fill.image-fill--{n}`.
+//
+// CSS variables you can override (inline style or section-scoped):
+//   --image-fill-color (mint colour for the shape; default: mint-1)
+//   --image-fill-pad-t / -r / -b / -l (margin around the image — `auto` lets
+//   the browser distribute remaining space; pixel/% values pin that side)
 
 .image-fill
   --image-fill-color: var(--color-mint-1)
+  --image-fill-pad-t: auto
+  --image-fill-pad-r: auto
+  --image-fill-pad-b: auto
+  --image-fill-pad-l: auto
 
   position: relative
-  display: grid
-  place-items: center
+  display: block
   width: 100%
 
   &::before
@@ -25,12 +31,20 @@
     pointer-events: none
 
   > img
-    position: relative
-    width: 92%
+    position: absolute
+    inset: 0
+    margin-top: var(--image-fill-pad-t)
+    margin-right: var(--image-fill-pad-r)
+    margin-bottom: var(--image-fill-pad-b)
+    margin-left: var(--image-fill-pad-l)
+    width: 600px
+    max-width: 100%
+    height: auto
     aspect-ratio: 1 / 1
     object-fit: cover
     border-radius: 50%
 
+  // Shape modifiers
   &--1
     aspect-ratio: 639 / 660
 
@@ -65,3 +79,29 @@
     &::before
       -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-5.svg')
       mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/image-fill/shape-5.svg')
+
+  // Size modifiers — vertical offsets for the 600×600 "big" image preset
+  &--big
+    --image-fill-pad-t: 22px
+    --image-fill-pad-b: 17.54px
+
+    @media (min-width: 768px)
+      --image-fill-pad-t: 24px
+      --image-fill-pad-b: 18.75px
+
+    @media (min-width: 1280px)
+      --image-fill-pad-t: 28px
+      --image-fill-pad-b: 14px
+
+  // Colour modifiers
+  &--mint
+    --image-fill-color: var(--color-mint)
+
+  &--mint-1
+    --image-fill-color: var(--color-mint-1)
+
+  &--mint-2
+    --image-fill-color: var(--color-mint-2)
+
+  &--mint-3
+    --image-fill-color: var(--color-mint-3)
