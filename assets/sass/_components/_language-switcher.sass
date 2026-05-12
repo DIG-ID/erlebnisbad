@@ -1,0 +1,43 @@
+.language-selector
+  & > .wpml-ls
+    @apply block
+  .wpml-ls-legacy-list-horizontal
+    @apply border-none m-0 p-0
+    ul
+      @apply flex flex-row list-none
+      li.wpml-ls-item
+        @apply relative
+        &:not(:last-child)
+          &::after
+            @apply content-['/'] absolute text-[1.1rem] leading-[1.8rem] font-raleway -right-[0.6rem] top-0 text-white mx-2
+        a.wpml-ls-link
+          @apply text-white font-raleway text-base  font-normal leading-none uppercase transition-colors duration-200
+          padding: 5px 12px 6px 2px
+          span.wpml-ls-native
+            @apply font-raleway text-base  font-normal leading-none uppercase
+        a.wpml-ls-link
+          span:not(.wpml-ls-native)
+            &:hover
+              @apply underline underline-offset-4
+          
+      li.wpml-ls-current-language
+        a.wpml-ls-link
+          span.wpml-ls-native
+            @apply text-white underline underline-offset-4
+
+#header-sticky
+  .language-selector
+    & > .wpml-ls
+      @apply block
+    .wpml-ls-legacy-list-horizontal
+      ul
+        li.wpml-ls-item
+          &:not(:last-child)
+            &::after
+              @apply text-Black
+          a.wpml-ls-link
+            @apply text-Black
+        li.wpml-ls-current-language
+          a.wpml-ls-link
+            span.wpml-ls-native
+              @apply text-Black

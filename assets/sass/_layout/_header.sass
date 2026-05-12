@@ -1,1 +1,130 @@
-// Header styles
+// Main header
+.header-main
+  @apply fixed top-0 left-0 right-0 z-50 bg-transparent
+  transition: opacity 0.3s ease
+
+  &.is-hidden
+    @apply opacity-0 pointer-events-none
+
+  --header-h: 130px
+
+  &__inner
+    @apply flex items-center justify-between gap-8 mx-auto w-full px-12 pt-12 pb-4
+    height: var(--header-h)
+    max-width: 1920px
+
+  &__logo
+    @apply flex-shrink-0 flex items-center
+
+  &__logo-img
+    @apply h-12 w-auto block
+
+  &__logo-text
+    @apply font-openSans font-bold text-white text-lg
+
+  &__nav
+    @apply hidden 2xl:flex items-center justify-center
+
+  &__menu
+    @apply flex items-center gap-x-16 list-none m-0 p-0
+
+    li
+      @apply m-0 p-0
+
+    a
+      @apply font-dmSans text-base font-normal text-white leading-none transition-colors duration-200
+      &:hover,
+      &:focus-visible
+        @apply text-Red
+
+    .current-menu-item > a,
+    .current-page-ancestor > a
+      @apply font-semibold
+
+  &__actions
+    @apply flex items-center gap-12 flex-shrink-0
+
+  &__logo-nav
+    @apply flex items-center gap-14 flex-shrink-0
+
+  &__burger
+    @apply flex items-center justify-center cursor-pointer bg-transparent border-0 p-0
+    -webkit-tap-highlight-color: transparent
+
+  &__burger-icon
+    @apply flex flex-col justify-center items-center gap-[7px] w-10
+
+    span
+      @apply block w-full h-[2px] bg-white
+
+// Sticky header
+.header-sticky
+  @apply fixed top-0 left-0 right-0 z-[51] bg-white
+  box-shadow: 0 2px 16px rgba(19, 19, 19, 0.08)
+  transform: translateY(-100%)
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)
+
+  &.is-visible
+    transform: translateY(0)
+
+  &__inner
+    @apply flex items-center justify-between gap-8 mx-auto w-full px-12
+    height: 95px
+    padding-top: 20px
+    padding-bottom: 20px
+    max-width: 1920px
+
+  &__logo
+    @apply flex-shrink-0 flex items-center
+
+  &__logo-img
+    @apply h-full w-auto block
+
+  &__logo-text
+    @apply font-openSans font-bold text-Black text-lg
+
+  &__nav
+    @apply hidden 2xl:flex items-center justify-center
+
+  &__menu
+    @apply flex items-center gap-x-16 list-none m-0 p-0
+
+    li
+      @apply m-0 p-0
+
+    a
+      @apply font-dmSans text-base font-normal text-Black leading-none transition-colors duration-200
+      &:hover,
+      &:focus-visible
+        @apply text-Red
+
+    .current-menu-item > a,
+    .current-page-ancestor > a
+      @apply font-semibold
+
+  &__actions
+    @apply flex items-center gap-12 flex-shrink-0
+
+  &__burger
+    @apply flex items-center justify-center cursor-pointer bg-transparent border-0 p-0
+    -webkit-tap-highlight-color: transparent
+
+  &__burger-icon
+    @apply flex flex-col justify-center items-center gap-[7px] w-10
+    span
+      @apply block w-full h-[2px] bg-Black
+
+@media (min-width: 1536px) and (max-width: 1650px)
+  .header-sticky
+    &__menu
+      @apply gap-x-2
+
+@media (min-width: 1650px) and (max-width: 1750px)
+  .header-sticky
+    &__menu
+      @apply gap-x-6
+
+@media (min-width: 1750px) and (max-width: 1900px)
+  .header-sticky
+    &__menu
+      @apply gap-x-10

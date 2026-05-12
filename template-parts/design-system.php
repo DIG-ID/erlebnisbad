@@ -15,7 +15,7 @@
 
 			<?php // Column 1 — Colors. ?>
 			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 border-Black xl:border-r">
-				<h2 class="title-main mb-10"><?php esc_html_e( 'Colors', 'digid' ); ?></h2>
+				<h2 class="title-main mb-10"><?php esc_html_e( 'Colors', 'erlebnisbad' ); ?></h2>
 				<ul class="space-y-6">
 					<li class="flex items-center gap-4">
 						<span class="w-[6.25rem] h-[6.25rem] rounded-full bg-Mint1 shrink-0"></span>
@@ -54,41 +54,41 @@
 
 			<?php // Column 2 — Titles. ?>
 			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 border-Black xl:border-r mt-12 md:mt-0">
-				<h2 class="title-main mb-10"><?php esc_html_e( 'Titles', 'digid' ); ?></h2>
+				<h2 class="title-main mb-10"><?php esc_html_e( 'Titles', 'erlebnisbad' ); ?></h2>
 
-				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Desktop + Tablet', 'digid' ); ?></p>
-				<h1 class="title-main mb-2"><?php esc_html_e( 'H1 Title', 'digid' ); ?></h1>
-				<h2 class="title-secondary mb-12"><?php esc_html_e( 'H2 Title', 'digid' ); ?></h2>
+				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Desktop + Tablet', 'erlebnisbad' ); ?></p>
+				<h1 class="title-main mb-2"><?php esc_html_e( 'H1 Title', 'erlebnisbad' ); ?></h1>
+				<h2 class="title-secondary mb-12"><?php esc_html_e( 'H2 Title', 'erlebnisbad' ); ?></h2>
 
-				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Mobile', 'digid' ); ?></p>
-				<h1 class="font-raleway text-[1.875rem] italic leading-[2.5rem] tracking-[0.03125rem] mb-2"><?php esc_html_e( 'H1 Title', 'digid' ); ?></h1>
-				<h2 class="font-raleway text-[1.125rem] leading-[1.6875rem] tracking-[-0.02138rem]"><?php esc_html_e( 'H2 Title', 'digid' ); ?></h2>
+				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Mobile', 'erlebnisbad' ); ?></p>
+				<h1 class="font-raleway text-[1.875rem] italic leading-[2.5rem] tracking-[0.03125rem] mb-2"><?php esc_html_e( 'H1 Title', 'erlebnisbad' ); ?></h1>
+				<h2 class="font-raleway text-[1.125rem] leading-[1.6875rem] tracking-[-0.02138rem]"><?php esc_html_e( 'H2 Title', 'erlebnisbad' ); ?></h2>
 			</div>
 
 			<?php // Column 3 — Paragraphs. ?>
 			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 border-Black xl:border-r mt-12 xl:mt-0">
-				<h2 class="title-main mb-2"><?php esc_html_e( 'Paragraphs', 'digid' ); ?></h2>
-				<p class="font-openSans text-Brown text-[1.125rem] mb-10"><?php esc_html_e( 'Open Sans', 'digid' ); ?></p>
+				<h2 class="title-main mb-2"><?php esc_html_e( 'Paragraphs', 'erlebnisbad' ); ?></h2>
+				<p class="font-openSans text-Brown text-[1.125rem] mb-10"><?php esc_html_e( 'Open Sans', 'erlebnisbad' ); ?></p>
 
-				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Desktop + Tablet', 'digid' ); ?></p>
-				<p class="body mb-2"><?php esc_html_e( 'Text', 'digid' ); ?></p>
+				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Desktop + Tablet', 'erlebnisbad' ); ?></p>
+				<p class="body mb-2"><?php esc_html_e( 'Text', 'erlebnisbad' ); ?></p>
 				<p class="body mb-12">
-					<?php esc_html_e( '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."', 'digid' ); ?>
+					<?php esc_html_e( '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."', 'erlebnisbad' ); ?>
 				</p>
 
-				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Mobile', 'digid' ); ?></p>
-				<p class="font-openSans text-[0.875rem] leading-[1.5625rem] tracking-[0.03125rem] mb-2"><?php esc_html_e( 'Text', 'digid' ); ?></p>
+				<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Mobile', 'erlebnisbad' ); ?></p>
+				<p class="font-openSans text-[0.875rem] leading-[1.5625rem] tracking-[0.03125rem] mb-2"><?php esc_html_e( 'Text', 'erlebnisbad' ); ?></p>
 				<p class="font-openSans text-[0.875rem] leading-[1.5625rem] tracking-[0.03125rem]">
-					<?php esc_html_e( '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."', 'digid' ); ?>
+					<?php esc_html_e( '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."', 'erlebnisbad' ); ?>
 				</p>
 			</div>
 
 			<?php // Column 4 — Buttons. ?>
 			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 mt-12 xl:mt-0">
-				<h2 class="title-main mb-10"><?php esc_html_e( 'Buttons', 'digid' ); ?></h2>
+				<h2 class="title-main mb-10"><?php esc_html_e( 'Buttons', 'erlebnisbad' ); ?></h2>
 
-				<a href="#" class="btn btn-primary mb-8"><?php esc_html_e( 'Mehr erfahren', 'digid' ); ?></a>
-				<a href="#" class="btn btn-link"><?php esc_html_e( 'Anreise & Kontakt', 'digid' ); ?></a>
+				<a href="#" class="btn btn-primary mb-8"><?php esc_html_e( 'Mehr erfahren', 'erlebnisbad' ); ?></a>
+				<a href="#" class="btn btn-link"><?php esc_html_e( 'Anreise & Kontakt', 'erlebnisbad' ); ?></a>
 			</div>
 
 			<?php // Column 5 — Icones. ?>
@@ -115,7 +115,7 @@
 			);
 			?>
 			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 border-Black xl:border-r mt-12 xl:border-l">
-				<h2 class="title-main mb-10"><?php esc_html_e( 'Icones', 'digid' ); ?></h2>
+				<h2 class="title-main mb-10"><?php esc_html_e( 'Icones', 'erlebnisbad' ); ?></h2>
 
 				<div class="grid grid-cols-3 gap-3 md:gap-4">
 					<?php foreach ( $icons as $icon ) : ?>
@@ -138,12 +138,12 @@
 			$theme_logo_dark   = get_field( 'general_theme_logo_dark', 'option' );
 			?>
 			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 mt-12">
-				<h2 class="title-main mb-10"><?php esc_html_e( 'Logos', 'digid' ); ?></h2>
+				<h2 class="title-main mb-10"><?php esc_html_e( 'Logos', 'erlebnisbad' ); ?></h2>
 
 				<ul class="space-y-6">
 					<?php if ( $theme_logo ) : ?>
 						<li>
-							<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Theme Logo', 'digid' ); ?></p>
+							<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Theme Logo', 'erlebnisbad' ); ?></p>
 							<div class="p-6 bg-white border border-Black/10 flex items-center justify-center min-h-[8rem]">
 								<?php echo wp_get_attachment_image( $theme_logo, 'full', false, array( 'class' => 'max-w-full h-auto' ) ); ?>
 							</div>
@@ -152,7 +152,7 @@
 
 					<?php if ( $theme_logo_footer ) : ?>
 						<li>
-							<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Theme Logo — Footer', 'digid' ); ?></p>
+							<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Theme Logo — Footer', 'erlebnisbad' ); ?></p>
 							<div class="p-6 flex items-center justify-center min-h-[8rem]">
 								<?php echo wp_get_attachment_image( $theme_logo_footer, 'full', false, array( 'class' => 'max-w-full h-auto' ) ); ?>
 							</div>
@@ -161,7 +161,7 @@
 
 					<?php if ( $theme_logo_dark ) : ?>
 						<li>
-							<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Theme Logo — Dark', 'digid' ); ?></p>
+							<p class="font-openSans text-Brown text-[1.125rem] mb-4"><?php esc_html_e( 'Theme Logo — Dark', 'erlebnisbad' ); ?></p>
 							<div class="p-6 bg-Black flex items-center justify-center min-h-[8rem]">
 								<?php echo wp_get_attachment_image( $theme_logo_dark, 'full', false, array( 'class' => 'max-w-full h-auto' ) ); ?>
 							</div>
