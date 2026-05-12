@@ -29,7 +29,21 @@ $img_url = $img_id ? wp_get_attachment_image_url( $img_id, 'full' ) : '';
             <a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
         <?php endif; ?>
       </div>
-      <div class="col-start-1 col-span-2 md:col-span-6 xl:col-span-11 mb-[44px] md:mb-20 xl:mb-24">
+      <?php
+      // Tailwind needs the full class string at build time, so we map ACF values to literals.
+      $title_col_span_map = array(
+          '6'  => 'xl:col-span-6',
+          '7'  => 'xl:col-span-7',
+          '8'  => 'xl:col-span-8',
+          '9'  => 'xl:col-span-9',
+          '10' => 'xl:col-span-10',
+          '11' => 'xl:col-span-11',
+          '12' => 'xl:col-span-12',
+      );
+      $title_col_span_key = get_field( 'hero_title_column_span' );
+      $title_col_span     = isset( $title_col_span_map[ $title_col_span_key ] ) ? $title_col_span_map[ $title_col_span_key ] : 'xl:col-span-11';
+      ?>
+      <div class="col-start-1 col-span-2 md:col-span-6 <?php echo esc_attr( $title_col_span ); ?> mb-[44px] md:mb-20 xl:mb-24">
         <h1 class="title-big text-white"><?php the_field( 'hero_title' ); ?></h1>
       </div>
     </div>

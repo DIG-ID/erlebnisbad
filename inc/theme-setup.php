@@ -10,10 +10,11 @@ function erlebnisbad_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'main-menu'      => __( 'Main Menu', 'erlebnisbad' ),
-			'mega-menu' => __( 'Mega Menu', 'erlebnisbad' ),
-			'secondary-menu' => __( 'Secondary Menu', 'erlebnisbad' ),
-			'footer-menu'    => __( 'Footer Menu', 'erlebnisbad' ),
+			'main-menu'             => __( 'Main Menu', 'erlebnisbad' ),
+			'mega-menu'             => __( 'Mega Menu', 'erlebnisbad' ),
+			'secondary-menu'        => __( 'Secondary Menu', 'erlebnisbad' ),
+			'footer-menu'           => __( 'Footer Menu', 'erlebnisbad' ),
+			'footer-copyright-menu' => __( 'Footer Copyright Menu', 'erlebnisbad' ),
 		)
 	);
 

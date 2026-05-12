@@ -11,7 +11,7 @@
 <section id="section-bistro" class="section-bistro bg-Mint1">
   <div class="theme-container pb-32 md:pb-24 xl:pb-40">
     <div class="theme-grid">
-      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 order-2 md:order-none xl:pt-36">
+      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 order-2 md:order-none pt-52 xl:pt-36">
         <?php
         $img_id = get_field( 'bistro_image' );
         if ( $img_id ) :
@@ -32,7 +32,7 @@
         endif;
         ?>
       </div>
-      <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-8 xl:col-span-4 xl:pt-56">
+      <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-8 xl:col-span-4 pt-24 xl:pt-56">
         <p class="overtitle text-Black pb-8 xl:pb-4"><?php the_field( 'bistro_overtitle' ); ?></p>
         <h2 class="title-main text-Black pb-8"><?php the_field( 'bistro_title' ); ?></h2>
         <p class="text-Black pb-8"><?php the_field( 'bistro_text' ); ?></p>
