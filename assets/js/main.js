@@ -18,6 +18,7 @@ import { debounce, isTouchDevice } from './utils/helpers.js';
 // Layout
 // =============================================================================
 import './sticky-header.js';
+import './mega-menu.js';
 
 // =============================================================================
 // DOM ready

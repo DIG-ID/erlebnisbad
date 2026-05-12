@@ -1,0 +1,128 @@
+.mega-menu
+  @apply fixed top-5 right-0 bottom-14 z-[61]
+  // Mobile: 97 vw content + 150px wave
+  width: calc(97vw)
+  clip-path: inset(0 0 0 100%)
+
+  @media (min-width: 768px)
+    width: calc(85vw)
+
+  @media (min-width: 1280px)
+    width: calc(65vw + 150px)
+
+  &__wave
+    @apply absolute top-0 bottom-0 pointer-events-none block
+    left: 0
+    width: 150px
+
+    svg
+      @apply block w-full
+      height: 100%
+
+  &__inner
+    @apply relative h-full flex flex-col bg-Mint overflow-hidden ml-20 md:ml-5
+    padding: 28px 24px 40px 28px
+
+    @media (min-width: 768px)
+      margin-left: 147px
+      padding: 36px 48px 52px 52px
+
+    @media (min-width: 1280px)
+      padding: 48px 64px 64px 72px
+
+  &__topbar
+    @apply flex items-center justify-end gap-8 flex-shrink-0
+
+    .language-selector a,
+    .language-selector span
+      @apply text-white transition-colors duration-200
+
+    .language-selector .wpml-ls-item:not(:last-child)::after
+      @apply text-white
+
+  &__close
+    @apply flex items-center justify-center cursor-pointer bg-transparent border-0 p-0 text-white transition-opacity duration-200
+
+    &:hover
+      @apply opacity-50
+
+    svg
+      @apply block
+      width: 20px
+      height: 22px
+
+  &__cols
+    @apply flex flex-col gap-8 my-auto
+
+    @media (min-width: 1280px)
+      @apply flex-row gap-12
+
+  &__col
+    @apply flex flex-col
+
+    &--primary
+      @apply flex-1
+
+    &--secondary
+      @apply flex-1
+
+  &__list
+    @apply list-none m-0 p-0 flex flex-col
+    gap: 20px
+
+    @media (min-width: 768px)
+      gap: 28px
+
+    @media (min-width: 1280px)
+      gap: 48px
+
+    li
+      @apply m-0 p-0
+
+    a
+      @apply inline-flex items-center gap-3 font-raleway font-medium text-white leading-normal
+      font-size: 24px
+      letter-spacing: 0.5px
+      transition: color 0.2s ease-in
+
+      @media (min-width: 768px)
+        font-size: 28px
+
+      @media (min-width: 1280px)
+        font-size: 32px
+
+      &::after
+        @extend %btn-arrow-icon
+        -webkit-mask-image: url("../../assets/svg/mega-menu-arrow.svg")
+                mask-image: url("../../assets/svg/mega-menu-arrow.svg")
+        @apply w-[31px] h-[17px] opacity-0 ml-4
+        background-color: #0C3B39
+        transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1)
+
+      &:hover,
+      &:active
+        @apply text-DarkGreen
+
+        &::after
+          @apply opacity-100
+
+    .current-menu-item > a,
+    .current-page-ancestor > a
+      @apply font-semibold
+
+  &__cta
+    @apply hidden
+
+    @media (min-width: 1280px)
+      @apply block mt-12 self-start
+
+.mega-menu-overlay
+  @apply fixed inset-0 z-[60]
+  background: rgba(19, 19, 19, 0.45)
+  opacity: 0
+  pointer-events: none
+  transition: opacity 0.4s ease
+
+  &.is-visible
+    opacity: 1
+    pointer-events: auto

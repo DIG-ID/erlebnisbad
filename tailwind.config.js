@@ -31,7 +31,7 @@ module.exports = {
         'Mint2': '#A1DBD0',
         'Mint3': '#96DAC8',
         'Mint': '#66C2B0',
-        'DarkGreen': '#0C3B38',
+        'DarkGreen': '#0C3B39',
         'Black': '#131313',
         'Red': '#E02E52',
         // UI / functional
