@@ -93,6 +93,21 @@
       --image-fill-pad-t: 28px
       --image-fill-pad-b: 14px
 
+  // Fit modifier — constrains the circular image to fit inside the shape's box
+  // and leaves blob visible around the image. Use this when items render at
+  // sizes smaller than the original 600×600 preset, where shape aspect ratios
+  // cause the 1/1 image to overflow inconsistently per shape.
+  &--contain
+    --image-fill-pad-t: auto
+    --image-fill-pad-r: auto
+    --image-fill-pad-b: auto
+    --image-fill-pad-l: auto
+
+    > img
+      width: auto
+      max-width: 85%
+      max-height: 85%
+
   // Colour modifiers
   &--mint
     --image-fill-color: var(--color-mint)
