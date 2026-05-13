@@ -92,4 +92,13 @@ if (megaMenu && overlay) {
   megaMenu.addEventListener('mouseenter', () => {
     clearTimeout(leaveTimer);
   });
+
+  // Keep the hidden clip-path in sync with the element's actual width on resize,
+  // so the menu never bleeds into view when the viewport changes.
+  window.addEventListener('resize', () => {
+    if (!megaMenu.classList.contains('is-open')) {
+      clip.O = megaMenu.offsetWidth;
+      megaMenu.style.clipPath = buildClipPath(clip.O, megaMenu.offsetHeight);
+    }
+  });
 }
