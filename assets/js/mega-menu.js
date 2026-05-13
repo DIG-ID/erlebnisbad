@@ -32,7 +32,9 @@ if (megaMenu && overlay) {
   megaMenu.style.clipPath = buildClipPath(clip.O, megaMenu.offsetHeight);
 
   // Items that stagger in on open.
-  const menuItems = megaMenu.querySelectorAll('.mega-menu__list li, .mega-menu__cta');
+  const rightItems = [...megaMenu.querySelectorAll('.mega-menu__col--secondary .mega-menu__list li, .mega-menu__cta')];
+  const leftItems  = [...megaMenu.querySelectorAll('.mega-menu__col--primary .mega-menu__list li')];
+  const menuItems  = [...rightItems, ...leftItems];
   gsap.set(menuItems, { opacity: 0, y: 16 });
 
   const openMenu = () => {
