@@ -49,6 +49,11 @@ if (megaMenu && overlay) {
 
   const closeMenu = () => {
     clearTimeout(leaveTimer);
+    // Move focus out before aria-hidden is applied to avoid the
+    // "aria-hidden on ancestor of focused element" browser warning.
+    if (megaMenu.contains(document.activeElement)) {
+      (burgerBtns[0] || document.body).focus();
+    }
     const H = megaMenu.offsetHeight;
     const W = megaMenu.offsetWidth;
     overlay.classList.remove('is-visible');

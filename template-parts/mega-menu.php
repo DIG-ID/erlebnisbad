@@ -29,11 +29,7 @@ $tickets_link = get_field( 'general_tickets_url', 'option' );
 				<?php do_action( 'wpml_add_language_selector' ); ?>
 			</div>
 
-			<button
-				class="mega-menu__close"
-				type="button"
-				aria-label="<?php esc_attr_e( 'Close menu', 'erlebnisbad' ); ?>"
-			>
+			<button	class="mega-menu__close" type="button" aria-label="<?php esc_attr_e( 'Close menu', 'erlebnisbad' ); ?>">
 				<svg width="20" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 					<line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 					<line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -73,11 +69,7 @@ $tickets_link = get_field( 'general_tickets_url', 'option' );
 				?>
 
 				<?php if ( $tickets_link ) : ?>
-					<a
-						class="btn btn-primary mega-menu__cta"
-						href="<?php echo esc_url( $tickets_link['url'] ); ?>"
-						target="<?php echo esc_attr( $tickets_link['target'] ? $tickets_link['target'] : '_self' ); ?>"
-					>
+					<a class="btn btn-primary mega-menu__cta" href="<?php echo esc_url( $tickets_link['url'] ); ?>" target="<?php echo esc_attr( $tickets_link['target'] ? $tickets_link['target'] : '_self' ); ?>">
 						<?php echo esc_html( $tickets_link['title'] ); ?>
 					</a>
 				<?php endif; ?>

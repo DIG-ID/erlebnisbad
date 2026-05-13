@@ -1,6 +1,5 @@
 .mega-menu
   @apply fixed top-5 right-0 bottom-14 z-[61]
-  // Mobile: 97 vw content + 150px wave
   width: calc(97vw)
   clip-path: inset(0 0 0 100%)
 
@@ -52,7 +51,7 @@
       height: 22px
 
   &__cols
-    @apply flex flex-col gap-8 my-auto
+    @apply flex flex-col gap-8 mt-12 md:my-auto
 
     @media (min-width: 1280px)
       @apply flex-row gap-12
@@ -114,7 +113,7 @@
     @apply hidden
 
     @media (min-width: 1280px)
-      @apply block mt-12 self-start
+      @apply flex mt-[3.15rem] self-start border-white
 
 .mega-menu-overlay
   @apply fixed inset-0 z-[60]
