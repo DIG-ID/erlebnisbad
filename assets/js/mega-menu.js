@@ -32,7 +32,7 @@ if (megaMenu && overlay) {
   megaMenu.style.clipPath = buildClipPath(clip.O, megaMenu.offsetHeight);
 
   // Items that stagger in on open.
-  const menuItems = megaMenu.querySelectorAll('.mega-menu__list li');
+  const menuItems = megaMenu.querySelectorAll('.mega-menu__list li, .mega-menu__cta');
   gsap.set(menuItems, { opacity: 0, y: 16 });
 
   const openMenu = () => {
@@ -52,10 +52,10 @@ if (megaMenu && overlay) {
     gsap.to(menuItems, {
       opacity: 1,
       y: 0,
-      duration: 0.4,
+      duration: 0.5,
       ease: 'power2.out',
-      stagger: 0.07,
-      delay: 0.18,
+      stagger: 0.11,
+      delay: 0.15,
       overwrite: true,
     });
   };
