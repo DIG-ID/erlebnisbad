@@ -1,1 +1,60 @@
-// Footer styles
+$arrow-svg: url("../../assets/svg/button-arrow.svg")
+%btn-arrow-icon
+  content: ""
+  @apply inline-block w-5 h-[17px] shrink-0
+  background-color: currentColor
+  -webkit-mask-image: $arrow-svg
+          mask-image: $arrow-svg
+  -webkit-mask-repeat: no-repeat
+          mask-repeat: no-repeat
+  -webkit-mask-position: center
+          mask-position: center
+  -webkit-mask-size: contain
+          mask-size: contain
+
+.footer-menu
+  &__list
+    &-1, &-2, &-3
+      @apply font-raleway
+      li:not(:last-child)
+        @apply mb-6
+    &-1
+      @apply text-[17px] font-semibold leading-normal tracking-[-0.02125rem]
+    &-2
+      @apply text-[14px] font-medium leading-normal tracking-[-0.0175rem]
+      li:nth-child(1)
+        @apply text-[17px] font-semibold leading-normal tracking-[-0.02125rem]
+    &-3
+      @apply text-[14px] font-medium leading-normal tracking-[-0.0175rem]
+    &-4
+      @apply text-[14px] font-medium leading-normal tracking-[-0.0175rem]
+      .footer-item
+        &__title
+          @apply text-[17px] font-semibold leading-normal tracking-[-0.02125rem]
+        &__text
+          @apply text-[14px] font-medium leading-normal tracking-[-0.0175rem]
+.footer-cols
+  a:not(.social-link)
+    @apply gap-2 bg-transparent text-Black inline-flex items-center cursor-pointer transition-colors duration-200 ease-in-out
+    &::after
+      @extend %btn-arrow-icon
+      @apply opacity-0 transition-opacity duration-200 ease-in-out
+
+    &:hover,
+    &:active
+      @apply text-Red
+      &::after
+        @apply opacity-100
+
+.footer-copyright
+  &__menu
+    @apply grid grid-cols-2 md:grid-cols-4 gap-8
+
+    li
+      @apply m-0 p-0
+
+    a
+      @apply font-raleway text-xs font-semibold tracking-[-0.015rem]
+
+.social-links
+  @apply flex

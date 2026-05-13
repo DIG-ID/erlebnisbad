@@ -31,6 +31,10 @@ if (megaMenu && overlay) {
   const clip = { O: megaMenu.offsetWidth };
   megaMenu.style.clipPath = buildClipPath(clip.O, megaMenu.offsetHeight);
 
+  // Items that stagger in on open.
+  const menuItems = megaMenu.querySelectorAll('.mega-menu__list li');
+  gsap.set(menuItems, { opacity: 0, y: 16 });
+
   const openMenu = () => {
     const H = megaMenu.offsetHeight;
     megaMenu.classList.add('is-open');
@@ -44,6 +48,15 @@ if (megaMenu && overlay) {
       ease: 'power3.inOut',
       overwrite: true,
       onUpdate: () => { megaMenu.style.clipPath = buildClipPath(clip.O, H); },
+    });
+    gsap.to(menuItems, {
+      opacity: 1,
+      y: 0,
+      duration: 0.4,
+      ease: 'power2.out',
+      stagger: 0.07,
+      delay: 0.18,
+      overwrite: true,
     });
   };
 
@@ -59,6 +72,8 @@ if (megaMenu && overlay) {
     overlay.classList.remove('is-visible');
     overlay.setAttribute('aria-hidden', 'true');
     burgerBtns.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+    // Reset items instantly so they're hidden for the next open.
+    gsap.set(menuItems, { opacity: 0, y: 16 });
     gsap.to(clip, {
       O: W,
       duration: 0.32,

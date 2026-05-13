@@ -14,7 +14,9 @@ function erlebnisbad_theme_setup() {
 			'mega-menu-left'        => __( 'Mega Menu Left Col', 'erlebnisbad' ),
 			'mega-menu-right'       => __( 'Mega Menu Right Col', 'erlebnisbad' ),
 			'secondary-menu'        => __( 'Secondary Menu', 'erlebnisbad' ),
-			'footer-menu'           => __( 'Footer Menu', 'erlebnisbad' ),
+			'footer-menu-1'           => __( 'Footer Menu 1', 'erlebnisbad' ),
+			'footer-menu-2'           => __( 'Footer Menu 2', 'erlebnisbad' ),
+			'footer-menu-3'           => __( 'Footer Menu 3', 'erlebnisbad' ),
 			'footer-copyright-menu' => __( 'Footer Copyright Menu', 'erlebnisbad' ),
 		)
 	);

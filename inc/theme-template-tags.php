@@ -77,6 +77,21 @@ function erlebnisbad_breadcrumbs() {
 add_action( 'breadcrumbs', 'erlebnisbad_breadcrumbs' );
 
 /**
+ * Returns the contents of an SVG file from assets/svg/.
+ *
+ * @param string $name Path relative to assets/svg/, without .svg extension.
+ * @return string SVG markup or empty string if file not found.
+ */
+
+function erlebnisbad_get_svg( $name ) {
+	$path = get_template_directory() . '/assets/svg/' . $name . '.svg';
+	if ( ! file_exists( $path ) ) {
+		return '';
+	}
+	return file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+}
+
+/**
  * Outputs social media links from ACF Options page.
  * URLs are managed in the WP admin under Options > Socials.
  */
@@ -85,7 +100,7 @@ function erlebnisbad_socials() {
 	$socials = array(
 		'facebook'  => array(
 			'url' => get_field( 'socials_facebook', 'options' ),
-			'svg' => '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23" fill="none" aria-hidden="true"><path d="M22 11.5426C22 5.168 17.0755 0 11.0004 0C4.92522 0 0 5.168 0 11.5426C0 16.9556 3.55126 21.4975 8.34235 22.7451V15.0696H6.07369V11.5426H8.34235V10.0226C8.34235 6.09387 10.0368 4.27332 13.7127 4.27332C14.4095 4.27332 15.6124 4.41635 16.1039 4.56013V7.75771C15.8444 7.7288 15.3934 7.71434 14.8329 7.71434C13.029 7.71434 12.3323 8.431 12.3323 10.2949V11.5426H15.9256L15.3086 15.0696H12.333V23C17.7795 22.31 22.0007 17.4432 22.0007 11.5426H22Z" fill="currentColor"/></svg>',
+			'svg' => erlebnisbad_get_svg( 'socials/facebook' ),
 		),
 		'instagram' => array(
 			'url' => get_field( 'socials_instagram', 'options' ),
