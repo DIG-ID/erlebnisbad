@@ -51,13 +51,7 @@ $tickets_link  = get_field( 'general_tickets_url', 'option' );
 			</div>
 
 			<!-- Burger / mega-menu trigger -->
-			<button
-				class="header-main__burger"
-				aria-expanded="false"
-				aria-controls="mega-menu"
-				aria-label="<?php esc_attr_e( 'Open menu', 'erlebnisbad' ); ?>"
-				type="button"
-			>
+			<button class="header-main__burger" aria-expanded="false" aria-controls="mega-menu" aria-label="<?php esc_attr_e( 'Open menu', 'erlebnisbad' ); ?>" type="button">
 				<span class="header-main__burger-icon" aria-hidden="true">
 					<span></span>
 					<span></span>
@@ -103,11 +97,7 @@ $tickets_link  = get_field( 'general_tickets_url', 'option' );
     <!-- Tickets CTA -->
     <?php if ( $tickets_link ) : ?>
       <div class="header-sticky__cta-wrapper hidden 2xl:block">
-        <a
-          class="btn btn-primary header-sticky__cta"
-          href="<?php echo esc_url( $tickets_link['url'] ); ?>"
-          target="<?php echo esc_attr( $tickets_link['target'] ? $tickets_link['target'] : '_self' ); ?>"
-        >
+        <a class="btn btn-primary header-sticky__cta" href="<?php echo esc_url( $tickets_link['url'] ); ?>" target="<?php echo esc_attr( $tickets_link['target'] ? $tickets_link['target'] : '_self' ); ?>">
           <?php echo esc_html( $tickets_link['title'] ); ?>
         </a>
       </div>
@@ -120,13 +110,7 @@ $tickets_link  = get_field( 'general_tickets_url', 'option' );
       </div>
 
       <!-- Burger / mega-menu trigger -->
-      <button
-        class="header-sticky__burger"
-        aria-expanded="false"
-        aria-controls="mega-menu"
-        aria-label="<?php esc_attr_e( 'Open menu', 'erlebnisbad' ); ?>"
-        type="button"
-      >
+      <button class="header-sticky__burger" aria-expanded="false" aria-controls="mega-menu" aria-label="<?php esc_attr_e( 'Open menu', 'erlebnisbad' ); ?>" type="button">
         <span class="header-sticky__burger-icon" aria-hidden="true">
           <span></span>
           <span></span>

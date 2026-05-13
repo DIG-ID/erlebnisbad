@@ -8,7 +8,7 @@
  * @since 1.0.0
  */
 
-$tickets_link = get_field( 'general_tickets_url', 'option' );
+$tickets_link = get_field( 'general_tickets_btn', 'option' );
 ?>
 
 <div id="mega-menu" class="mega-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'Navigation menu', 'erlebnisbad' ); ?>">
