@@ -51,7 +51,11 @@ if (megaMenu && overlay) {
       overwrite: true,
       onUpdate: () => { megaMenu.style.clipPath = buildClipPath(clip.O, H); },
     });
-    gsap.to(menuItems, {
+    // Below xl (1280px) start from left column; on desktop start from right.
+    const orderedItems = window.innerWidth < 1280
+      ? [...leftItems, ...rightItems]
+      : [...rightItems, ...leftItems];
+    gsap.to(orderedItems, {
       opacity: 1,
       y: 0,
       duration: 0.5,

@@ -19,15 +19,8 @@
       height: 100%
 
   &__inner
-    @apply relative h-full flex flex-col bg-Mint overflow-hidden ml-20 md:ml-5
+    @apply relative h-full flex flex-col bg-Mint overflow-hidden ml-20 md:ml-[147px] pt-7 pr-6 pb-10 pl-7 md:pt-9 md:pr-12 md:pb-[52px] md:pl-[52px] xl:pt-12 xl:pr-16 xl:pb-16 xl:pl-[72px] 
     padding: 28px 24px 40px 28px
-
-    @media (min-width: 768px)
-      margin-left: 147px
-      padding: 36px 48px 52px 52px
-
-    @media (min-width: 1280px)
-      padding: 48px 64px 64px 72px
 
   &__topbar
     @apply flex items-center justify-end gap-8 flex-shrink-0
@@ -51,10 +44,7 @@
       height: 22px
 
   &__cols
-    @apply flex flex-col gap-8 mt-12 md:my-auto
-
-    @media (min-width: 1280px)
-      @apply flex-row gap-12
+    @apply flex flex-col xl:flex-row gap-5 md:gap-7 xl:gap-12 mt-12 md:my-auto
 
   &__col
     @apply flex flex-col
@@ -66,22 +56,14 @@
       @apply flex-1
 
   &__list
-    @apply list-none m-0 p-0 flex flex-col
-    gap: 20px
-
-    @media (min-width: 768px)
-      gap: 28px
-
-    @media (min-width: 1280px)
-      gap: 48px
+    @apply list-none m-0 p-0 flex flex-col gap-5 md:gap-7 xl:gap-12
 
     li
       @apply m-0 p-0
 
     a
-      @apply inline-flex items-center gap-3 font-raleway font-medium text-white leading-normal
+      @apply inline-flex items-center gap-3 font-raleway font-medium text-white leading-normal tracking-[0.03125rem]
       font-size: 24px
-      letter-spacing: 0.5px
       transition: color 0.2s ease-in
 
       @media (min-width: 768px)
@@ -110,10 +92,7 @@
       @apply font-semibold
 
   &__cta
-    @apply hidden
-
-    @media (min-width: 1280px)
-      @apply flex mt-[3.15rem] self-start border-white
+    @apply hidden xl:flex xl:mt-[3.15rem] xl:self-start xl:border-white
 
 .mega-menu-overlay
   @apply fixed inset-0 z-[60]
