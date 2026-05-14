@@ -30,7 +30,7 @@ $tickets_link = get_field( 'general_tickets_btn', 'option' );
 			</div>
 
 			<button	class="mega-menu__close" type="button" aria-label="<?php esc_attr_e( 'Close menu', 'erlebnisbad' ); ?>">
-				<svg width="20" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+				<svg width="28" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
 					<line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 					<line x1="20" y1="4" x2="4" y2="20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
 				</svg>

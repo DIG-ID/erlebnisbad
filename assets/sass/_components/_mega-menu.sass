@@ -23,7 +23,7 @@
     padding: 28px 24px 40px 28px
 
   &__topbar
-    @apply flex items-center justify-end gap-8 flex-shrink-0
+    @apply flex items-end justify-end gap-12 flex-shrink-0 pr-8 pt-[14px]
 
     .language-selector a,
     .language-selector span
@@ -33,15 +33,15 @@
       @apply text-white
 
   &__close
-    @apply flex items-center justify-center cursor-pointer bg-transparent border-0 p-0 text-white transition-opacity duration-200
+    @apply flex items-center justify-center cursor-pointer bg-transparent border-0 mb-1 p-0 text-white transition-opacity duration-200
 
     &:hover
       @apply opacity-50
 
     svg
       @apply block
-      width: 20px
-      height: 22px
+      width: 28px
+      height: 30px
 
   &__cols
     @apply flex flex-col xl:flex-row gap-5 md:gap-7 xl:gap-12 mt-12 md:my-auto
