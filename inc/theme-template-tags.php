@@ -88,7 +88,7 @@ function erlebnisbad_get_svg( $name ) {
 	if ( ! file_exists( $path ) ) {
 		return '';
 	}
-	return file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	return file_get_contents( $path ); 
 }
 
 /**
@@ -100,7 +100,8 @@ function erlebnisbad_socials() {
 	$socials = array(
 		'facebook'  => array(
 			'url' => get_field( 'socials_facebook', 'options' ),
-			'svg' => erlebnisbad_get_svg( 'socials/facebook' ),
+			// PNG-embedded SVG cannot be inlined — load as external <img> instead.
+			'svg' => '<img src="' . esc_url( get_template_directory_uri() . '/assets/svg/socials/facebook.svg' ) . '" width="17" height="17" alt="" aria-hidden="true">',
 		),
 		'instagram' => array(
 			'url' => get_field( 'socials_instagram', 'options' ),

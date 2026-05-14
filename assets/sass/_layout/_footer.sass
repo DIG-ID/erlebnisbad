@@ -27,7 +27,7 @@ $arrow-svg: url("../../assets/svg/button-arrow.svg")
     &-3
       @apply text-[14px] font-medium leading-normal tracking-[-0.0175rem]
     &-4
-      @apply text-[14px] font-medium leading-normal tracking-[-0.0175rem]
+      @apply font-raleway
       .footer-item
         &__title
           @apply text-[17px] font-semibold leading-normal tracking-[-0.02125rem]
@@ -48,13 +48,15 @@ $arrow-svg: url("../../assets/svg/button-arrow.svg")
 
 .footer-copyright
   &__menu
-    @apply grid grid-cols-2 md:grid-cols-4 gap-8
+    @apply flex justify-center md:justify-end xl:grid xl:grid-cols-4 gap-12 xl:gap-8 md:pr-9 xl:pr-0
 
     li
       @apply m-0 p-0
 
     a
       @apply font-raleway text-xs font-semibold tracking-[-0.015rem]
+      &:hover
+        @apply text-Red
 
 .social-links
   @apply flex
