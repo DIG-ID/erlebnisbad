@@ -19,8 +19,9 @@
             </div>
             <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-8 xl:col-span-4">
                 <p class="text-Black"><?php the_field( 'opening_hours_general_text' ); ?></p>
+                <p class="text-Black pt-8 md:pt-12 xl:pt-14 hidden xl:block"><?php the_field( 'opening_hours_general_schedule' ); ?></p>  
             </div>
-            <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-8 xl:col-span-4">
+            <div class="col-span-2 md:col-start-1 md:col-span-6 xl:hidden">
                 <p class="text-Black pt-8 md:pt-12 xl:pt-14"><?php the_field( 'opening_hours_general_schedule' ); ?></p>  
             </div>
         </div>
