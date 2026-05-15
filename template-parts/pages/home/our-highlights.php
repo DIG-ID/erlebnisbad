@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-highlights" class="section-highlights bg-white xl:pt-28">
+<section id="section-highlights" class="section-highlights bg-white">
     <div class="theme-container text-center pb-48 md:pb-40 xl:pb-48 pt-52 xl:pt-28">
         <h2 class="title-main text-Black pb-24 md:pb-14 xl:pb-12"><?php the_field( 'highlights_title' ); ?></h2>
 
