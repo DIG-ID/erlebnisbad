@@ -13,6 +13,9 @@ module.exports = {
     './page-templates/**/*.php',
     './template-parts/**/*.php',
   ],
+  safelist: [
+    'xl:inline',
+  ],
   theme: {
     fontFamily: {
       raleway: ['raleway', 'sans-serif'],

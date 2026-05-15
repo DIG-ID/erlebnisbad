@@ -1,6 +1,6 @@
 <?php
 /**
- * Intro Section in the Bistro Page Template.
+ * Intro Section in the Info Prices Page Template.
  *
  * @package erlebnisbad
  * @subpackage Section
@@ -8,13 +8,13 @@
  */
 
 ?>
-<section id="section-intro" class="section-intro bg-white pt-24 md:pt-20 pb-24 md:pb-44 xl:pb-32">
+<section id="section-intro" class="section-intro bg-white pt-24 md:pt-20 pb-12 xl:pb-20">
     <div class="theme-container">
         <div class="theme-grid text-center justify-items-center">
             <div class="col-span-2 md:col-start-2 md:col-span-4 xl:col-start-5 xl:col-span-4">
                 <p class="text-Black pb-20 md:pb-24"><?php the_field( 'intro_text' ); ?></p>
             </div>
-            <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-3 xl:col-span-8 pb-24 md:pb-36 xl:pb-28">
+            <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-3 xl:col-span-8 ">
                 <?php
                 $img_id = get_field( 'intro_image' );
                 if ( $img_id ) :
