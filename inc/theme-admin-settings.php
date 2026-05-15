@@ -59,7 +59,7 @@ add_filter( 'login_headertext', 'erlebnisbad_login_title' );
 function erlebnisbad_login_logo() {
 	echo '<style type="text/css">
 	h1 a {
-		background-image: url(' . esc_url( get_template_directory_uri() ) . '/assets/svg/logo.svg) !important;
+		background-image: url(' . esc_url( get_template_directory_uri() ) . '/assets/logos/LOGO-DARK.png) !important;
 	}
 	</style>';
 }
