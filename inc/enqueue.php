@@ -67,7 +67,7 @@ if ( ! function_exists( 'erlebnisbad_enqueue_google_maps' ) ) :
 		}
 
 		$templates = array(
-			// 'page-templates/page-contact.php',
+			'page-templates/page-arrival-contact.php',
 		);
 
 		if ( empty( $templates ) || ! is_page_template( $templates ) ) {

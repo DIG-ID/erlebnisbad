@@ -11,7 +11,7 @@ define( 'erlebnisbad_FONT_PROVIDER', 'adobe' );
 define( 'erlebnisbad_ADOBE_FONTS_ID', 'rtz3wiv' ); // Typekit kit ID, e.g. 'abc1234'
 
 // Google Maps API key — set per project. Leave empty to disable.
-define( 'erlebnisbad_GOOGLE_MAPS_API_KEY', '' );
+define( 'erlebnisbad_GOOGLE_MAPS_API_KEY', 'AIzaSyBAZN5TfX1aWmjodZ4e_6sOcaJV4D59jfo' );
 
 // Theme setup: supports, nav menus, sidebars, plugin filters.
 require get_template_directory() . '/inc/theme-setup.php';
@@ -30,3 +30,5 @@ require get_template_directory() . '/inc/helpers.php';
 
 // Performance optimizations.
 require get_template_directory() . '/inc/performance.php';
+
+

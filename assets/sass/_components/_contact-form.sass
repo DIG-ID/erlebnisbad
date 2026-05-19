@@ -1,0 +1,117 @@
+// =============================================================================
+// Contact Form 7 styling — scoped to the contact-form section panel.
+// Pairs with the CF7 template documented in the project.
+// =============================================================================
+
+.section-contact-form__form
+    .wpcf7-form
+        @apply m-0
+
+    // CF7 wraps each form-tag in <p> by default — reset margins so wrap's pb is the only gap source
+    .wpcf7-form p
+        @apply m-0
+
+    .cf-grid
+        @apply flex flex-col gap-0 xl:gap-[9px]
+
+    .cf-grid__cols
+        @apply grid grid-cols-1 gap-0 xl:grid-cols-2 xl:gap-5
+
+    // Mobile/tablet: flatten so all 4 fields are direct grid children (allows reordering via `order`)
+    // Desktop (xl): restore the inputs flex-column on the left
+    .cf-grid__inputs
+        display: contents
+        @screen xl
+            @apply flex flex-col gap-0
+
+    // Mobile/tablet: textarea also becomes a direct grid child
+    // Desktop (xl): textarea owns its column and fills the height
+    .cf-grid__textarea
+        display: contents
+        @screen xl
+            @apply block h-full
+
+    // Reorder for mobile/tablet to match Figma: name → message → email → subject
+    .cf-grid__cols > .cf-grid__inputs > *:nth-child(1)
+        @apply order-1 xl:order-none
+
+    .cf-grid__cols > .cf-grid__textarea > *
+        @apply order-2 xl:order-none
+
+    .cf-grid__cols > .cf-grid__inputs > *:nth-child(2)
+        @apply order-3 xl:order-none
+
+    .cf-grid__cols > .cf-grid__inputs > *:nth-child(3)
+        @apply order-4 xl:order-none
+
+    .cf-grid__footer
+        @apply flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between md:gap-4
+
+    .cf-grid__consent
+        @apply flex items-center
+
+    // Inputs + textarea
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea
+        @apply w-full bg-LightGray rounded-2xl border-0 font-openSans text-[17px] md:text-[20px] text-[#444444] tracking-[0.5px] leading-[27px] md:leading-[32px] px-6 py-5
+
+        &::placeholder
+            @apply text-[#444444] opacity-100
+
+        &:focus
+            @apply outline-none ring-2 ring-DarkGreen
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"]
+        @apply h-[80px] py-0
+
+    textarea
+        @apply h-[300px] resize-none
+
+    // Submit width override — design has ~218px forced width
+    button[type="submit"]
+        @apply min-w-[218px]
+
+    // Acceptance (GDPR) checkbox row
+    .wpcf7-acceptance
+        .wpcf7-list-item
+            @apply m-0
+
+        label
+            @apply flex items-center gap-3 cursor-pointer text-white font-openSans text-[16px] leading-normal
+
+        input[type="checkbox"]
+            @apply w-[18px] h-[18px] shrink-0 cursor-pointer rounded-none border-0 bg-[#d9d9d9]
+
+    // pb provides both the visual gap between fields and reserved error-tip space
+    // Figma: mobile/tablet 32px, desktop 30px
+    .wpcf7-form-control-wrap
+        @apply block relative pb-[32px] xl:pb-[30px]
+
+    // Textarea wrap fills the column height on desktop so the textarea matches the inputs column height
+    .cf-grid__textarea .wpcf7-form-control-wrap
+        @apply xl:h-full
+
+    .wpcf7-not-valid-tip
+        @apply absolute left-0 bottom-0 text-white text-[13px] pointer-events-none
+
+    // Remove CF7's default red border on invalid inputs — error is only shown via tip + bottom alert
+    input.wpcf7-not-valid,
+    textarea.wpcf7-not-valid
+        border: 0 !important
+
+    .wpcf7-response-output
+        @apply text-white border border-Red rounded-2xl mt-6 p-4 text-[14px]
+
+    // CF7 state classes on <form> set their own border-color with higher specificity — force Red on all states
+    form.invalid .wpcf7-response-output,
+    form.unaccepted .wpcf7-response-output,
+    form.payment-required .wpcf7-response-output,
+    form.failed .wpcf7-response-output,
+    form.aborted .wpcf7-response-output,
+    form.spam .wpcf7-response-output,
+    form.sent .wpcf7-response-output
+        @apply border-Red
