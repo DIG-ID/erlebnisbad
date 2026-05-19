@@ -89,12 +89,29 @@ $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 				</div>
 
 				<?php
-				if ( get_field( 'hero_title_option' ) === 'custom' ) :
-					?><h1 class="title-big"><?php the_field( 'hero_title' ); ?></h1><?php
-				elseif ( get_field( 'hero_title_option' ) === 'default' ) :
-					?><h1 class="title-big"><?php the_title(); ?></h1><?php
-				endif;
+				$title_col_span_map = array(
+					'6'  => 'xl:col-span-6',
+					'7'  => 'xl:col-span-7',
+					'8'  => 'xl:col-span-8',
+					'9'  => 'xl:col-span-9',
+					'10' => 'xl:col-span-10',
+					'11' => 'xl:col-span-11',
+					'12' => 'xl:col-span-12',
+				);
+				$title_col_span_key = get_field( 'hero_title_column_span' );
+				$title_col_span     = isset( $title_col_span_map[ $title_col_span_key ] ) ? $title_col_span_map[ $title_col_span_key ] : 'xl:col-span-12';
 				?>
+				<div class="theme-grid">
+					<div class="col-start-1 col-span-2 md:col-span-6 <?php echo esc_attr( $title_col_span ); ?>">
+						<?php
+						if ( get_field( 'hero_title_option' ) === 'custom' ) :
+							?><h1 class="title-big"><?php the_field( 'hero_title' ); ?></h1><?php
+						elseif ( get_field( 'hero_title_option' ) === 'default' ) :
+							?><h1 class="title-big"><?php the_title(); ?></h1><?php
+						endif;
+						?>
+					</div>
+				</div>
 
 				<?php
 				if ( get_field( 'hero_button_option' ) === 'custom' ) :
