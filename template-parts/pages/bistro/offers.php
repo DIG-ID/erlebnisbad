@@ -25,7 +25,7 @@
           <p class="text-Black md:pb-0 xl:pb-14 md:order-4 xl:order-none"><?php the_field( 'offers_text' ); ?></p>
 
           <!-- Button: tablet col 2 row 1 -->
-          <div class="md:order-2 xl:order-none pt-14 md:pt-0">
+          <div class="md:order-2 xl:order-none pt-14 md:pt-0 md:justify-self-end xl:justify-self-stretch">
             <?php
             $hero_button = get_field( 'offers_button' );
             if ( $hero_button ) :
@@ -33,7 +33,7 @@
                 $link_title  = $hero_button['title'];
                 $link_target = $hero_button['target'] ? $hero_button['target'] : '_self';
                 ?>
-                <a class="btn btn-primary w-full" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                <a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
             <?php endif; ?>
           </div>
         </div>
