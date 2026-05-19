@@ -14,7 +14,7 @@ $id_mobile    = ! empty( $images['mobile'] )  ? $images['mobile']  : $id_tablet;
 $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 ?>
 
-<section class="section-hero w-full h-dvh max-h-[1045px] flex flex-col">
+<section class="section-hero w-full h-svh max-h-[1045px] flex flex-col transition-all duration-300 ease-in-out">
 
 	<div class="section-hero__media relative flex-1">
 
