@@ -65,7 +65,7 @@ $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 					<div class="hidden xl:block">
 						<?php
 						if ( get_field( 'hero_button_option' ) === 'custom' ) :
-							$custom_link = get_field('hero_link');
+							$custom_link = get_field('hero_button');
 							if( $custom_link ): 
 									$link_url = $custom_link['url'];
 									$link_title = $custom_link['title'];
@@ -115,7 +115,7 @@ $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 
 				<?php
 				if ( get_field( 'hero_button_option' ) === 'custom' ) :
-					$custom_link = get_field('hero_link');
+					$custom_link = get_field('hero_button');
 					if( $custom_link ): 
 							$link_url = $custom_link['url'];
 							$link_title = $custom_link['title'];
