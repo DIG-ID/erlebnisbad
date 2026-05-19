@@ -12,7 +12,6 @@ $id_desktop   = ! empty( $images['desktop'] ) ? $images['desktop'] : null;
 $id_tablet    = ! empty( $images['tablet'] )  ? $images['tablet']  : $id_desktop;
 $id_mobile    = ! empty( $images['mobile'] )  ? $images['mobile']  : $id_tablet;
 $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
-$tickets_link = get_field( 'general_tickets_url', 'option' );
 ?>
 
 <section class="section-hero w-full h-dvh max-h-[1045px] flex flex-col">
@@ -63,18 +62,31 @@ $tickets_link = get_field( 'general_tickets_url', 'option' );
 					endif;
 					?>
 
-					<?php if ( $tickets_link ) : ?>
 					<div class="hidden xl:block">
-						<a
-							href="<?php echo esc_url( $tickets_link['url'] ); ?>"
-							target="<?php echo esc_attr( $tickets_link['target'] ?: '_self' ); ?>"
-							class="btn btn-primary"
-						><?php echo esc_html( $tickets_link['title'] ); ?></a>
+						<?php
+						if ( get_field( 'hero_button_option' ) === 'custom' ) :
+							$custom_link = get_field('link');
+							if( $custom_link ): 
+									$link_url = $custom_link['url'];
+									$link_title = $custom_link['title'];
+									$link_target = $custom_link['target'] ? $custom_link['target'] : '_self';
+									?>
+									<a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+							<?php endif;
+						elseif ( get_field( 'hero_button_option' ) === 'default' ) :
+							$link = get_field( 'link', 'option' );
+							if( $link ): 
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+									?>
+									<a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+							<?php endif;
+						endif;
+						?>
 					</div>
-					<?php endif; ?>
+
 				</div>
-
-
 
 				<?php
 				if ( get_field( 'hero_title_option' ) === 'custom' ) :
@@ -84,13 +96,27 @@ $tickets_link = get_field( 'general_tickets_url', 'option' );
 				endif;
 				?>
 
-				<?php if ( $tickets_link ) : ?>
-				<a
-					href="<?php echo esc_url( $tickets_link['url'] ); ?>"
-					target="<?php echo esc_attr( $tickets_link['target'] ?: '_self' ); ?>"
-					class="btn btn-primary mt-7 md:mt-8 md:self-start xl:hidden"
-				><?php echo esc_html( $tickets_link['title'] ); ?></a>
-				<?php endif; ?>
+				<?php
+				if ( get_field( 'hero_button_option' ) === 'custom' ) :
+					$custom_link = get_field('link');
+					if( $custom_link ): 
+							$link_url = $custom_link['url'];
+							$link_title = $custom_link['title'];
+							$link_target = $custom_link['target'] ? $custom_link['target'] : '_self';
+							?>
+							<a class="btn btn-primary mt-7 md:mt-8 md:self-start xl:hidden" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<?php endif;
+				elseif ( get_field( 'hero_button_option' ) === 'default' ) :
+					$link = get_field( 'general_tickets_btn', 'option' );
+					if( $link ): 
+							$link_url = $link['url'];
+							$link_title = $link['title'];
+							$link_target = $link['target'] ? $link['target'] : '_self';
+							?>
+							<a class="btn btn-primary mt-7 md:mt-8 md:self-start xl:hidden" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+					<?php endif;
+				endif;
+				?>
 
 			</div>
 		</div>
