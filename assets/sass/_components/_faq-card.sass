@@ -1,0 +1,29 @@
+// =============================================================================
+// FAQ Card — Q&A card with F (Frage) / A (Antwort) badges on the left edge.
+// =============================================================================
+
+.faq-card
+    @apply relative bg-white border-2 border-Mint rounded-[15px] flex flex-col gap-8 px-[46px] py-[35px] md:px-[51px] md:py-[48px]
+
+    // Frage badge — anchored to the card's left border at a fixed top (Figma: top 48, left -8)
+    &::before
+        content: 'F'
+        @apply absolute -left-2 top-[48px] flex items-center justify-center w-[45px] h-[32px] bg-Red text-white font-openSans font-bold text-[14px] uppercase rounded-[8px]
+
+    // Antwort badge — fixed below the F badge (Figma: top 113, left -8)
+    &::after
+        content: 'A'
+        @apply absolute -left-2 top-[113px] flex items-center justify-center w-[45px] h-[32px] bg-Mint text-white font-openSans font-bold text-[14px] uppercase rounded-[8px]
+
+    &__question
+        @apply font-raleway font-semibold text-[25px] leading-[35px] tracking-[0.5px] text-Mint m-0 break-words
+
+    &__answer
+        @apply font-openSans text-[16px] leading-[32px] tracking-[0.5px] text-Black break-words
+
+        // Body text from textarea may come wrapped in <p> via wpautop — reset margins
+        p
+            @apply m-0
+
+        strong, b
+            @apply font-bold
