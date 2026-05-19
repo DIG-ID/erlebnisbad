@@ -74,7 +74,7 @@ $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 									<a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 							<?php endif;
 						elseif ( get_field( 'hero_button_option' ) === 'default' ) :
-							$link = get_field( 'link', 'option' );
+							$link = get_field( 'general_tickets_btn', 'option' );
 							if( $link ): 
 									$link_url = $link['url'];
 									$link_title = $link['title'];
