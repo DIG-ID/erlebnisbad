@@ -1,4 +1,13 @@
-.section-hero
+// Hero mask paths inlined as data URIs — zero HTTP requests.
+// Each variable holds the SVG path for its breakpoint, compiled into the CSS bundle.
+$hero-mask-mobile:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 397 794'><path fill='white' d='M0 786.5C0 786.5 56 770 198.5 786.5C341 803 397 786.5 397 786.5L397 0H0V786.5Z'/></svg>")
+$hero-mask-tablet:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 834 1027'><path fill='white' d='M0 1004.41C0 1004.41 110.548 953.578 417 1004.41C723.452 1055.24 834 1004.41 834 1004.41V0H0V1004.41Z'/></svg>")
+$hero-mask-desktop: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1920 942.192'><path fill='white' d='M0 919.596C0 919.596 254.5 868.755 960 919.596C1665.5 970.438 1920 919.596 1920 919.596V0H0Z'/></svg>")
+
+
+
+
+.section-hero-original
   position: relative
   isolation: isolate
 
@@ -12,8 +21,8 @@
     background-position: center
     background-size: cover
     background-repeat: no-repeat
-    -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-mobile.svg')
-    mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-mobile.svg')
+    -webkit-mask-image: $hero-mask-mobile
+    mask-image: $hero-mask-mobile
     -webkit-mask-repeat: no-repeat
     mask-repeat: no-repeat
     -webkit-mask-position: top
@@ -24,9 +33,57 @@
     pointer-events: none
 
     @media (min-width: 768px)
-      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-tablet.svg')
-      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask-tablet.svg')
+      -webkit-mask-image: $hero-mask-tablet
+      mask-image: $hero-mask-tablet
 
     @media (min-width: 1280px)
-      -webkit-mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask.svg')
-      mask-image: url('/wp-content/themes/erlebnisbad/assets/svg/waves/hero-mask.svg')
+      -webkit-mask-image: $hero-mask-desktop
+      mask-image: $hero-mask-desktop
+
+
+.section-hero
+
+  &__figure
+    -webkit-mask-image: $hero-mask-mobile
+    mask-image: $hero-mask-mobile
+    -webkit-mask-size: 100% 100%
+    mask-size: 100% 100%
+    -webkit-mask-repeat: no-repeat
+    mask-repeat: no-repeat
+
+    @media (min-width: 768px)
+      -webkit-mask-image: $hero-mask-tablet
+      mask-image: $hero-mask-tablet
+
+    @media (min-width: 1280px)
+      -webkit-mask-image: $hero-mask-desktop
+      mask-image: $hero-mask-desktop
+
+  &__picture
+    display: block
+    width: 100%
+    height: 100%
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+
+  &__placeholder
+    width: 100%
+    height: 100%
+    object-fit: cover
+    object-position: center
+
+  &__overlay
+    position: absolute
+    inset: 0
+    background: rgba(19, 19, 19, 0.55)
+    pointer-events: none
+
+  &__waves
+    flex-shrink: 0
+
+    svg
+      width: 100%
