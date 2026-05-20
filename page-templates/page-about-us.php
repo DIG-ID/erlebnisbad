@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: About UsPage Template
+ * Template Name: About Us Page Template
  *
  * @package erlebnisbad
  * @subpackage Template
