@@ -1,0 +1,49 @@
+// Module: Posts Slider
+
+// Grid metrics used for the xl bleed offset calculation:
+//   container px-12 = 48px each side
+//   grid gap-x-5    = 20px (11 gaps for 12 cols)
+//   col-2 left      = 48px + (100vw - 96px - 220px)/12 + 20px
+//                   = calc((min(100vw,1920px) - 316px) / 12 + 68px + max(0px,(100vw - 1920px) / 2))
+
+.posts-slider
+  @apply pt-16 md:pt-20 xl:pt-24
+  overflow-x: hidden
+
+  &__header
+    @apply mb-10 md:mb-12
+
+  &__bleed
+    // Mobile: full padding both sides
+    @apply px-8
+    @media (min-width: 768px)
+      // md+: keep left padding, bleed right to viewport edge
+      padding-left: 2.25rem // px-9
+      padding-right: 0
+    @media (min-width: 1280px)
+      // xl+: left aligns with grid col-start-2
+      padding-left: calc((min(100vw, 1920px) - 316px) / 12 + 68px + max(0px, (100vw - 1920px) / 2))
+      padding-right: 0
+
+  &__swiper
+    @apply overflow-hidden
+
+  &__slide
+    height: auto
+
+  &__nav
+    @apply flex justify-center gap-6 mt-8
+
+  &__prev,
+  &__next
+    // Reset Swiper absolute positioning so they sit in the flex nav container
+    position: static
+    margin: 0
+    transform: none
+    width: auto
+    height: auto
+    // Hide Swiper's default ::after arrow icon
+    &::after
+      display: none
+    svg
+      display: block

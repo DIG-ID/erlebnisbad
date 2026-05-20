@@ -14,7 +14,10 @@ if ( have_posts() ) :
 		the_post();
 		do_action( 'before_main_content' );
 			get_template_part( 'template-parts/modules/hero' );
-      get_template_part( 'template-parts/pages/activities/intro' );	
+      get_template_part( 'template-parts/pages/activities/intro' );
+      get_template_part( 'template-parts/pages/activities/content-kursangebot' );
+      get_template_part( 'template-parts/pages/activities/content-angebot' );
+      get_template_part( 'template-parts/pages/activities/content-besonderes-erlebnis' );
       get_template_part( 'template-parts/pages/activities/opening-hours' );
 		do_action( 'after_main_content' );
 	endwhile;

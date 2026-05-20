@@ -1,0 +1,83 @@
+// Tabs Single Posts
+
+.tabs-posts
+
+  &__inner
+    @apply items-start
+
+  &__info-header
+    @apply flex items-end self-end
+
+  // Mobile/tablet list (xl:hidden)
+  &__list
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+  &__item
+    display: contents
+
+  // Mobile/tablet: pair 1 (items 1+2) → row 1 buttons, row 2 panel
+  //                pair 2 (items 3+4) → row 3 buttons, row 4 panel
+  &__item:nth-child(1) > .tabs-posts__nav-btn
+    @media (max-width: 1279px)
+      grid-row: 1
+      grid-column: 1
+
+  &__item:nth-child(2) > .tabs-posts__nav-btn
+    @media (max-width: 1279px)
+      grid-row: 1
+      grid-column: 2
+
+  &__item:nth-child(1) > .tabs-posts__panel,
+  &__item:nth-child(2) > .tabs-posts__panel
+    @media (max-width: 1279px)
+      grid-row: 2
+
+  &__item:nth-child(3) > .tabs-posts__nav-btn
+    @media (max-width: 1279px)
+      grid-row: 3
+      grid-column: 1
+
+  &__item:nth-child(4) > .tabs-posts__nav-btn
+    @media (max-width: 1279px)
+      grid-row: 3
+      grid-column: 2
+
+  &__item:nth-child(3) > .tabs-posts__panel,
+  &__item:nth-child(4) > .tabs-posts__panel
+    @media (max-width: 1279px)
+      grid-row: 4
+
+  // xl nav bar (hidden below xl, shown as flex row)
+  &__nav
+    @apply items-end self-end border-b-[0.5px] border-Mint2
+
+  &__nav-btn
+    @apply relative pb-4 text-left
+    @media (max-width: 1279px)
+      border-bottom: 0.5px solid #A1DBD0
+    &::after
+      content: ''
+      @apply absolute left-0 right-8 h-[3px] bg-Mint2 scale-x-0
+      bottom: -2px
+      transform-origin: left
+      transition: transform 0.2s ease
+    &.is-active
+      &::after
+        @apply scale-x-100 xl:scale-x-125
+
+  &__panel
+    @apply text-[#373737]
+    display: none
+    &.is-active
+      display: block
+    // Mobile/tablet: full-width panel, spacing below
+    @media (max-width: 1279px)
+      grid-column: 1 / -1
+      @apply pt-6 mb-20
+    // xl: spacing via panels wrapper
+    @media (min-width: 1280px)
+      @apply pt-14
+
+  &__panels
+    @apply mb-0

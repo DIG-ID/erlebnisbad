@@ -1,5 +1,37 @@
 import Swiper from 'swiper/bundle';
 
+// Posts slider — reusable across pages
+document.querySelectorAll( '.posts-slider__swiper' ).forEach( ( el ) => {
+	const section = el.closest( '.posts-slider' );
+	new Swiper( el, {
+		grabCursor:    true,
+		slidesPerView: 1,
+		spaceBetween:  20,
+		navigation: {
+			prevEl: section.querySelector( '.posts-slider__prev' ),
+			nextEl: section.querySelector( '.posts-slider__next' ),
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 1.8,
+				spaceBetween:  20,
+			},
+			1024: {
+				slidesPerView: 2.8,
+				spaceBetween:  20,
+			},
+			1280: {
+				slidesPerView: 2.8,
+				spaceBetween:  32,
+			},
+			1536: {
+				slidesPerView: 3.8,
+				spaceBetween:  32,
+			},
+		},
+	} );
+} );
+
 document.querySelectorAll( '.slider-posts__main' ).forEach( ( mainEl ) => {
 	const section  = mainEl.closest( '.slider-posts' );
 	const thumbsEl = section?.querySelector( '.slider-posts__thumbs' );
@@ -26,6 +58,10 @@ document.querySelectorAll( '.slider-posts__main' ).forEach( ( mainEl ) => {
 		const mainSwiper = new Swiper( mainEl, {
 			grabCursor: true,
 			thumbs: { swiper: thumbsSwiper },
+			navigation: {
+				prevEl: section.querySelector( '.slider-posts__prev' ),
+				nextEl: section.querySelector( '.slider-posts__next' ),
+			},
 		} );
 
 		// ResizeObserver reacts to the actual element size changing,

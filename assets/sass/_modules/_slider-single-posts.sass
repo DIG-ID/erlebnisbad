@@ -1,9 +1,6 @@
-// =============================================================================
-// Module: Slider Single Posts
-// =============================================================================
+// Slider Single Posts
 
 .slider-posts
-  @apply py-12 md:py-16 xl:py-20
 
   &__main-wrap
     @apply relative
@@ -19,6 +16,8 @@
   &__image
     @apply w-full block object-cover
     aspect-ratio: 1360 / 705
+    @media (max-width: 767px)
+      min-height: 700px
 
   &__thumbs-wrap
     @apply relative
@@ -41,4 +40,19 @@
     @apply w-full block object-cover
     height: 100%
     pointer-events: none
+
+  &__mobile-nav
+    @apply flex justify-center gap-6 mt-6
+
+  &__prev,
+  &__next
+    position: static
+    margin: 0
+    transform: none
+    width: auto
+    height: auto
+    &::after
+      display: none
+    svg
+      display: block
 
