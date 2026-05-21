@@ -18,7 +18,7 @@ if ( empty( $tabs ) ) {
 		<div class="tabs-posts__inner theme-grid !gap-x-0">
 
 			<div class="tabs-posts__info-header order-1 xl:order-none col-span-2 md:col-span-6 xl:row-start-1 xl:col-start-2 xl:col-span-3 flex items-end">
-				<h3 class="title-secondary text-black pb-4 border-b-[0.5px] border-Mint2 w-full"><?php the_field( 'tabs_info_title' ); ?></h3>
+				<h2 class="title-secondary text-black pb-4 border-b-[0.5px] border-Mint2 w-full"><?php the_field( 'tabs_info_title' ); ?></h2>
 			</div>
 
 			<div class="tabs-posts__info-body order-2 xl:order-none col-span-2 md:col-span-6 xl:row-start-2 xl:col-start-2 xl:col-span-3">
@@ -30,9 +30,11 @@ if ( empty( $tabs ) ) {
 				<?php foreach ( $tabs as $index => $tab ) : ?>
 					<?php $active = in_array( $index, array( 0, 2 ), true ); ?>
 					<div class="tabs-posts__item<?php echo $active ? ' is-active' : ''; ?>">
-						<button class="title-secondary tabs-posts__nav-btn<?php echo $active ? ' is-active' : ''; ?>" role="tab" aria-selected="<?php echo $active ? 'true' : 'false'; ?>" aria-controls="tab-panel-m-<?php echo esc_attr( $index ); ?>">
-							<?php echo esc_html( $tab['title'] ); ?>
-						</button>
+						<h2 class="tabs-posts__item-heading">
+							<button class="title-secondary tabs-posts__nav-btn<?php echo $active ? ' is-active' : ''; ?>" role="tab" aria-selected="<?php echo $active ? 'true' : 'false'; ?>" aria-controls="tab-panel-m-<?php echo esc_attr( $index ); ?>">
+								<?php echo esc_html( $tab['title'] ); ?>
+							</button>
+						</h2>
 						<div id="tab-panel-m-<?php echo esc_attr( $index ); ?>" class="tabs-posts__panel<?php echo $active ? ' is-active' : ''; ?>" role="tabpanel" aria-hidden="<?php echo $active ? 'false' : 'true'; ?>">
 							<?php echo wp_kses_post( $tab['content'] ); ?>
 						</div>
