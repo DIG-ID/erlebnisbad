@@ -167,6 +167,31 @@ Plugins activos relevantes para desenvolvimento:
 
 ---
 
+## Template Actions
+
+Funções reutilizáveis em `inc/theme-template-tags.php`, chamadas via `do_action()`.
+
+| Action | Argumentos | Descrição |
+|--------|-----------|-----------|
+| `do_action( 'before_main_content' )` | — | Abre `<main id="main-content">` |
+| `do_action( 'after_main_content' )` | — | Fecha `</main>` |
+| `do_action( 'before_post_content' )` | — | Abre `<article>` com post classes |
+| `do_action( 'after_post_content' )` | — | Fecha `</article>` |
+| `do_action( 'theme_logo' )` | — | Logo do tema (custom logo ou nome do site) |
+| `do_action( 'breadcrumbs' )` | — | Breadcrumbs via Yoast SEO |
+| `do_action( 'socials' )` | — | Links sociais das ACF Options |
+| `do_action( 'wave_separator' )` | — | Separador de waves — variante 1, cor `stroke-Mint1` |
+| `do_action( 'wave_separator', 2 )` | `$variant` (int) | Variante 2 |
+| `do_action( 'wave_separator', 1, 'stroke-Mint' )` | `$variant`, `$color_class` | Cor Tailwind personalizada |
+
+### Wave Separator — detalhes
+- Variantes disponíveis: `1` e `2`
+- Cor por omissão: `stroke-Mint1` (`#BCEBDF`) — qualquer classe `stroke-*` do Tailwind é válida
+- 3 SVGs inline por variante (desktop / tablet / mobile) com `vector-effect="non-scaling-stroke"`
+- Estilos base em `assets/sass/_components/_waves.sass`
+
+---
+
 ## Convenções Gerais
 
 - Não usar plugins desnecessários — preferir código no tema.

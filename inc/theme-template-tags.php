@@ -137,3 +137,54 @@ function erlebnisbad_socials() {
 }
 
 add_action( 'socials', 'erlebnisbad_socials' );
+
+/**
+ * Outputs responsive wave separator SVGs.
+ *
+ * @param int    $variant     Wave variant: 1 or 2.
+ * @param string $color_class Tailwind stroke colour class. Default 'stroke-Mint1'.
+ */
+function erlebnisbad_wave_separator( $variant = 1, string $color_class = 'stroke-Mint1' ): void {
+	$variant = (int) $variant;
+	$color   = esc_attr( $color_class );
+
+	if ( 2 === $variant ) {
+		?>
+		<div class="wave-separator wave-separator__variant-2" aria-hidden="true">
+
+			<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 80" fill="none" class="w-full hidden xl:block <?php echo $color; ?>">
+				<path vector-effect="non-scaling-stroke" stroke-width="1.5" fill="none" d="M0 17.117c165.863-10.215 269.641-31.762 516.148 2.544 260.081 36.196 625.842 36.691 792.982 13.4 167.14-23.29 362.77-12.884 549.4 8.425 19.88 2.27 40.42 4.123 61.47 5.606M0 38.77c127.346-10.29 233.713-21.07 441.153 8.059 260.084 36.52 625.847 37.02 792.997 13.52 167.14-23.5 362.76-13 549.39 8.5 42.93 4.945 88.94 7.932 136.46 9.425"/>
+			</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 834 62" fill="none" class="w-full hidden md:block xl:hidden <?php echo $color; ?>">
+				<path vector-effect="non-scaling-stroke" stroke-width="1.5" fill="none" d="M0 1c109.743.12 224.234 8.95 335.527 21.656C486.443 39.888 675.587 33.14 834 22.326M0 29.54c86.307 2.974 174.384 10.555 260.544 20.48C436.151 70.25 663.518 57.723 834 44.093"/>
+			</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 393 53" fill="none" class="w-full block md:hidden <?php echo $color; ?>">
+				<path vector-effect="non-scaling-stroke" stroke-width="1.5" fill="none" d="M0 27.966c71.554-2.524 134.181-7.19 181.133-13.733C247.997 4.916 319.419.991 393 1M0 51.704c40.51-2.593 76.46-6.01 106.146-10.183C195.529 28.954 293.058 26.11 393 29.472"/>
+			</svg>
+
+		</div>
+		<?php
+	} else {
+		?>
+		<div class="wave-separator wave-separator__variant-1" aria-hidden="true">
+
+			<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 62" fill="none" class="w-full hidden xl:block <?php echo $color; ?>">
+				<path vector-effect="non-scaling-stroke" stroke-width="1.5" fill="none" d="M1920 15.82c-171.7 13.864-405.71 27.363-585.47 6.838C1147.9 1.349 952.275-9.058 785.133 14.233 619.667 37.291 259.541 37.036 0 1.911m1920 35.467c-20.03 1.326-38.7 2.728-55.59 4.143-173.14 14.5-418.23 30-604.87 8.5-186.63-21.5-382.251-32-549.394-8.5C560.109 62.616 250.023 64.37 0 38.094"/>
+			</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 834 59" fill="none" class="w-full hidden md:block xl:hidden <?php echo $color; ?>">
+				<path vector-effect="non-scaling-stroke" stroke-width="1.5" fill="none" d="M0 21.258c221.349 14.572 460.157 10.53 586.133-7.025C664.003 3.383 748.056-.155 834.5 1.318M0 52.857c198.534 9.367 399.305 4.389 511.146-11.336C611.382 27.428 721.861 25.563 834.5 30.965"/>
+			</svg>
+
+			<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 393 59" fill="none" class="w-full block md:hidden <?php echo $color; ?>">
+				<path vector-effect="non-scaling-stroke" stroke-width="1.5" fill="none" d="M0 .998c73.067 3.65 146.977 10.286 219.527 18.569 53.985 6.164 112.861 9.26 173.473 10.198M0 32.962c48.352 3.677 96.743 8.462 144.544 13.968C220.597 55.693 306.357 58.31 393 57.354"/>
+			</svg>
+
+		</div>
+		<?php
+	}
+}
+
+add_action( 'wave_separator', 'erlebnisbad_wave_separator', 10, 2 );
