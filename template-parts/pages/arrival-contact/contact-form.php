@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-contact-form" class="section-contact-form bg-Mint1 pt-24 md:pt-40 xl:pt-24 pb-40 md:pb-52 xl:pb-44">
+<section id="section-contact-form" class="section-contact-form bg-Mint1 waves waves__top--color pt-24 md:pt-40 xl:pt-24 pb-40 md:pb-52 xl:pb-44">
     <div class="theme-container">
         <div class="theme-grid pb-14 md:pb-16 xl:pb-24">
             <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-2 xl:col-span-4">
