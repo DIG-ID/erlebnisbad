@@ -19,7 +19,9 @@ if ( have_posts() ) :
 			get_template_part( 'template-parts/pages/home/waterpark' );
 			get_template_part( 'template-parts/pages/home/kids-family' );
 			get_template_part( 'template-parts/pages/home/opening-hours');
+			do_action( 'wave_separator' );
 			get_template_part( 'template-parts/pages/home/courses-activities' );
+			do_action( 'wave_separator', 2 );
 			get_template_part( 'template-parts/pages/home/our-highlights' );
 			get_template_part( 'template-parts/pages/home/bistro' );
 			get_template_part( 'template-parts/pages/home/partners' );
