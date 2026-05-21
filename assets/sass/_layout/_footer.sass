@@ -12,6 +12,36 @@ $arrow-svg: url("../../assets/svg/button-arrow.svg")
   -webkit-mask-size: contain
           mask-size: contain
 
+
+$footer-mask-mobile:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 394 463' fill='none'%3E%3Cpath fill='%23fff' d='M0 0s107.386 5.713 199.443 38.432S393 71.15 393 71.15l.5 391.35H0z'/%3E%3C/svg%3E")
+$footer-mask-tablet:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 834 1003' fill='none'%3E%3Cpath fill='%23fff' d='M834 1002.5H0v-989S218-3.5 428 37 834 0 834 0z'/%3E%3C/svg%3E")
+$footer-mask-desktop: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1923 1007' fill='none'%3E%3Cpath fill='%23fff' d='M896.253 49.269c323.697 40.336 522.127 40.789 831.887-19.787C1807.46 13.969 1870.57 4.552 1922.5 0l-1.5 1006.67H0L.5 30.02s41.89-6.146 64.608-9.733C279.243-13.518 572.557 8.933 896.253 49.269'/%3E%3C/svg%3E")
+
+
+.footer-main
+  &__figure
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    -webkit-mask-image: $footer-mask-mobile
+    mask-image: $footer-mask-mobile
+    -webkit-mask-size: 100% 100%
+    mask-size: 100% 100%
+    -webkit-mask-repeat: no-repeat
+    mask-repeat: no-repeat
+
+    @media (min-width: 768px)
+      -webkit-mask-image: $footer-mask-tablet
+      mask-image: $footer-mask-tablet
+
+    @media (min-width: 1024px)
+      -webkit-mask-image: $footer-mask-desktop
+      mask-image: $footer-mask-desktop
+
+  &__picture
+    display: flex
+    flex: 1
+
 .footer-menu
   &__list
     &-1, &-2, &-3
