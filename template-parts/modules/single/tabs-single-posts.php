@@ -43,7 +43,7 @@ if ( empty( $tabs ) ) {
 			</div>
 
 			<?php // xl: nav buttons in row 1 (aligned with info-header), panel in row 2. ?>
-			<div class="tabs-posts__nav hidden xl:flex xl:justify-between order-3 xl:order-none col-span-2 md:col-span-6 xl:row-start-1 xl:col-start-5 xl:col-span-7" role="tablist" aria-label="<?php esc_attr_e( 'Kurs-Informationen', 'digid' ); ?>">
+			<div class="tabs-posts__nav hidden xl:flex <?php echo count( $tabs ) > 2 ? 'xl:justify-between' : 'xl:gap-12'; ?> order-3 xl:order-none col-span-2 md:col-span-6 xl:row-start-1 xl:col-start-5 xl:col-span-7" role="tablist" aria-label="<?php esc_attr_e( 'Kurs-Informationen', 'digid' ); ?>">
 				<?php foreach ( $tabs as $index => $tab ) : ?>
 					<button class="title-secondary tabs-posts__nav-btn<?php echo 0 === $index ? ' is-active' : ''; ?>" role="tab" aria-selected="<?php echo 0 === $index ? 'true' : 'false'; ?>" aria-controls="tab-panel-xl-<?php echo esc_attr( $index ); ?>" data-index="<?php echo esc_attr( $index ); ?>">
 						<?php echo esc_html( $tab['title'] ); ?>
