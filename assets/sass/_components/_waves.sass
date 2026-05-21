@@ -16,3 +16,45 @@
 
       @media (min-width: 1280px)
         stroke-width: 1
+
+
+
+.waves
+  @apply relative
+  &__top
+    &--color
+      &::before
+        @apply absolute -top-[67px] left-0 w-full h-[69px]
+        content: ''
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 393 69' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 41.492c151.228 12.314 281.606 19.16 393 22.346v5.033H0z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M393 14.718c-70.012-.09-143.913-2.032-221.5-6.316C114.346 5.246 57.027 2.636 0 .5m393 43.207c-83.43-2.209-174.282-6.617-273-13.796A8066 8066 0 0 0 0 22.089'/%3E%3C/svg%3E")
+        background-size: 100% 100%
+        background-repeat: no-repeat
+
+      @media (min-width: 768px)
+        &::before
+          @apply -top-[67px] h-[69px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 834 69' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 26.803S55.264 31 84.002 33.388C439.793 62.939 681.914 62.45 834 54.824V68.5H0z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M834 7.704c-156.004 14.301-346.215 20.964-566 8.827C178.486 11.588 90.5.5 0 .5m834 36.43c-158.008 8.705-361.253 8.742-617.5-9.894C142.969 21.688 70.673 17.465 0 14.204'/%3E%3C/svg%3E")
+
+      @media (min-width: 1280px)
+        &::before
+          @apply -top-[114px] h-[116px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1920 116' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 82.282s260-58.141 960 0 960 0 960 0v33.558H0z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M1920 .494c-181.17 29.298-447.29 54.413-782 35.93C700.208 12.25 252.766 20.087.5 28.135'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M1920 47.933c-171.65 23.205-440.12 38.602-833.5 9.993C656.007 26.618 267.843 33.832 0 47.303'/%3E%3C/svg%3E")
+
+  &__bottom
+    &--color
+      &::after
+        @apply absolute -bottom-[87px] left-0 w-full h-[89px]
+        content: ''
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 393 89' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 0h393v9.06C261.751 20.077 128.793 26.649 0 30.109z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M393 68.254C262.309 78.524 129.244 84.521 0 87.544M393 31.91q-17.67 1.255-36.021 2.59C239.064 43.074 119.018 49.135 0 53.235'/%3E%3C/svg%3E")
+        background-size: 100% 100%
+        background-repeat: no-repeat
+
+      @media (min-width: 768px)
+        &::after
+          @apply -bottom-[108px] h-[110px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 834 110' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 0h834v8.397c-79.079 2.881-184.476 8.207-323.745 17.607C339.193 40.924 164.756 48.167 0 50.697z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M834 62.73c-73.367 3.864-169.211 10.663-294 21.547C360.541 99.93 175.11 107.134 0 109.31m834-77.488C742.627 35.51 619.964 42.574 455.979 54.5 305.269 65.46 151.078 72.313 0 76.214'/%3E%3C/svg%3E")
+
+      @media (min-width: 1280px)
+        &::after
+          @apply -bottom-[117px] h-[119px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1920 119' fill='none'%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M0 91.831s747 58 1412 0c323.45-28.21 456.58-29.175 508-22.724'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M1920 38.337c-65.85-5.296-226-2.901-592.02 23.718C850.3 96.795 337.643 90.275 0 79.248'/%3E%3Cpath fill='%23bcebdf' d='M0 0h1920v12.28s-166.18-5.548-533.75 19.26C721.254 89.54 0 35.5 0 35.5z'/%3E%3C/svg%3E")

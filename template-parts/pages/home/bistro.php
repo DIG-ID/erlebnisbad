@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-bistro" class="section-bistro bg-Mint1">
+<section id="section-bistro" class="section-bistro  waves waves__top--color waves__bottom--color bg-Mint1">
   <div class="theme-container pb-32 md:pb-24 xl:pb-40">
     <div class="theme-grid">
       <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 order-2 md:order-none pt-52 xl:pt-36">
