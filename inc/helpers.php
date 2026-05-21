@@ -4,6 +4,22 @@
  */
 
 /**
+ * Allow display:flex/grid in wp_kses inline styles (stripped by default).
+ *
+ * @param string[] $styles Allowed CSS properties.
+ * @return string[]
+ */
+add_filter(
+	'safe_style_css',
+	function ( $styles ) {
+		$styles[] = 'display';
+		$styles[] = 'flex-shrink';
+		$styles[] = 'gap';
+		return $styles;
+	}
+);
+
+/**
  * Outputs one or more values to the browser console.
  * For development/debugging only — remove calls before going to production.
  *
