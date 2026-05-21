@@ -56,8 +56,10 @@ document.querySelectorAll( '.slider-posts__main' ).forEach( ( mainEl ) => {
 		} );
 
 		const mainSwiper = new Swiper( mainEl, {
-			grabCursor: true,
-			thumbs: { swiper: thumbsSwiper },
+			grabCursor:        true,
+			effect:            'fade',
+			fadeEffect:        { crossFade: true },
+			thumbs:            { swiper: thumbsSwiper },
 			navigation: {
 				prevEl: section.querySelector( '.slider-posts__prev' ),
 				nextEl: section.querySelector( '.slider-posts__next' ),
