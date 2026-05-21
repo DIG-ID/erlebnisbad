@@ -9,7 +9,7 @@
 
 ?>
 <?php if ( have_rows( 'faq_faq' ) ) : ?>
-<section id="section-faq" class="section-faq bg-Mint1">
+<section id="section-faq" class="section-faq bg-Mint1 waves waves__top--color waves__bottom--color">
     <div class="theme-container pb-52 md:pb-56 xl:pb-36 pt-32 xl:pt-8">
         <div class="theme-grid gap-y-12 md:gap-y-10 xl:gap-y-12">
             <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-2 xl:col-span-10">

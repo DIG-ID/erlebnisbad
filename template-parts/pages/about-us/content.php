@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-content" class="section-content bg-Mint1 pt-28 xl:pt-24 pb-52 md:pb-40 xl:pb-44">
+<section id="section-content" class="section-content bg-Mint1 waves waves__top--color waves__bottom--color pt-28 xl:pt-24 pb-52 md:pb-40 xl:pb-44">
     <div class="theme-container">
         <div class="theme-grid grid-flow-row-dense">
             <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-7 xl:col-span-4">
