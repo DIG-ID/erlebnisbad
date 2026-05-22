@@ -16,9 +16,9 @@
         $img_id = get_field( 'kids_family_image' );
         if ( $img_id ) :
           ?>
-          <div class="shape-bg shape-bg__img shape-bg--1 before:bg-Mint3">
+          <figure class="shape-bg shape-bg__img shape-bg--1 before:bg-Mint3">
             <?php echo wp_get_attachment_image( $img_id, 'full' ); ?>
-          </div>
+          </figure>
           <?php
         endif;
         ?>

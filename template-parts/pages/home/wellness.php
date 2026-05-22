@@ -18,9 +18,9 @@
 				$img_id = get_field( 'wellness_image' );
 				if ( $img_id ) :
 					?>
-					<div class="shape-bg shape-bg__img shape-bg--1 before:bg-Mint2">
+					<figure class="shape-bg shape-bg__img shape-bg--1 before:bg-Mint2">
 						<?php echo wp_get_attachment_image( $img_id, 'full' ); ?>
-					</div>
+					</figure>
 					<?php
 				endif;
 				?>
