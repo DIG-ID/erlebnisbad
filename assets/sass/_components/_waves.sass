@@ -21,16 +21,18 @@
 
 .waves
   @apply relative
+  &::before,
+  &::after
+    @apply absolute left-0 w-full bg-no-repeat
+    background-size: 100% 100%
+    content: ''
   &__top
     &--color
       @apply mt-[69px] md:mt-[69px] xl:mt-[116px]
       &::before
-        @apply absolute -top-[67px] left-0 w-full h-[69px]
-        content: ''
+        @apply -top-[67px] h-[69px]
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 393 69' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 41.492c151.228 12.314 281.606 19.16 393 22.346v5.033H0z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M393 14.718c-70.012-.09-143.913-2.032-221.5-6.316C114.346 5.246 57.027 2.636 0 .5m393 43.207c-83.43-2.209-174.282-6.617-273-13.796A8066 8066 0 0 0 0 22.089'/%3E%3C/svg%3E")
-        background-size: 100% 100%
-        background-repeat: no-repeat
-
+        
       @media (min-width: 768px)
         &::before
           @apply -top-[67px] h-[69px]
@@ -41,15 +43,28 @@
           @apply -top-[114px] h-[116px]
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1920 116' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 82.282s260-58.141 960 0 960 0 960 0v33.558H0z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M1920 .494c-181.17 29.298-447.29 54.413-782 35.93C700.208 12.25 252.766 20.087.5 28.135'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M1920 47.933c-171.65 23.205-440.12 38.602-833.5 9.993C656.007 26.618 267.843 33.832 0 47.303'/%3E%3C/svg%3E")
 
+    &--color-dark
+      @apply mt-[37px] md:mt-[78px] xl:mt-[68px]
+      &::before
+        @apply -top-[35px]  h-[37px]
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 393 37' fill='none'%3E%3Cpath fill='%2366c2b0' d='M0 4.68c108-6.998 208.402-6.448 302.398 11.292 33.589 6.34 63.399 11.593 90.602 15.763v4.445H0z'/%3E%3C/svg%3E")
+
+      @media (min-width: 768px)
+        &::before
+          @apply -top-[76px] h-[78px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 834 78' fill='none'%3E%3Cpath fill='%2366c2b0' d='M0 4.402c146.877-15.622 338.088 13.13 493.069 42.37C647.117 75.839 701.031 76.128 834 47.999v29.646H0z'/%3E%3C/svg%3E")
+
+      @media (min-width: 1280px)
+        &::before
+          @apply -top-[66px] h-[68px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1920 68' fill='none'%3E%3Cpath fill='%2366c2b0' d='M0 29.174s256.5-65.642 960 0 960 0 960 0v38.148H0z'/%3E%3C/svg%3E")
+
   &__bottom
     &--color
       @apply mb-[89px] md:mb-[110px] xl:mb-[119px]
       &::after
-        @apply absolute -bottom-[87px] left-0 w-full h-[89px]
-        content: ''
+        @apply -bottom-[87px] h-[89px]
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 393 89' fill='none'%3E%3Cpath fill='%23bcebdf' d='M0 0h393v9.06C261.751 20.077 128.793 26.649 0 30.109z'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M393 68.254C262.309 78.524 129.244 84.521 0 87.544M393 31.91q-17.67 1.255-36.021 2.59C239.064 43.074 119.018 49.135 0 53.235'/%3E%3C/svg%3E")
-        background-size: 100% 100%
-        background-repeat: no-repeat
 
       @media (min-width: 768px)
         &::after
@@ -60,3 +75,19 @@
         &::after
           @apply -bottom-[117px] h-[119px]
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1920 119' fill='none'%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M0 91.831s747 58 1412 0c323.45-28.21 456.58-29.175 508-22.724'/%3E%3Cpath stroke='%2366c2b0' stroke-width='1' vector-effect='non-scaling-stroke' d='M1920 38.337c-65.85-5.296-226-2.901-592.02 23.718C850.3 96.795 337.643 90.275 0 79.248'/%3E%3Cpath fill='%23bcebdf' d='M0 0h1920v12.28s-166.18-5.548-533.75 19.26C721.254 89.54 0 35.5 0 35.5z'/%3E%3C/svg%3E")
+
+    &--color-dark
+      @apply mb-[24px] md:mb-[26px] xl:mb-[66px]
+      &::after
+        @apply -bottom-[22px] h-[24px]
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 393 24' fill='none'%3E%3Cpath fill='%2366c2b0' d='M203.446 17.689C119.393 28.378 0 17.689 0 17.689V0l393 .003V17.69S287.5 7 203.446 17.689'/%3E%3C/svg%3E")
+
+      @media (min-width: 768px)
+        &::after
+          @apply -bottom-[24px] h-[26px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 834 26' fill='none'%3E%3Cpath fill='%2366c2b0' d='M431.5 17.5C262 36-.5 17.5-.5 17.5V0L834 .003V17.5S601-1 431.5 17.5'/%3E%3C/svg%3E")
+
+      @media (min-width: 1280px)
+        &::after
+          @apply -bottom-[64px] h-[66px]
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 1920 66' fill='none'%3E%3Cpath fill='%2366c2b0' d='M1920 0v18.596c-39.19-8.06-162.93-9.198-508 20.898-665 58-1412 0-1412 0V0z'/%3E%3C/svg%3E")
