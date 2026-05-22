@@ -36,23 +36,18 @@
     <?php if ( have_rows( 'courses_activities_images' ) ) : ?>
       <div class="flex flex-col items-center gap-16 md:flex-row md:items-start md:justify-center md:gap-x-4 md:gap-y-0 xl:gap-x-[53px]">
         <?php
+        $i = 0;
         while ( have_rows( 'courses_activities_images' ) ) :
             the_row();
             $courses_image_id     = get_sub_field( 'image' );
             $courses_image_button = get_sub_field( 'image_button' );
+            $i++;
             ?>
             <div class="w-full max-w-[445px] md:flex-1 md:basis-0">
                 <?php if ( $courses_image_id ) : ?>
-                    <div class="image-fill image-fill--1">
-                        <?php
-                        echo wp_get_attachment_image(
-                            $courses_image_id,
-                            'full',
-                            false,
-                            array( 'class' => 'object-cover' )
-                        );
-                        ?>
-                    </div>
+                    <figure class="shape-bg shape-bg__img shape-bg--<?php echo esc_attr( $i ); ?> before:bg-Mint1">
+                      <?php echo wp_get_attachment_image( $courses_image_id, 'full' ); ?>
+                    </figure>
                 <?php endif; ?>
 
                 <?php
