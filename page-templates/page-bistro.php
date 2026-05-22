@@ -16,7 +16,8 @@ if ( have_posts() ) :
 			get_template_part( 'template-parts/modules/hero' );
 			get_template_part( 'template-parts/pages/bistro/intro' );
             get_template_part( 'template-parts/pages/bistro/offers' );
-            get_template_part( 'template-parts/pages/bistro/opening-hours' );
+            get_template_part( 'template-parts/modules/opening-hours' );
+            //get_template_part( 'template-parts/pages/bistro/opening-hours' );
 		do_action( 'after_main_content' );
 	endwhile;
 endif;
