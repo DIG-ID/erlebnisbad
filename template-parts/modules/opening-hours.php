@@ -10,19 +10,21 @@
 <section id="section-opening-hours" class="section-opening-hours bg-white pt-16 md:pt-32 pb-32 md:pb-64">
   <div class="theme-container">
     <div class="theme-grid text-center justify-items-center md:text-left md:justify-items-start">
-      <div class="col-span-2 md:col-span-6 xl:col-start-3 xl:col-span-8 pb-12 xl:pb-32">
+      <div class="col-span-2 md:col-span-6 xl:col-span-12 pb-12 xl:pb-32">
         <?php
         $img_id = get_field( 'opening_hours_image' );
         if ( $img_id ) :
           ?>
-            <?php
-            echo wp_get_attachment_image(
-              $img_id,
-              'full',
-              false,
-              array('class' => 'object-cover',)
-            );
-            ?>
+            <div class="oh-image-wrap">
+              <?php
+              echo wp_get_attachment_image(
+                $img_id,
+                'full',
+                false,
+                array( 'class' => 'oh-image-reveal w-full block object-cover' )
+              );
+              ?>
+            </div>
           <?php
         endif;
         ?>

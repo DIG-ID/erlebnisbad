@@ -1,0 +1,13 @@
+// Opening Hours — image reveal
+
+// Block-level wrapper: negative margins on a div in normal flow
+// automatically expand its width (width: auto absorbs negative margins).
+.oh-image-wrap
+  @media (max-width: 767px)
+    margin-left: -2rem
+    margin-right: -2rem
+
+.oh-image-reveal
+  @media (max-width: 767px)
+    min-height: 324px
+    object-fit: cover

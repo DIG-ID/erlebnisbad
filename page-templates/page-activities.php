@@ -19,7 +19,7 @@ if ( have_posts() ) :
 			get_template_part( 'template-parts/pages/activities/content-angebot' );
 			get_template_part( 'template-parts/pages/activities/content-besonderes-erlebnis' );
 			do_action( 'wave_separator' );
-			get_template_part( 'template-parts/pages/activities/opening-hours' );
+			get_template_part( 'template-parts/modules/opening-hours' );
 		do_action( 'after_main_content' );
 	endwhile;
 endif;
