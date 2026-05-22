@@ -29,16 +29,9 @@
             </div>
             <div class="col-span-2 md:col-start-1 md:col-span-3 xl:col-start-2 xl:col-span-4 pt-14 md:pt-36 xl:pt-32 order-1 md:order-none">
                 <?php $img_id = get_field( 'prices_info_useful_information_image' ); if ( $img_id ) : ?>
-                <div class="image-fill image-fill--5 image-fill--contain image-fill--mint-2">
-                    <?php
-                    echo wp_get_attachment_image(
-                        $img_id,
-                        'full',
-                        false,
-                        array( 'class' => 'object-cover h-auto' )
-                    );
-                    ?>
-                </div>
+                <figure class="shape-bg shape-bg__img shape-bg--2 before:bg-Mint2">
+                    <?php echo wp_get_attachment_image( $img_id, 'full' ); ?>
+                </figure>
                 <?php endif; ?>
             </div>
         </div>

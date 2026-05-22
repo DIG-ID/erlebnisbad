@@ -21,6 +21,8 @@
           2 => 'xl:pt-0',
           0 => 'xl:pt-[428px]',
       );
+
+      $i = 0;
       ?>
       <div class="theme-grid gap-y-16 md:gap-y-56 xl:gap-y-0 items-start">
         <?php
@@ -42,20 +44,14 @@
           $description_class = ( 2 === $position_in_3col ) ? 'xl:max-w-[496px] xl:-mx-3' : '';
           // Item 3 in tablet sits in cols 2-4 (slightly inset from the left) with a small top offset; reset on xl.
           $md_col_start      = ( 3 === $row_index ) ? 'md:col-start-2 md:pt-10 xl:col-start-auto' : '';
+          $i++;
           ?>
           <div class="section-features__item col-span-2 md:col-span-3 xl:col-span-4 flex flex-col items-center text-center <?php echo esc_attr( $md_col_start ); ?> <?php echo esc_attr( $md_stagger ); ?> <?php echo esc_attr( $xl_stagger ); ?>">
             <div class="section-features__inner w-full max-w-[306px] xl:max-w-[472px]">
               <?php if ( $offer_image_id ) : ?>
-                <div class="image-fill <?php echo esc_attr( $shape_class ); ?> image-fill--contain image-fill--mint-2 overflow-hidden mb-8 md:mb-10 xl:mb-10">
-                  <?php
-                  echo wp_get_attachment_image(
-                      $offer_image_id,
-                      'full',
-                      false,
-                      array( 'class' => 'object-cover' )
-                  );
-                  ?>
-                </div>
+                <figure class="shape-bg shape-bg__img shape-bg--<?php echo esc_attr( $i ); ?> before:bg-Mint2 mb-8 md:mb-10 xl:mb-10">
+                  <?php echo wp_get_attachment_image( $offer_image_id, 'full' ); ?>
+                </figure>
               <?php endif; ?>
 
               <?php if ( $offer_title ) : ?>
