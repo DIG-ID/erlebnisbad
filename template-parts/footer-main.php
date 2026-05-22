@@ -38,7 +38,7 @@ $footer_bg_responsive_id  = get_field( 'general_footer_image_responsive', 'optio
 
 
 <div class="theme-container-mobile-fluid bg-transparent md:absolute bottom-0 left-0 right-0">
-	<div class="theme-grid bg-white pt-14 xl:pt-20 pb-24 md:pb-16 xl:pb-56 rounded-t-2xl md:px-9 xl:px-0">
+	<div class="theme-grid bg-white pt-14 xl:pt-28 pb-24 md:pb-16 xl:pb-28 rounded-t-2xl md:px-9 xl:px-0">
 		<div class="col-start-1 xl:col-start-2 col-span-2 md:col-span-3 xl:col-span-3 px-8 md:px-0 pb-14 xl:pb-0">
 			<?php
 			$footer_logo_id = get_field( 'general_theme_logo_footer','option' );
