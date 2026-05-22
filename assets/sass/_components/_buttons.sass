@@ -37,14 +37,14 @@ $arrow-svg: url("../../assets/svg/button-arrow.svg")
     // .btn-primary — pill CTA (Mehr erfahren)
     // -------------------------------------------------------------------------
     &-primary
-        @apply gap-3 rounded-full px-6 py-3 bg-Red border-2 border-Red text-white uppercase font-semibold text-[0.9375rem] tracking-[0.0625rem] leading-none text-center justify-center
+        @apply gap-3 rounded-full px-6 py-3 bg-Red border-2 border-white text-white uppercase font-semibold text-[0.9375rem] tracking-[0.0625rem] leading-none text-center justify-center
 
         &::before
             @extend %btn-arrow-icon
 
         &:hover,
         &:active
-            @apply bg-white text-Red
+            @apply bg-white text-Red border-Red
 
     // -------------------------------------------------------------------------
     // .btn-link — inline text link with right arrow (Anreise & Kontakt)
