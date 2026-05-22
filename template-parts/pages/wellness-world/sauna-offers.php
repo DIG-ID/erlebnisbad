@@ -21,6 +21,8 @@
       <?php
       // Tailwind needs the full class string at build time, so we list the shape variants statically.
       $shape_classes = array( 'image-fill--1', 'image-fill--2', 'image-fill--3', 'image-fill--4', 'image-fill--5' );
+
+      $i = 0;
       // Desktop stagger (3 items in 1 row): item 2 highest, item 1 lowest, item 3 middle.
       // Uses padding-top on desktop because there's only one row — no row-height side effects.
       $xl_stagger_classes = array(
@@ -45,20 +47,14 @@
           // Desktop (3 cols, single row): position-based stagger via padding-top.
           $position_in_3col = $row_index % 3;
           $xl_stagger       = isset( $xl_stagger_classes[ $position_in_3col ] ) ? $xl_stagger_classes[ $position_in_3col ] : 'xl:pt-0';
+          $i++;
           ?>
           <div class="section-sauna-offers__item col-span-2 md:col-span-3 xl:col-span-4 flex flex-col items-center text-center <?php echo esc_attr( $md_stagger ); ?> <?php echo esc_attr( $xl_stagger ); ?>">
             <div class="section-sauna-offers__inner w-full max-w-[306px] xl:max-w-[472px]">
               <?php if ( $offer_image_id ) : ?>
-                <div class="image-fill <?php echo esc_attr( $shape_class ); ?> image-fill--contain image-fill--mint-2 overflow-hidden mb-8 md:mb-10 xl:mb-10">
-                  <?php
-                  echo wp_get_attachment_image(
-                      $offer_image_id,
-                      'full',
-                      false,
-                      array( 'class' => 'object-cover' )
-                  );
-                  ?>
-                </div>
+                <figure class="shape-bg shape-bg__img shape-bg--<?php echo esc_attr( $i ); ?> before:bg-Mint2 mb-8 md:mb-10 xl:mb-10">
+                  <?php echo wp_get_attachment_image( $offer_image_id,'full' ); ?>
+                </figure>
               <?php endif; ?>
 
               <?php if ( $offer_title ) : ?>
@@ -73,7 +69,7 @@
         <?php endwhile; ?>
         <?php endif; ?>
         </div>
-        <?php if ( have_rows( 'sauna_offers_extras' ) ) : ?>
+        <?php if ( have_rows( 'sauna_offers_extras' ) ) : $i = 0;?>
           <div class="theme-grid gap-y-16 md:gap-y-0 items-start pt-24 md:pt-32 xl:pt-48">
             <?php
             while ( have_rows( 'sauna_offers_extras' ) ) :
@@ -83,6 +79,7 @@
               $extra_description = get_sub_field( 'description' );
               $extra_index       = get_row_index();
               $extra_shape       = $shape_classes[ ( $extra_index - 1 ) % count( $shape_classes ) ];
+              $i++;
               ?>
               <div class="section-sauna-offers__extra col-span-2 md:col-span-3 xl:col-span-6 flex flex-col items-center text-center">
                 <div class="section-sauna-offers__extra-inner w-full max-w-[306px] xl:max-w-[472px]">
@@ -91,16 +88,9 @@
                   <?php endif; ?>
 
                   <?php if ( $extra_image_id ) : ?>
-                    <div class="image-fill <?php echo esc_attr( $extra_shape ); ?> image-fill--contain image-fill--mint-2 overflow-hidden mb-8 md:mb-10 xl:mb-11">
-                      <?php
-                      echo wp_get_attachment_image(
-                          $extra_image_id,
-                          'full',
-                          false,
-                          array( 'class' => 'object-cover' )
-                      );
-                      ?>
-                    </div>
+                    <firgure class="shape-bg shape-bg__img shape-bg--<?php echo esc_attr( $i ); ?> before:bg-Mint2 mb-8 md:mb-10 xl:mb-11">
+                      <?php echo wp_get_attachment_image( $extra_image_id, 'full' ); ?>
+                    </firgure>
                   <?php endif; ?>
 
                   <?php if ( $extra_description ) : ?>
