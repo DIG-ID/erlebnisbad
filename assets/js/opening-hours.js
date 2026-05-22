@@ -1,8 +1,6 @@
 import { gsap, ScrollTrigger } from './gsap.js';
 
-const el = document.querySelector( '.oh-image-reveal' );
-
-if ( el ) {
+document.querySelectorAll( '.oh-image-reveal' ).forEach( ( el ) => {
 	const mm = gsap.matchMedia();
 
 	// md and up: clip from center 8/12 cols → full width
@@ -43,4 +41,4 @@ if ( el ) {
 			}
 		);
 	} );
-}
+} );
