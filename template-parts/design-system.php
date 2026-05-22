@@ -173,3 +173,28 @@
 		</div>
 	</div>
 </section>
+
+
+
+<section>
+	<div class="container">
+		<figure class="shape-bg  shape-bg__img shape-bg--1 before:bg-orange-400">
+			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+		</figure>
+		<figure class="shape-bg shape-bg__img shape-bg--2 before:bg-Mint1">
+			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+		</figure>
+		<figure class="shape-bg shape-bg__img shape-bg--3 before:bg-Mint2">
+			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+		</figure>
+		<figure class="shape-bg shape-bg__img shape-bg--4 before:bg-Mint3">
+			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+		</figure>
+		<figure class="shape-bg shape-bg__img shape-bg--5 before:bg-purple-500">
+			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+		</figure>
+		<figure class="shape-bg shape-bg__img shape-bg--6 before:bg-amber-800">
+			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+		</figure>
+	</div>
+</section>

@@ -16,17 +16,8 @@
         $img_id = get_field( 'kids_family_image' );
         if ( $img_id ) :
           ?>
-          <div class="image-fill image-fill--5 image-fill--mint-2">
-            <?php
-            echo wp_get_attachment_image(
-              $img_id,
-              'full',
-              false,
-              array(
-                'class' => 'object-cover',
-              )
-            );
-            ?>
+          <div class="shape-bg shape-bg__img shape-bg--1 before:bg-Mint2">
+            <?php echo wp_get_attachment_image( $img_id, 'full' ); ?>
           </div>
           <?php
         endif;
