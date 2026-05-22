@@ -14,16 +14,22 @@
             <div class="col-span-2 md:col-start-2 md:col-span-4 xl:col-start-5 xl:col-span-4">
                 <p class="text-Black pb-20 md:pb-24"><?php the_field( 'intro_text' ); ?></p>
             </div>
-            <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-3 xl:col-span-8 ">
+            <div class="col-span-2 md:col-span-6 xl:col-span-12">
                 <?php
                 $img_id = get_field( 'intro_image' );
                 if ( $img_id ) :
-                    echo wp_get_attachment_image(
-                        $img_id,
-                        'full',
-                        false,
-                        array( 'class' => 'object-cover' )
-                    );
+                    ?>
+                    <div class="oh-image-wrap">
+                        <?php
+                        echo wp_get_attachment_image(
+                            $img_id,
+                            'full',
+                            false,
+                            array( 'class' => 'oh-image-reveal w-full block object-cover' )
+                        );
+                        ?>
+                    </div>
+                    <?php
                 endif;
                 ?>
             </div>
