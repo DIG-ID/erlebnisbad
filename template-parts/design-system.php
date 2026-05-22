@@ -137,7 +137,7 @@
 			$theme_logo_footer = get_field( 'general_theme_logo_footer', 'option' );
 			$theme_logo_dark   = get_field( 'general_theme_logo_dark', 'option' );
 			?>
-			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 mt-12">
+			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 mt-12  border-Black xl:border-r">
 				<h2 class="title-main mb-10"><?php esc_html_e( 'Logos', 'erlebnisbad' ); ?></h2>
 
 				<ul class="space-y-6">
@@ -170,31 +170,32 @@
 				</ul>
 			</div>
 
+			<div class="col-span-2 md:col-span-3 xl:col-span-3 px-4 xl:px-8 mt-12 border-Black xl:border-r">
+				<h2 class="title-main mb-10"><?php esc_html_e( 'Image Shapes', 'erlebnisbad' ); ?></h2>
+				<div class="grid grid-cols-2 gap-8">
+					<figure class="shape-bg  shape-bg__img shape-bg--1 before:bg-orange-400">
+						<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+					</figure>
+					<figure class="shape-bg shape-bg__img shape-bg--2 before:bg-Mint1">
+						<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+					</figure>
+					<figure class="shape-bg shape-bg__img shape-bg--3 before:bg-Mint2">
+						<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+					</figure>
+					<figure class="shape-bg shape-bg__img shape-bg--4 before:bg-Mint3">
+						<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+					</figure>
+					<figure class="shape-bg shape-bg__img shape-bg--5 before:bg-purple-500">
+						<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+					</figure>
+					<figure class="shape-bg shape-bg__img shape-bg--6 before:bg-amber-800">
+						<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
+					</figure>
+				</div>
+
+
+			</div>
+
 		</div>
-	</div>
-</section>
-
-
-
-<section>
-	<div class="container">
-		<figure class="shape-bg  shape-bg__img shape-bg--1 before:bg-orange-400">
-			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
-		</figure>
-		<figure class="shape-bg shape-bg__img shape-bg--2 before:bg-Mint1">
-			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
-		</figure>
-		<figure class="shape-bg shape-bg__img shape-bg--3 before:bg-Mint2">
-			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
-		</figure>
-		<figure class="shape-bg shape-bg__img shape-bg--4 before:bg-Mint3">
-			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
-		</figure>
-		<figure class="shape-bg shape-bg__img shape-bg--5 before:bg-purple-500">
-			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
-		</figure>
-		<figure class="shape-bg shape-bg__img shape-bg--6 before:bg-amber-800">
-			<img src="https://placehold.co/600x600?text=Hello+World" alt="test image">
-		</figure>
 	</div>
 </section>
