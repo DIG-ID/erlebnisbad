@@ -31,7 +31,7 @@
 				$img_id = get_field( 'waterpark_image' );
 				if ( $img_id ) :
 					?>
-					<figure class="shape-bg shape-bg__img shape-bg--1 before:bg-Mint1">
+					<figure class="shape-bg shape-bg__img shape-bg--2 before:bg-Mint1">
 						<?php echo wp_get_attachment_image( $img_id, 'full' ); ?>
 					</figure>
 					<?php
