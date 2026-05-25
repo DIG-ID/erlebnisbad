@@ -10,7 +10,7 @@
 ?>
 <section id="section-highlights" class="section-highlights bg-white">
     <div class="theme-container text-center pb-48 md:pb-40 xl:pb-48 pt-52 xl:pt-28">
-        <h2 class="title-main text-Black pb-24 md:pb-14 xl:pb-12"><?php the_field( 'highlights_title' ); ?></h2>
+        <h2 class="title-main text-Black pb-24 md:pb-14 xl:pb-28"><?php the_field( 'highlights_title' ); ?></h2>
 
         <?php if ( have_rows( 'highlights_items' ) ) : ?>
             <div class="grid grid-cols-2 gap-x-6 gap-y-10 items-stretch justify-items-center md:flex md:flex-row md:flex-wrap md:justify-center md:items-stretch md:gap-[130px]">

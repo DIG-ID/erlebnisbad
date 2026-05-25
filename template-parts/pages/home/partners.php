@@ -13,7 +13,7 @@
     <h2 class="title-main text-Black pb-20 xl:pb-12"><?php the_field( 'partners_title' ); ?></h2>
 
     <?php if ( have_rows( 'partners_items' ) ) : ?>
-      <div class="grid grid-cols-2 gap-x-6 gap-y-10 items-center justify-items-center md:flex md:flex-row md:flex-wrap md:justify-center md:gap-12 xl:gap-36">
+      <div class="grid grid-cols-2 gap-x-8 gap-y-10 items-center justify-items-center md:flex md:flex-row md:flex-wrap md:justify-center md:gap-12 xl:gap-44">
         <?php
         while ( have_rows( 'partners_items' ) ) :
             the_row();
