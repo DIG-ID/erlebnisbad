@@ -98,7 +98,7 @@
   <div class="theme-container pt-32">
     <div class="theme-grid text-center justify-items-center ">
         <div class="col-start-1 col-span-2 md:col-span-6 xl:col-start-2 xl:col-span-4 pb-8 md:pb-16 xl:pb-0">
-            <h2 class="title-main text-Black pb-7"><?php the_field( 'features_acessibility_title' ); ?></h2>
+            <h2 class="title-main text-Black pb-7"><?php the_field( 'features_accessibility__title' ); ?></h2>
             <p class="text-Black max-w-[306px] md:max-w-[593px]"><?php the_field( 'features_accessibility_text' ); ?></p>
         </div>
         <div class="col-start-1 col-span-2 md:col-span-6 xl:col-start-8 xl:col-span-4">
