@@ -53,7 +53,7 @@
             <div class="section-sauna-offers__inner w-full max-w-[306px] xl:max-w-[472px]">
               <?php if ( $offer_image_id ) : ?>
                 <figure class="shape-bg shape-bg__img shape-bg--<?php echo esc_attr( $i ); ?> before:bg-Mint2 mb-8 md:mb-10 xl:mb-10">
-                  <?php echo wp_get_attachment_image( $offer_image_id,'full' ); ?>
+                  <?php echo wp_get_attachment_image( $offer_image_id,'full', false, array( 'class' => 'object-cover h-auto' ) ); ?>
                 </figure>
               <?php endif; ?>
 
