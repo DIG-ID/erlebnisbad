@@ -30,10 +30,10 @@
         ?>
       </div>
       <?php $opening_text = get_field( 'opening_hours_text' ); ?>
-      <div class="col-span-2 md:col-span-3 xl:col-start-3 xl:col-span-5">
+      <div class="col-span-2 md:col-span-3 <?php echo is_front_page() ? 'xl:col-start-2' : 'xl:col-start-3'; ?> xl:col-span-5">
         <h2 class="title-main text-Black pb-7 md:pb-0 xl:pb-7 max-w-[280px] md:max-w-none xl:max-w-[650px]"><?php the_field( 'opening_hours_title' ); ?></h2>
       </div>
-      <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-9 xl:col-span-2 md:flex md:flex-col md:items-end xl:items-start md:pr-0 xl:pl-16 order-2 md:order-none">
+      <div class="col-span-2 md:col-start-4 md:col-span-3 <?php echo is_front_page() ? 'xl:col-start-10' : 'xl:col-start-9'; ?> xl:col-span-2 md:flex md:flex-col md:items-end xl:items-start md:pr-0 xl:pl-16 order-2 md:order-none">
        <?php
         $hero_button = get_field( 'opening_hours_button' );
         if ( $hero_button ) :
@@ -47,7 +47,7 @@
           <p class="hidden md:block xl:hidden w-full text-Black md:mt-auto md:text-left"><?php echo wp_kses_post( $opening_text ); ?></p>
         <?php endif; ?>
       </div>
-      <div class="col-span-2 md:hidden xl:block xl:col-start-3 xl:col-span-4">
+      <div class="col-span-2 md:hidden xl:block <?php echo is_front_page() ? 'xl:col-start-2' : 'xl:col-start-3'; ?> xl:col-span-4">
         <p class="text-Black pb-7 md:pb-0  max-w-[280px] xl:max-w-none"><?php echo wp_kses_post( $opening_text ); ?></p>
       </div>
     </div>

@@ -10,8 +10,6 @@
   &__header
     @apply relative mb-[163px]
 
-    // Bottom wave: same 4-segment curve as __content, reversed right-to-left.
-    // Extends 80px beyond each side; overflow-x-hidden on parent clips the flat baseline ends.
     &::after
       @apply absolute -left-[80px] -bottom-[163px] h-[165px] bg-no-repeat pointer-events-none
       width: calc(100% + 160px)
@@ -31,8 +29,6 @@
     @apply relative mt-[163px]
     filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.25)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.25))
 
-    // Top wave: Mint3 fill + Mint stroke.
-    // Extends 80px beyond each side; overflow-x-hidden on parent clips the flat baseline ends.
     &::before
       @apply absolute -left-[80px] -top-[163px] h-[165px] bg-no-repeat pointer-events-none
       width: calc(100% + 160px)
