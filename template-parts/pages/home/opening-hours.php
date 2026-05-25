@@ -10,19 +10,21 @@
 <section id="section-opening-hours" class="section-opening-hours bg-white pt-48 xl:pt-32 pb-48 xl:pb-32">
   <div class="theme-container">
     <div class="theme-grid">
-      <div class="col-span-2 md:col-span-6 xl:col-start-3 xl:col-span-8 pb-12 md:pb-14 xl:pb-16">
+      <div class="col-span-2 md:col-span-6 xl:col-span-12 pb-12 xl:pb-16">
         <?php
         $img_id = get_field( 'opening_hours_image' );
         if ( $img_id ) :
           ?>
-            <?php
-            echo wp_get_attachment_image(
-              $img_id,
-              'full',
-              false,
-              array('class' => 'object-cover',)
-            );
-            ?>
+            <div class="oh-image-wrap">
+              <?php
+              echo wp_get_attachment_image(
+                $img_id,
+                'full',
+                false,
+                array( 'class' => 'oh-image-reveal w-full block object-cover' )
+              );
+              ?>
+            </div>
           <?php
         endif;
         ?>
@@ -30,7 +32,7 @@
       <div class="col-span-2 xl:col-start-2">
         <p class="overtitle text-Black pb-7 md:pb-14 xl:pb-0"><?php the_field( 'opening_hours_overtitle' ); ?></p>
       </div>
-      <div class="col-span-2 md:col-start-5 xl:col-start-10 pr-28 md:pr-0 xl:pl-16 md:pb-12 order-2 md:order-none">
+      <div class="col-span-2 md:col-start-5 xl:col-start-10 flex justify-start md:justify-end items-center order-2 md:order-none mb-8">
        <?php
         $hero_button = get_field( 'opening_hours_button' );
         if ( $hero_button ) :
