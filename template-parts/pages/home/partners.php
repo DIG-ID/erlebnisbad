@@ -9,7 +9,7 @@
 
 ?>
 <section id="section-partners" class="section-partners bg-white">
-  <div class="theme-container text-center pb-48 md:pb-40 xl:pb-48 pt-52 xl:pt-28">
+  <div class="theme-container text-center pb-48 md:pb-40 xl:pb-40 pt-52 xl:pt-28">
     <h2 class="title-main text-Black pb-24 md:pb-14 xl:pb-28"><?php the_field( 'partners_title' ); ?></h2>
 
     <?php if ( have_rows( 'partners_items' ) ) : ?>
