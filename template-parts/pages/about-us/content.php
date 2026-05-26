@@ -8,10 +8,10 @@
  */
 
 ?>
-<section id="section-content" class="section-content bg-Mint1 waves waves__top--color waves__bottom--color pt-28 xl:pt-24 pb-52 md:pb-40 xl:pb-44">
+<section id="section-content" class="section-content bg-Mint1 waves waves__top--color waves__bottom--color pt-28 xl:pt-24 pb-52 md:pb-40 xl:pb-24">
     <div class="theme-container">
         <div class="theme-grid grid-flow-row-dense">
-            <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-7 xl:col-span-4 md:pt-28 xl:pt-10">
+            <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-7 xl:col-span-4 md:pt-28 xl:pt-0">
                 <?php $img_id = get_field( 'content_image' ); if ( $img_id ) : ?>
                 <div class="image-fill image-fill--5 image-fill--contain image-fill--mint-2">
                     <?php

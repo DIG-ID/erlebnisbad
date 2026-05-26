@@ -13,7 +13,7 @@
 
 	<div class="theme-container ">
 		<div class="theme-grid items-center">
-			<div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 order-2 md:order-none">
+			<div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-4 order-2 md:order-none">
 				<?php
 				$img_id = get_field( 'wellness_image' );
 				if ( $img_id ) :

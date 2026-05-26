@@ -11,7 +11,7 @@
 <section id="section-kids-family" class="section-kids-family bg-Mint">
   <div class="theme-container pt-36 md:pt-24 xl:pt-10 pb-32 md:pb-24 xl:pb-36">
     <div class="theme-grid items-center">
-      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 order-2 md:order-none">
+      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-4 order-2 md:order-none xl:pt-8">
         <?php
         $img_id = get_field( 'kids_family_image' );
         if ( $img_id ) :

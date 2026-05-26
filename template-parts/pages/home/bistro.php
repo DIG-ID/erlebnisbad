@@ -11,7 +11,7 @@
 <section id="section-bistro" class="section-bistro bg-Mint1 waves waves__top--color waves__bottom--color">
   <div class="theme-container pb-32 md:pb-24 xl:pb-40">
     <div class="theme-grid">
-      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 order-2 md:order-none pt-52 xl:pt-36">
+      <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-4 order-2 md:order-none pt-52 xl:pt-36">
         <?php
         $img_id = get_field( 'bistro_image' );
         if ( $img_id ) :
