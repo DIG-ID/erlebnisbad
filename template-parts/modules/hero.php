@@ -12,9 +12,10 @@ $id_desktop   = ! empty( $images['desktop'] ) ? $images['desktop'] : null;
 $id_tablet    = ! empty( $images['tablet'] )  ? $images['tablet']  : $id_desktop;
 $id_mobile    = ! empty( $images['mobile'] )  ? $images['mobile']  : $id_tablet;
 $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
+$ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_ticker' ) : '';
 ?>
 
-<section class="section-hero w-full h-svh max-h-[1045px] flex flex-col transition-all duration-300 ease-in-out">
+<section class="section-hero w-full h-svh max-h-[1045px] flex flex-col transition-all duration-300 ease-in-out<?php echo $ticker_text ? ' has-ticker' : ''; ?>">
 
 	<div class="section-hero__media relative flex-1">
 
@@ -139,7 +140,17 @@ $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 		</div>
 
 	</div>
-
+	
+	<?php if ( $ticker_text ) : ?>
+	<div class="news-ticker" aria-label="<?php echo esc_attr( $ticker_text ); ?>">
+		<div class="news-ticker__track">
+			<span class="news-ticker__item" aria-hidden="true"><?php echo esc_html( $ticker_text ); ?></span>
+			<span class="news-ticker__item" aria-hidden="true"><?php echo esc_html( $ticker_text ); ?></span>
+		</div>
+	</div>
+	<?php endif; ?>
+	
+	<?php if ( ! $ticker_text ) : ?>
 	<div class="section-hero__waves" aria-hidden="true">
 
 		<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 112" fill="none" class="hidden xl:block stroke-Mint">
@@ -158,5 +169,6 @@ $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 		</svg>
 
 	</div>
+	<?php endif; ?>
 
 </section>

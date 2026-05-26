@@ -1,3 +1,26 @@
+// News ticker
+@keyframes news-ticker
+  from
+    transform: translateX(0)
+  to
+    transform: translateX(-50%)
+
+.news-ticker
+  @apply bg-Mint overflow-hidden w-full
+
+  &__track
+    @apply flex w-max
+    animation: news-ticker 25s linear infinite
+
+    &:hover
+      animation-play-state: paused
+
+  &__item
+    @apply whitespace-nowrap font-raleway italic uppercase text-sm md:text-xl text-white pt-5 pb-16 px-12
+    &::after
+      content: ''
+      @apply mx-5
+
 // Hero mask paths inlined as data URIs — zero HTTP requests.
 // Each variable holds the SVG path for its breakpoint, compiled into the CSS bundle.
 $hero-mask-mobile:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 397 794'><path fill='white' d='M0 786.5C0 786.5 56 770 198.5 786.5C341 803 397 786.5 397 786.5L397 0H0V786.5Z'/></svg>")
@@ -43,7 +66,7 @@ $hero-mask-desktop: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/s
 
 .section-hero
 
-  &__figure
+  &:not(.has-ticker) &__figure
     -webkit-mask-image: $hero-mask-mobile
     mask-image: $hero-mask-mobile
     -webkit-mask-size: 100% 100%
