@@ -14,6 +14,7 @@
             <div class="col-span-2 md:col-start-2 md:col-span-4 xl:col-start-5 xl:col-span-4">
                 <p class="text-Black pb-20 md:pb-24"><?php the_field( 'intro_text' ); ?></p>
             </div>
+            <?php /*
             <div class="col-span-2 md:col-span-6 xl:col-span-12 pb-24 md:pb-36 xl:pb-28">
                 <?php
                 $img_id = get_field( 'intro_image' );
@@ -33,6 +34,7 @@
                 endif;
                 ?>
             </div>
+            */ ?>
             <?php if ( have_rows( 'intro_items' ) ) : ?>
             </div>
       <div class="section-intro__items flex flex-col items-center gap-7 md:flex-row md:flex-wrap md:justify-center md:items-stretch md:gap-9 xl:gap-24">
