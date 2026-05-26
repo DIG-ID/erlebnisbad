@@ -3,8 +3,6 @@
   &__img
     @apply max-w-[600px]
     img
-      // Fixed aspect ratio keeps siblings aligned in a row regardless of each image's natural ratio.
-      // `object-cover` crops to fill, so the shape mask stays consistent.
       @apply relative p-4 xl:p-8 z-10 w-full aspect-square object-cover rounded-full
   &:before
     @apply absolute inset-0 z-0
