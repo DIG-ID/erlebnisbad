@@ -9,8 +9,8 @@
 
 ?>
 <section id="section-partners" class="section-partners bg-white">
-  <div class="theme-container text-center pt-48 md:pt-32 pb-56 md:pb-64">
-    <h2 class="title-main text-Black pb-20 xl:pb-12"><?php the_field( 'partners_title' ); ?></h2>
+  <div class="theme-container text-center pb-48 md:pb-40 xl:pb-48 pt-52 xl:pt-28">
+    <h2 class="title-main text-Black pb-24 md:pb-14 xl:pb-28"><?php the_field( 'partners_title' ); ?></h2>
 
     <?php if ( have_rows( 'partners_items' ) ) : ?>
       <div class="grid grid-cols-2 gap-x-8 gap-y-10 items-center justify-items-center md:flex md:flex-row md:flex-wrap md:justify-center md:gap-12 xl:gap-44">
