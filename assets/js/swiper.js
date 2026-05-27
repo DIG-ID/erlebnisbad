@@ -1,5 +1,19 @@
 import Swiper from 'swiper/bundle';
 
+// Intro info blocks slider
+document.querySelectorAll( '.intro-slider__swiper' ).forEach( ( el ) => {
+	const section = el.closest( '.intro-slider' );
+	new Swiper( el, {
+		grabCursor:    true,
+		slidesPerView: 1,
+		spaceBetween:  0,
+		navigation: {
+			prevEl: section.querySelector( '.intro-slider__prev' ),
+			nextEl: section.querySelector( '.intro-slider__next' ),
+		},
+	} );
+} );
+
 // Posts slider — reusable across pages
 document.querySelectorAll( '.posts-slider__swiper' ).forEach( ( el ) => {
 	const section = el.closest( '.posts-slider' );
