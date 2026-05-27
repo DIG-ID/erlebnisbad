@@ -106,9 +106,9 @@ $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_t
 					<div class="col-start-1 col-span-2 md:col-span-6 <?php echo esc_attr( $title_col_span ); ?>">
 						<?php
 						if ( get_field( 'hero_title_option' ) === 'custom' ) :
-							?><h1 class="title-big"><?php the_field( 'hero_title' ); ?></h1><?php
+							?><h1 class="title-big-hero"><?php the_field( 'hero_title' ); ?></h1><?php
 						elseif ( get_field( 'hero_title_option' ) === 'default' ) :
-							?><h1 class="title-big"><?php the_title(); ?></h1><?php
+							?><h1 class="title-big-hero"><?php the_title(); ?></h1><?php
 						endif;
 						?>
 					</div>
