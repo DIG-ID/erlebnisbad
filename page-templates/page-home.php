@@ -15,8 +15,8 @@ if ( have_posts() ) :
 		do_action( 'before_main_content' );
 			get_template_part( 'template-parts/modules/hero' );
 			get_template_part( 'template-parts/pages/home/intro' );
-			get_template_part( 'template-parts/pages/home/wellness' );
 			get_template_part( 'template-parts/pages/home/waterpark' );
+			get_template_part( 'template-parts/pages/home/wellness' );
 			get_template_part( 'template-parts/pages/home/kids-family' );
 			get_template_part( 'template-parts/pages/home/opening-hours');
 			do_action( 'wave_separator' );
