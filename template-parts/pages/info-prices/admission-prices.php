@@ -21,7 +21,7 @@
             <div class="col-span-2 md:col-start-1 md:col-span-3 xl:col-start-2 xl:col-span-5 xl:pt-40 text-center justify-items-center md:text-left md:justify-items-start">
                 <p class="overtitle text-Black pb-2 md:pb-3 xl:pb-4"><?php the_field( 'prices_info_admission_prices_overtitle' ); ?></p>
                 <h2 class="title-main text-Black pb-8"><?php the_field( 'prices_info_admission_prices_title' ); ?></h2>
-                <p class="text-Black pb-8 xl:max-w-xl"><?php the_field( 'prices_info_admission_prices_text' ); ?></p>
+                <p class="text-Black pb-8 xl:max-w-[600px]"><?php the_field( 'prices_info_admission_prices_text' ); ?></p>
                 <?php
                 $hero_button = get_field( 'prices_info_admission_prices_button' );
                 if ( $hero_button ) :
