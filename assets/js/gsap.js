@@ -41,7 +41,7 @@ export { gsap, ScrollTrigger, lenis };
 
 
 
-gsap.utils.toArray(".panel").forEach((panel, i) => {
+gsap.utils.toArray(".panel-home").forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
     start: "top top",

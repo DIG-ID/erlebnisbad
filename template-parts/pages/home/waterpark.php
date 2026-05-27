@@ -9,7 +9,7 @@
 
 ?>
 
-<section id="section-waterpark" class="section-waterpark bg-Mint1 pt-36 md:pt-24 xl:pt-10 pb-32 md:pb-24 xl:pb-56">
+<section id="section-waterpark" class="section-waterpark panel-home panel-home--waterpark bg-Mint1 pt-36 md:pt-24 xl:pt-10 pb-32 md:pb-24 xl:pb-56">
 
 	<div class="theme-container ">
 		<div class="theme-grid items-center">
