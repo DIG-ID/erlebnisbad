@@ -10,7 +10,7 @@
 ?>
 
 <section id="section-waterpark" class="section-waterpark panel-home panel-home--waterpark bg-Mint1">
-	<div class="theme-container pt-36 md:pt-24 xl:pt-10 pb-32 md:pb-24 xl:pb-56">
+	<div class="theme-container pt-36 md:pt-24 xl:pt-8 pb-32 md:pb-24 xl:pb-32">
 		<div class="theme-grid items-center">
 			<div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-4 order-2 md:order-none">
 				<?php
