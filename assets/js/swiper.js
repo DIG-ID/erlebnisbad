@@ -27,20 +27,24 @@ document.querySelectorAll( '.posts-slider__swiper' ).forEach( ( el ) => {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView: 1.8,
-				spaceBetween:  20,
+				slidesPerView:    1.8,
+				spaceBetween:     20,
+				slidesOffsetAfter: 20,
 			},
 			1024: {
-				slidesPerView: 2.8,
-				spaceBetween:  20,
+				slidesPerView:    2.8,
+				spaceBetween:     20,
+				slidesOffsetAfter: 20,
 			},
 			1280: {
-				slidesPerView: 2.8,
-				spaceBetween:  32,
+				slidesPerView:    2.8,
+				spaceBetween:     32,
+				slidesOffsetAfter: 64,
 			},
 			1536: {
-				slidesPerView: 3.8,
-				spaceBetween:  32,
+				slidesPerView:    3.8,
+				spaceBetween:     32,
+				slidesOffsetAfter: 64,
 			},
 		},
 	} );
