@@ -15,7 +15,7 @@ if ( have_posts() ) :
 		do_action( 'before_main_content' );
 			get_template_part( 'template-parts/modules/hero' );
 			get_template_part( 'template-parts/pages/home/intro' );
-			?><div class="panels-container"><?php
+			?><div class="panels-container mt-[300px]"><?php
 				get_template_part( 'template-parts/pages/home/wellness' );
 				get_template_part( 'template-parts/pages/home/waterpark' );
 				get_template_part( 'template-parts/pages/home/kids-family' );
