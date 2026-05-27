@@ -12,8 +12,8 @@
   <div class="theme-container">
     <?php if ( have_rows( 'features_items' ) ) : ?>
       <?php
-      // Tailwind needs the full class string at build time, so we list the shape variants statically.
-      $shape_classes = array( 'image-fill--1', 'image-fill--2', 'image-fill--3', 'image-fill--4', 'image-fill--5' );
+      // Shape variants cycle through the six available `shape-bg--<n>` blobs.
+      $shape_classes = array( 'shape-bg--1', 'shape-bg--2', 'shape-bg--3', 'shape-bg--4', 'shape-bg--5', 'shape-bg--6' );
       // Order classes (kept as literals so Tailwind picks them up). Used on mobile to preserve reading order
       // when the column wrappers collapse via display: contents.
       $order_classes = array(
@@ -49,18 +49,11 @@
           $order_class = isset( $order_classes[ $item['order'] ] ) ? $order_classes[ $item['order'] ] : '';
           ?>
           <div class="section-features__item <?php echo esc_attr( $order_class ); ?> md:order-none flex flex-col items-center text-center">
-            <div class="section-features__inner w-full max-w-[306px] xl:max-w-[600px]">
+            <div class="section-features__inner w-full max-w-[306px] xl:max-w-[547px]">
               <?php if ( $item['image'] ) : ?>
-                <div class="image-fill <?php echo esc_attr( $item['shape'] ); ?> image-fill--mint-2 mb-8 md:mb-10 xl:mb-12">
-                  <?php
-                  echo wp_get_attachment_image(
-                      $item['image'],
-                      'full',
-                      false,
-                      array( 'class' => 'object-cover' )
-                  );
-                  ?>
-                </div>
+                <figure class="shape-bg shape-bg__img <?php echo esc_attr( $item['shape'] ); ?> before:bg-Mint2 mb-8 md:mb-10 xl:mb-12">
+                  <?php echo wp_get_attachment_image( $item['image'], 'full' ); ?>
+                </figure>
               <?php endif; ?>
 
               <?php if ( $item['title'] ) : ?>
