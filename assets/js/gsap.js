@@ -49,7 +49,7 @@ if (panels.length) {
   panels.forEach((panel, i) => {
     ScrollTrigger.create({
       trigger: panel,
-      start: () => `top ${window.innerHeight * 0.3 + i * 80}px`,
+      start: () => `top ${window.innerHeight * 0.3 + i * 40}px`,
       endTrigger: lastPanel,
       end: () => `top ${window.innerHeight * 0.3 + (panels.length - 1) * 80 - 100}px`,
       pin: true,
