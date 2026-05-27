@@ -41,11 +41,19 @@ export { gsap, ScrollTrigger, lenis };
 
 
 
-gsap.utils.toArray(".panel-home").forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "top top",
-    pin: true,
-    pinSpacing: false
+const panels = gsap.utils.toArray(".panel-home");
+
+if (panels.length) {
+  const lastPanel = panels[panels.length - 1];
+
+  panels.forEach((panel, i) => {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: () => `top ${window.innerHeight * 0.3 + i * 80}px`,
+      endTrigger: lastPanel,
+      end: () => `top ${window.innerHeight * 0.3 + (panels.length - 1) * 80 - 100}px`,
+      pin: true,
+      pinSpacing: false
+    });
   });
-}); 
+} 
