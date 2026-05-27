@@ -30,5 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------------------------
   // Project-specific initialisation goes here
   // ---------------------------------------------------
+  initHomeStack();
 
 });

@@ -38,3 +38,14 @@ function initLenis() {
 const lenis = initLenis();
 
 export { gsap, ScrollTrigger, lenis };
+
+
+
+gsap.utils.toArray(".panel").forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top",
+    pin: true,
+    pinSpacing: false
+  });
+}); 
