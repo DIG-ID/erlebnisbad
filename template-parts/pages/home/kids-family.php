@@ -9,7 +9,7 @@
 
 ?>
 <section id="section-kids-family" class="section-kids-family panel-home panel-home--kids-family bg-Mint">
-  <div class="theme-container pt-36 md:pt-24 xl:pt-8 pb-32 md:pb-24 xl:pb-32">
+  <div class="theme-container pb-16 md:pb-24 xl:pb-32">
     <div class="theme-grid items-center">
       <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-4 order-2 md:order-none xl:pt-8">
         <?php
