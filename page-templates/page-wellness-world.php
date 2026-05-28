@@ -17,7 +17,7 @@ if ( have_posts() ) :
 			get_template_part( 'template-parts/modules/intro' );
 			get_template_part( 'template-parts/pages/wellness-world/sauna-offers' );
 			get_template_part( 'template-parts/modules/spotlights' );
-			get_template_part( 'template-parts/modules/opening-hours' );	
+			get_template_part( 'template-parts/modules/opening-hours' );
 		do_action( 'after_main_content' );
 	endwhile;
 endif;
