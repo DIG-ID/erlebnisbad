@@ -41,19 +41,21 @@ export { gsap, ScrollTrigger, lenis };
 
 
 
-const panels = gsap.utils.toArray(".panel-home");
+if (document.body.classList.contains('page-template-page-home')) {
+  const panels = gsap.utils.toArray(".panel-home");
 
-if (panels.length) {
-  const lastPanel = panels[panels.length - 1];
+  if (panels.length) {
+    const lastPanel = panels[panels.length - 1];
 
-  panels.forEach((panel, i) => {
-    ScrollTrigger.create({
-      trigger: panel,
-      start: () => `top ${window.innerHeight * 0.28 + i * 60}px`,
-      endTrigger: lastPanel,
-      end: () => `top ${window.innerHeight * 0.28 + (panels.length - 1) * 80 - 120}px`,
-      pin: true,
-      pinSpacing: false
+    panels.forEach((panel, i) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: () => `top ${window.innerHeight * 0.28 + i * 60}px`,
+        endTrigger: lastPanel,
+        end: () => `top ${window.innerHeight * 0.28 + (panels.length - 1) * 80 - 120}px`,
+        pin: true,
+        pinSpacing: false
+      });
     });
-  });
+  }
 } 
