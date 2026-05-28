@@ -42,7 +42,7 @@
         </div>
 
         <div class="intro-slider bg-Mint relative">
-          <div class="intro-slider__inner px-8 md:px-9 xl:px-12 mx-auto xl:max-w-[1920px] py-16 md:py-20 xl:py-36">
+          <div class="intro-slider__inner px-8 md:px-9 xl:px-12 mx-auto xl:max-w-[1920px] py-16 md:py-20 xl:pt-36 xl:pb-56">
 
             <?php if ( have_rows( 'intro_info_block' ) ) : ?>
             <div class="intro-slider__swiper swiper">

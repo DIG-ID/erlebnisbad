@@ -80,3 +80,14 @@ $intro-top-mask-desktop: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2
 
     &__next
       @apply right-4 md:right-6 xl:right-10
+
+
+  .panels-container
+    @apply mt-[300px]
+
+  .section-intro.has-info-block ~ .panels-container
+    @apply mt-[100px]
+
+  .section-intro.has-info-block ~ .panels-container .section-wellness::before
+    background-color: #66C2B0
+    filter: none

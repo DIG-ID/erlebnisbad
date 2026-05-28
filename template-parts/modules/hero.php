@@ -174,7 +174,7 @@ $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_t
 
 </section>
 <?php if ( $ticker_text ) : ?>
-<div class="section-hero__waves mt-8" aria-hidden="true">
+<div class="section-hero__waves" aria-hidden="true">
 
 		<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 112" fill="none" class="hidden xl:block stroke-Mint">
 			<path vector-effect="non-scaling-stroke" stroke-width="1" fill="none" d="M0 34.278c177.226-13.588 415.148-21.865 704.479 2.616C1077.92 68.492 1374.62 139.138 1920 97.379"/>

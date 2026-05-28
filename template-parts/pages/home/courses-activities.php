@@ -12,7 +12,7 @@
   <div class="theme-container">
     <div class="theme-grid">
       <div class="col-span-2 xl:col-start-2">
-        <p class="overtitle text-Black pb-7 md:pb-14 xl:pb-0"><?php the_field( 'courses_activities_overtitle' ); ?></p>
+        <p class="overtitle text-Black pb-8 xl:pb-4"><?php the_field( 'courses_activities_overtitle' ); ?></p>
       </div>
       <div class="col-span-2 md:col-start-5 xl:col-start-10 pr-28 md:pr-0 xl:pl-16 pb-20 md:pb-12 order-2 md:order-none">
         <?php
@@ -22,11 +22,20 @@
             $link_title  = $hero_button['title'];
             $link_target = $hero_button['target'] ? $hero_button['target'] : '_self';
             ?>
-            <a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+            <a class="btn btn-primary inline-flex md:hidden" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
         <?php endif; ?>
       </div>
       <div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5">
-        <h2 class="title-main text-Black pb-8 max-w-[300px] md:max-w-none xl:max-w-[630px] "><?php the_field( 'courses_activities_title' ); ?></h2>
+        <h2 class="title-main text-Black pb-7 xl:pb-4 max-w-[300px] md:max-w-none xl:max-w-[630px] "><?php the_field( 'courses_activities_title' ); ?></h2>
+        <?php
+        $hero_button = get_field( 'courses_activities_button' );
+        if ( $hero_button ) :
+            $link_url    = $hero_button['url'];
+            $link_title  = $hero_button['title'];
+            $link_target = $hero_button['target'] ? $hero_button['target'] : '_self';
+            ?>
+            <a class="btn btn-primary !hidden md:!inline-flex" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+        <?php endif; ?>
       </div>
       <div class="col-span-2 md:col-span-3 xl:col-start-8 xl:col-span-4 ">
         <p class="text-Black pb-8 md:pb-36 xl:pb-32"><?php the_field( 'courses_activities_text' ); ?></p>
