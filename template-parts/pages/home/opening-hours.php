@@ -32,7 +32,7 @@
       <div class="col-span-2 xl:col-start-2">
         <p class="overtitle text-Black pb-8 xl:pb-4"><?php the_field( 'opening_hours_overtitle' ); ?></p>
       </div>
-      <div class="col-span-2 md:col-start-5 xl:col-start-10 flex justify-start md:justify-end items-center order-2 md:order-none mb-8">
+      <div class="col-span-2 md:col-start-5 xl:col-start-10 flex justify-start md:justify-end items-center order-2 md:order-none">
        <?php
         $hero_button = get_field( 'opening_hours_button' );
         if ( $hero_button ) :

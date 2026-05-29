@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-access" class="section-access bg-Mint waves waves__top--color-dark waves__bottom--color-dark pt-12 xl:pt-32 pb-32 md:pb-44 xl:pb-20 mt-0 md:mt-0 xl:mt-0">
+<section id="section-access" class="section-access bg-Mint waves waves__top--color-dark waves__bottom--color-dark pt-12 xl:pt-32 pb-32 md:pb-44 xl:pb-20 !mt-0 md:mt-0 xl:mt-0">
     <div class="theme-container">
         <div class="theme-grid text-center justify-items-center">
             <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-5 xl:col-span-4">

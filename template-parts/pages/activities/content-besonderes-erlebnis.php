@@ -26,7 +26,7 @@ if ( ! $besonderes_query->have_posts() ) {
 	<div class="theme-container">
 		<div class="theme-grid posts-slider__header">
 			<div class="col-span-2 md:col-span-3 xl:col-span-3 xl:col-start-2">
-				<h2 class="title-main"><?php the_field( 'cards_content_besondere_erlebnisse_title' ); ?></h2>
+				<h2 class="title-main pb-7 md:pb-0"><?php the_field( 'cards_content_besondere_erlebnisse_title' ); ?></h2>
 			</div>
 			<div class="col-span-2 md:col-span-3 xl:col-span-4 flex items-end">
 				<p><?php the_field( 'cards_content_besondere_erlebnisse_text' ); ?></p>

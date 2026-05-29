@@ -55,9 +55,9 @@
       @apply pr-24
 
   &__nav-btn
-    @apply relative pb-4 text-left
-    @media (max-width: 1279px)
-      border-bottom: 0.5px solid #A1DBD0
+    @apply relative pb-4 pl-2 md:pl-0 text-left
+    //@media (max-width: 1279px)
+      //border-bottom: 0.5px solid #A1DBD0
     &::after
       content: ''
       @apply absolute left-0 right-8 h-[3px] bg-Mint2 scale-x-0
@@ -97,7 +97,8 @@
       align-items: flex-start
 
   &__item-heading
-    @apply m-0 p-0 font-normal
+    @apply m-0 p-0 font-normal inline-flex xl:block items-end
+    border-bottom: 0.5px solid #A1DBD0
 
   &__content-title
-    @apply inline-block mb-5 text-[25px] leading-[35px]
+    @apply inline-block mb-5 text-xl xl:text-[25px] xl:leading-[35px]
