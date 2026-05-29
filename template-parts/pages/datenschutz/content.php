@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-datenschutz-content" class="section-datenschutz-content bg-white pt-20 md:pt-28 xl:pt-36 pb-32 md:pb-44 xl:pb-52">
+<section id="section-datenschutz-content" class="section-datenschutz-content bg-white pt-20 md:pt-28 xl:pt-36 pb-20 md:pb-44 xl:pb-52">
     <div class="theme-container">
 
         <?php if ( get_field( 'datenschutz_intro' ) ) : ?>
@@ -28,7 +28,7 @@
                 ?>
                 <div class="theme-grid pb-12 md:pb-16 xl:pb-20">
                     <?php if ( $title ) : ?>
-                        <div class="col-span-2 md:col-span-6 xl:col-start-2 xl:col-span-4">
+                        <div class="col-span-2 md:col-span-6 xl:col-start-2 xl:col-span-4 pb-4 md:pb-8">
                             <h2 class="title-main text-Black max-w-[546px]"><?php echo esc_html( $title ); ?></h2>
                         </div>
                     <?php endif; ?>

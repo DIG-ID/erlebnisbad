@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-impressum-content" class="section-impressum-content bg-white pt-20 md:pt-28 xl:pt-36 pb-32 md:pb-44 xl:pb-52">
+<section id="section-impressum-content" class="section-impressum-content bg-white pt-12 md:pt-28 xl:pt-36 pb-32 md:pb-44 xl:pb-52">
     <div class="theme-container">
 
         <?php if ( have_rows( 'impressum' ) ) : ?>

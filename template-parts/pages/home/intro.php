@@ -10,7 +10,7 @@
 ?>
 <section id="section-intro" class="section-intro bg-white<?php echo get_field( 'intro_enable_info_block' ) ? ' has-info-block' : ''; ?>">
 
-  <div class="theme-container pt-36 md:pt-24 xl:pt-36">
+  <div class="theme-container pt-20 md:pt-24 xl:pt-36">
     <div class="theme-grid text-center justify-items-center">
         <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-4 xl:col-span-6">
             <h2 class="title-main text-Black pb-8 md:pb-12 xl:pb-10 max-w-[300px] md:max-w-[630px] xl:max-w-[760px]"><?php the_field( 'intro_title' ); ?></h2>

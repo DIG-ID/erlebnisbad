@@ -8,9 +8,9 @@
  */
 
 ?>
-<section id="section-maps-contact" class="section-maps-contact bg-white pt-24 xl:pt-20 pb-32 xl:pb-52">
+<section id="section-maps-contact" class="section-maps-contact bg-white pt-12 xl:pt-20 pb-20 md:pb-32 xl:pb-52">
     <div class="theme-container">
-        <div class="theme-grid justify-items-center text-center pb-24 md:pb-32">
+        <div class="theme-grid justify-items-center text-center pb-20 md:pb-32">
             <div class="col-span-2 md:col-span-6 xl:col-start-5 xl:col-span-4">
                 <p class="text-Black max-w-80 md:max-w-[593px] xl:max-w-none"><?php the_field( 'maps_contact_text' ); ?></p>
             </div>

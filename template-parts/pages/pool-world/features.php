@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-features" class="section-features bg-white pt-16 md:pt-36 xl:pt-32 pb-36 md:pb-52">
+<section id="section-features" class="section-features bg-white pt-12 md:pt-36 xl:pt-32 pb-32 md:pb-52">
   <div class="theme-container">
     <?php if ( have_rows( 'features_items' ) ) : ?>
       <?php
@@ -72,7 +72,7 @@
           <?php
       };
       ?>
-      <div class="flex flex-col md:flex-row md:items-start gap-y-28 md:gap-y-0 md:gap-x-4 xl:gap-x-5">
+      <div class="flex flex-col md:flex-row md:items-start gap-y-12 md:gap-y-0 md:gap-x-4 xl:gap-x-5">
         <!-- Left column: display:contents on mobile so items become direct children of the outer flex (preserves reading order via `order-*`); flex column on md+ so it sizes independently. -->
         <div class="contents md:flex md:flex-col md:flex-1 md:gap-y-32 xl:items-end xl:pr-[78px]">
           <?php foreach ( $left_items as $item ) : ?>
@@ -88,7 +88,7 @@
       </div>
     <?php endif; ?>
   </div>
-  <div class="theme-container pt-32">
+  <div class="theme-container pt-20 md:pt-32">
     <div class="theme-grid text-center justify-items-center ">
         <div class="col-start-1 col-span-2 md:col-span-6 xl:col-start-2 xl:col-span-4 pb-8 md:pb-16 xl:pb-0">
             <h2 class="title-main text-Black pb-7"><?php the_field( 'features_accessibility_title' ); ?></h2>

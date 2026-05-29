@@ -8,9 +8,9 @@
  */
 
 ?>
-<section id="section-team" class="section-team bg-white pt-20 md:pt-28 xl:pt-36 pb-32 md:pb-44 xl:pb-52">
+<section id="section-team" class="section-team bg-white pt-12 md:pt-28 xl:pt-36 pb-32 md:pb-44 xl:pb-52">
     <div class="theme-container">
-        <div class="theme-grid gap-y-16 md:gap-y-20 xl:gap-y-24">
+        <div class="theme-grid gap-y-12 md:gap-y-20 xl:gap-y-24">
 
             <div class="col-span-2 md:col-span-6 xl:col-start-2 xl:col-span-9">
                 <?php if ( get_field( 'team_overtitle' ) ) : ?>

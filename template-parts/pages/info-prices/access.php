@@ -8,12 +8,12 @@
  */
 
 ?>
-<section id="section-access" class="section-access bg-Mint waves waves__top--color-dark waves__bottom--color-dark pt-20 xl:pt-32 pb-16 md:pb-44 xl:pb-20 mt-0 md:mt-0 xl:mt-0">
+<section id="section-access" class="section-access bg-Mint waves waves__top--color-dark waves__bottom--color-dark pt-12 xl:pt-32 pb-32 md:pb-44 xl:pb-20 mt-0 md:mt-0 xl:mt-0">
     <div class="theme-container">
         <div class="theme-grid text-center justify-items-center">
             <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-5 xl:col-span-4">
                 <h2 class="title-main text-Black pb-2 md:pb-9 xl:pb-8"><?php the_field( 'prices_info_access_title' ); ?></h2>
-                <p class="text-Black pb-14 md:max-w-[593px]"><?php the_field( 'prices_info_access_text' ); ?></p>
+                <p class="text-Black pb-7 md:pb-14 md:max-w-[593px]"><?php the_field( 'prices_info_access_text' ); ?></p>
             </div>
             <?php if ( have_rows( 'prices_info_access_items' ) ) : ?>
             <div class="col-span-2 md:col-span-6 xl:col-start-2 xl:col-span-10 section-intro__items flex flex-col items-center gap-7 md:flex-row md:flex-wrap md:justify-center md:items-stretch md:gap-9 xl:gap-24">

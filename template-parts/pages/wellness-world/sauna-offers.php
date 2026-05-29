@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-sauna-offers" class="section-sauna-offers bg-white pt-16 md:pt-32 pb-32 xl:pb-28">
+<section id="section-sauna-offers" class="section-sauna-offers bg-white pt-12 md:pt-32 pb-32 xl:pb-28">
   <div class="theme-container">
     <div class="theme-grid text-center justify-items-center pb-16 md:pb-24 xl:pb-24">
       <div class="col-span-2 md:col-start-2 md:col-span-4 xl:col-start-5 xl:col-span-4">
@@ -31,7 +31,7 @@
           0 => 'xl:pt-36',
       );
       ?>
-      <div class="theme-grid gap-y-16 md:gap-y-48 xl:gap-y-0 items-start">
+      <div class="theme-grid gap-y-12 md:gap-y-48 xl:gap-y-0 items-start">
         <?php
         while ( have_rows( 'sauna_offers_items' ) ) :
           the_row();
@@ -70,7 +70,7 @@
         <?php endif; ?>
         </div>
         <?php if ( have_rows( 'sauna_offers_extras' ) ) : $i = 0;?>
-          <div class="theme-grid gap-y-16 md:gap-y-0 items-start pt-24 md:pt-32 xl:pt-48">
+          <div class="theme-grid gap-y-12 md:gap-y-0 items-start pt-12 md:pt-32 xl:pt-48">
             <?php
             while ( have_rows( 'sauna_offers_extras' ) ) :
               the_row();
@@ -100,7 +100,7 @@
               </div>
             <?php endwhile; ?>
             <?php endif; ?>
-            <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-5 xl:col-span-4 text-center justify-items-center pt-16 xl:pt-32">
+            <div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-5 xl:col-span-4 text-center justify-items-center pt-8 xl:pt-32">
                 <h2 class="title-main text-Black pb-8"><?php the_field( 'sauna_offers_outro_title' ); ?></h2>
                 <p class="text-Black md:max-w-[593px] xl:max-w-none"><?php the_field( 'sauna_offers_outro_text' ); ?></p>
             </div>

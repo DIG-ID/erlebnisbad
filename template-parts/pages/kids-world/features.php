@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-kids-features" class="section-features bg-white pt-24 md:pt-36 xl:pt-32 pb-32 md:pb-24 xl:pb-44">
+<section id="section-kids-features" class="section-features bg-white pt-12 md:pt-36 xl:pt-32 pb-32 md:pb-24 xl:pb-44">
   <div class="theme-container">
     <?php if ( have_rows( 'features_items' ) ) : ?>
       <?php
@@ -24,7 +24,7 @@
 
       $i = 0;
       ?>
-      <div class="theme-grid gap-y-16 md:gap-y-56 xl:gap-y-0 items-start">
+      <div class="theme-grid gap-y-12 md:gap-y-56 xl:gap-y-0 items-start">
         <?php
         while ( have_rows( 'features_items' ) ) :
           the_row();
@@ -68,7 +68,7 @@
     <?php endif; ?>
 
     <div class="theme-grid text-center justify-items-center pt-24 md:pt-56 xl:pt-36">
-      <div class="col-start-1 col-span-2 md:col-span-6 xl:col-start-5 xl:col-span-4 pb-8 md:pb-16 xl:pb-0">
+      <div class="col-start-1 col-span-2 md:col-span-6 xl:col-start-5 xl:col-span-4 md:pb-16 xl:pb-0">
         <h2 class="title-main text-Black pb-7"><?php the_field( 'features_supervision_title' ); ?></h2>
         <p class="text-Black max-w-[306px] md:max-w-[593px] xl:max-w-none mx-auto"><?php the_field( 'features_supervision_text' ); ?></p>
       </div>

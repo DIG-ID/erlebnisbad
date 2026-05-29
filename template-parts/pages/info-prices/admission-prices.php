@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-admission-prices" class="section-admission-prices bg-Mint1 waves waves__top--color pt-24 md:pt-36 xl:pt-44 pb-12 md:pb-28 xl:pb-48">
+<section id="section-admission-prices" class="section-admission-prices bg-Mint1 waves waves__top--color pt-12 md:pt-36 xl:pt-44 pb-12 md:pb-28 xl:pb-48">
     <div class="theme-container">
         <div class="theme-grid grid-flow-row-dense">
             <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-8 xl:col-span-4">

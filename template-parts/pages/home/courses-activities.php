@@ -8,13 +8,13 @@
  */
 
 ?>
-<section id="courses-activities" class="section-courses-activities bg-white pt-12 md:pt-14 xl:pt-32 pb-48 xl:pb-36">
+<section id="courses-activities" class="section-courses-activities bg-white pt-12 md:pt-14 xl:pt-32 pb-32 xl:pb-36">
   <div class="theme-container">
     <div class="theme-grid">
       <div class="col-span-2 xl:col-start-2">
         <p class="overtitle text-Black pb-8 xl:pb-4"><?php the_field( 'courses_activities_overtitle' ); ?></p>
       </div>
-      <div class="col-span-2 md:col-start-5 xl:col-start-10 pr-28 md:pr-0 xl:pl-16 pb-20 md:pb-12 order-2 md:order-none">
+      <div class="col-span-2 md:col-start-5 xl:col-start-10 pr-28 md:pr-0 xl:pl-16 pb-12 md:pb-12 order-2 md:order-none">
         <?php
         $hero_button = get_field( 'courses_activities_button' );
         if ( $hero_button ) :
@@ -43,7 +43,7 @@
     </div>
 
     <?php if ( have_rows( 'courses_activities_images' ) ) : ?>
-      <div class="flex flex-col items-center gap-16 md:flex-row md:items-start md:justify-center md:gap-x-4 md:gap-y-0 xl:gap-x-[53px]">
+      <div class="flex flex-col items-center gap-12 md:flex-row md:items-start md:justify-center md:gap-x-4 md:gap-y-0 xl:gap-x-[53px]">
         <?php
         $i = 0;
         while ( have_rows( 'courses_activities_images' ) ) :

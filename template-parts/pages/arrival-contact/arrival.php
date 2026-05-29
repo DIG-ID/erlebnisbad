@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-arrival" class="section-arrival bg-white pt-24 xl:pt-20 pb-32 xl:pb-52">
+<section id="section-arrival" class="section-arrival bg-white pb-32 xl:pb-52">
     <div class="theme-container">
         <div class="theme-grid">
             <div class="col-span-2 md:col-span-6 xl:col-start-2 xl:col-span-4">

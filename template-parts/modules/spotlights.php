@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-spotlights" class="section-spotlights bg-Mint1 waves waves__top--color waves__bottom--color pt-24 md:pt-36 xl:pt-44 pb-32 md:pb-24 xl:pb-44 spotlight-panel-container">
+<section id="section-spotlights" class="section-spotlights bg-Mint1 waves waves__top--color waves__bottom--color pt-12 md:pt-36 xl:pt-44 pb-32 md:pb-24 xl:pb-44 spotlight-panel-container">
 	<div class="theme-container">
 
 		<div class="theme-grid grid-flow-row-dense spotlight-panel spotlight-panel--2">

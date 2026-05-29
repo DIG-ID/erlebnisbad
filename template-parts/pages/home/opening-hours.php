@@ -7,7 +7,7 @@
  * @since 1.0.0
  */
 ?>
-<section id="section-opening-hours" class="section-opening-hours bg-white pt-48 xl:pt-32 pb-48 xl:pb-32">
+<section id="section-opening-hours" class="section-opening-hours bg-white pt-48 xl:pt-32 pb-32 xl:pb-32">
   <div class="theme-container">
     <div class="theme-grid">
       <div class="col-span-2 md:col-span-6 xl:col-span-12 pb-12 xl:pb-16">

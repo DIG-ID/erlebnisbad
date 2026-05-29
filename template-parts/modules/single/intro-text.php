@@ -13,7 +13,7 @@ if ( empty( $intro_text ) ) {
 }
 ?>
 
-<section id="intro-text" class="intro-text xl:pt-16 pb-20 xl:pb-0">
+<section id="intro-text" class="intro-text xl:pt-16 pb-12 xl:pb-0">
 	<div class="theme-container">
 		<div class="theme-grid">
       <div class="col-span-2 md:col-span-5 xl:col-span-4 xl:col-start-2">

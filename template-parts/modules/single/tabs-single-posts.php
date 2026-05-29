@@ -22,7 +22,7 @@ if ( empty( $tabs ) ) {
 			</div>
 
 			<div class="tabs-posts__info-body order-2 xl:order-none col-span-2 md:col-span-6 xl:row-start-2 xl:col-start-2 xl:col-span-3">
-				<p class="text-[#373737] xl:max-w-[80%] pt-10 md:pt-14 pb-20 md:pb-28 xl:pb-0"><?php the_field( 'tabs_info_text' ); ?></p>
+				<p class="text-[#373737] xl:max-w-[80%] pt-10 md:pt-14 pb-12 md:pb-28 xl:pb-0"><?php the_field( 'tabs_info_text' ); ?></p>
 			</div>
 
 			<?php // Mobile/tablet: paired accordion grid (2 cols, pair-independent switching). ?>

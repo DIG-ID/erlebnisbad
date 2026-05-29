@@ -8,7 +8,7 @@
  */
 
 ?>
-<section id="section-intro" class="section-intro bg-white pt-24 md:pt-20 pb-12 xl:pb-20">
+<section id="section-intro" class="section-intro bg-white pt-20 md:pt-20 pb-12 xl:pb-20">
     <div class="theme-container">
         <div class="theme-grid text-center justify-items-center">
             <div class="col-span-2 md:col-start-2 md:col-span-4 xl:col-start-5 xl:col-span-4">
