@@ -42,7 +42,7 @@ export { gsap, ScrollTrigger, lenis };
 
 
 if (document.body.classList.contains('page-template-page-home')) {
-  const panels = gsap.utils.toArray(".panel-home");
+  const panels = gsap.utils.toArray('.panel-home');
 
   if (panels.length) {
     const lastPanel = panels[panels.length - 1];
@@ -62,7 +62,7 @@ if (document.body.classList.contains('page-template-page-home')) {
 
 
 if (document.querySelector('.section-spotlights')) {
-  const panels = gsap.utils.toArray(".spotlight-panel");
+  const panels = gsap.utils.toArray('.spotlight-panel');
 
   if (panels.length) {
     const lastPanel = panels[panels.length - 1];
@@ -70,9 +70,9 @@ if (document.querySelector('.section-spotlights')) {
     panels.forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
-        start: () => `top ${window.innerHeight * 0.28 + i * 60}px`,
+        start: () => 'top top',
         endTrigger: lastPanel,
-        end: () => `top ${window.innerHeight * 0.28 + (panels.length - 1) * 80 - 120}px`,
+        end: () => 'top top',
         pin: true,
         pinSpacing: false
       });
