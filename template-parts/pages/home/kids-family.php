@@ -24,7 +24,7 @@
         ?>
       </div>
       <div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-7 xl:col-span-5 pb-8 md:pb-0">
-        <p class="overtitle text-Black pb-8 xl:pb-4"><?php the_field( 'kids_family_overtitle' ); ?></p>
+        <p class="overtitle text-Black pb-4"><?php the_field( 'kids_family_overtitle' ); ?></p>
         <h2 class="title-main text-Black pb-8"><?php the_field( 'kids_family_title' ); ?></h2>
         <p class="text-Black pb-8"><?php the_field( 'kids_family_text' ); ?></p>
         <?php

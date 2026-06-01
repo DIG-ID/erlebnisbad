@@ -17,7 +17,7 @@
     @apply flex-shrink-0 flex items-center
 
   &__logo-img
-    @apply h-12 w-auto block
+    @apply block w-full h-auto max-w-[140px] xl:max-w-[160px]
 
   &__logo-text
     @apply font-openSans font-bold text-white text-lg
@@ -59,20 +59,18 @@
 
 // Sticky header
 .header-sticky
-  @apply fixed top-0 left-0 right-0 z-[51] bg-white pointer-events-none
+  @apply fixed top-0 left-0 w-full z-[51] bg-white pointer-events-none
   box-shadow: 0 2px 16px rgba(19, 19, 19, 0.08)
   clip-path: inset(0 0 100% 0)
 
   &__inner
-    @apply flex items-center justify-between gap-8 mx-auto w-full px-[18px] md:px-8 xl:px-12 py-3 md:py-4 xl:py-5
-    height: 95px
-    max-width: 1920px
+    @apply flex items-center justify-between w-full px-4 md:px-8 xl:px-12 py-4 md:py-4 xl:py-5 max-w-[1920px] mx-auto
 
   &__logo
     @apply flex-shrink-0 flex items-center
 
   &__logo-img
-    @apply h-full w-auto block
+    @apply block w-full h-auto max-w-[140px] xl:max-w-[160px]
 
   &__logo-text
     @apply font-openSans font-bold text-Black text-lg
@@ -97,7 +95,7 @@
       @apply font-semibold
 
   &__actions
-    @apply flex items-center gap-12 flex-shrink-0
+    @apply flex items-center gap-8 xl:gap-12 flex-shrink-0
 
   &__burger
     @apply flex items-center justify-center cursor-pointer bg-transparent border-0 p-0

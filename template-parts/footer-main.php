@@ -48,7 +48,7 @@ $footer_bg_responsive_id  = get_field( 'general_footer_image_responsive', 'optio
 					'full',
 					false,
 					array(
-						'class' => 'w-full h-auto object-cover max-w-72 mx-auto md:mx-0',
+						'class' => 'block w-full h-auto object-cover max-w-40 xl:max-w-72 mx-auto md:mx-0',
 					)
 				);
 			endif;
