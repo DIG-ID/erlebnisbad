@@ -45,7 +45,7 @@ if (document.body.classList.contains('page-template-page-home')) {
   // Desktop only — matchMedia auto-creates/reverts the triggers per breakpoint
   const mm = gsap.matchMedia();
 
-  mm.add('(min-width: 1024px)', () => {
+  mm.add('(min-width: 1280px)', () => {
     const panels = gsap.utils.toArray('.panel-home');
 
     if (panels.length) {
@@ -85,7 +85,7 @@ if (document.querySelector('.section-spotlights')) {
         trigger: container,
         // Responsive start — re-evaluated on every ScrollTrigger refresh (resize):
         // desktop pins later (25%), smaller screens earlier (15%)
-        start: () => `top ${window.innerWidth >= 1024 ? '25%' : '15%'}`,
+        start: () => `top ${window.innerWidth >= 1280 ? '25%' : '15%'}`,
         end: '+=200%',     // scroll distance the pin lasts — tune to taste
         pin: true,
         scrub: 1

@@ -10,9 +10,9 @@
 ?>
 
 <section id="section-wellness" class="section-wellness panel-home panel-home--wellness bg-Mint3">
-	<div class="theme-container pb-16 md:pb-24 xl:pb-32">
+	<div class="theme-container pb-40 xl:pb-48">
 		<div class="theme-grid items-center">
-			<div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5">
+			<div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-5 pb-8 md:pb-0">
 				<p class="overtitle text-Black pb-8 xl:pb-4"><?php the_field( 'wellness_overtitle' ); ?></p>
 				<h2 class="title-main text-Black pb-8"><?php the_field( 'wellness_title' ); ?></h2>
 				<p class="text-Black pb-8"><?php the_field( 'wellness_text' ); ?></p>

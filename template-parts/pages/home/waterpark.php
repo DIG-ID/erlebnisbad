@@ -10,7 +10,7 @@
 ?>
 
 <section id="section-waterpark" class="section-waterpark panel-home panel-home--waterpark bg-Mint1">
-	<div class="theme-container pb-16 md:pb-24 xl:pb-32">
+	<div class="theme-container pb-40 xl:pb-48">
 		<div class="theme-grid items-center">
 			<div class="col-span-2 md:col-span-3 xl:col-start-2 xl:col-span-4 order-2 md:order-none">
 				<?php
@@ -24,7 +24,7 @@
 				endif;
 				?>
 			</div>
-			<div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-7 xl:col-span-5">
+			<div class="col-span-2 md:col-start-4 md:col-span-3 xl:col-start-7 xl:col-span-5 pb-8 md:pb-0">
 				<p class="overtitle text-Black pb-8 xl:pb-4"><?php the_field( 'waterpark_overtitle' ); ?></p>
 				<h2 class="title-main text-Black pb-8"><?php the_field( 'waterpark_title' ); ?></h2>
 				<p class="text-Black pb-8"><?php the_field( 'waterpark_text' ); ?></p>
