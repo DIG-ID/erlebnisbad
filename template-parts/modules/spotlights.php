@@ -11,7 +11,7 @@
 <section id="section-spotlights" class="section-spotlights bg-Mint1 waves waves__top--color waves__bottom--color py-8 md:py-12 xl:py-16 spotlight-panel-container">
 	<div class="theme-container">
 
-		<div class="theme-grid grid-flow-row-dense spotlight-panel spotlight-panel--2 items-center">
+		<div class="theme-grid grid-flow-row-dense spotlight-panel spotlight-panel--2 items-center mb-16 md:mb-0">
 			<div class="col-span-2 md:col-start-1 md:col-span-3 xl:col-start-2 xl:col-span-4">
 				<?php $img_id = get_field( 'spotlight_image' );if ( $img_id ) :?>
 				<figure class="shape-bg shape-bg__img shape-bg--5 before:bg-Mint2">
