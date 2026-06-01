@@ -42,40 +42,67 @@ export { gsap, ScrollTrigger, lenis };
 
 
 if (document.body.classList.contains('page-template-page-home')) {
-  const panels = gsap.utils.toArray('.panel-home');
+  // Desktop only — matchMedia auto-creates/reverts the triggers per breakpoint
+  const mm = gsap.matchMedia();
 
-  if (panels.length) {
-    const lastPanel = panels[panels.length - 1];
+  mm.add('(min-width: 1024px)', () => {
+    const panels = gsap.utils.toArray('.panel-home');
 
-    panels.forEach((panel, i) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: () => `top ${window.innerHeight * 0.28 + i * 60}px`,
-        endTrigger: lastPanel,
-        end: () => `top ${window.innerHeight * 0.28 + (panels.length - 1) * 80 - 120}px`,
-        pin: true,
-        pinSpacing: false
+    if (panels.length) {
+      const lastPanel = panels[panels.length - 1];
+
+      panels.forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: () => `top ${window.innerHeight * 0.28 + i * 60}px`,
+          endTrigger: lastPanel,
+          end: () => `top ${window.innerHeight * 0.28 + (panels.length - 1) * 80 - 120}px`,
+          pin: true,
+          pinSpacing: false
+        });
       });
-    });
-  }
+    }
+  });
 }
 
 
 if (document.querySelector('.section-spotlights')) {
+  const container = document.querySelector('.section-spotlights');
   const panels = gsap.utils.toArray('.spotlight-panel');
 
-  if (panels.length) {
-    const lastPanel = panels[panels.length - 1];
+  // Need at least two stacked panels to cross-fade between them
+  if (container && panels.length >= 2) {
+    const [first, second] = panels;
 
-    panels.forEach((panel, i) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: () => 'top top',
-        endTrigger: lastPanel,
-        end: () => 'top top',
+    // Initial states — both hidden and pushed down, ready to fade in up
+    gsap.set([first, second], { autoAlpha: 0, y: 40 });
+
+    // Single scrubbed timeline driven by the pinned container.
+    // The container is pinned (not the panels); the panels are stacked
+    // on top of each other via CSS so they share the same space.
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        // Responsive start — re-evaluated on every ScrollTrigger refresh (resize):
+        // desktop pins later (25%), smaller screens earlier (15%)
+        start: () => `top ${window.innerWidth >= 1024 ? '25%' : '15%'}`,
+        end: '+=200%',     // scroll distance the pin lasts — tune to taste
         pin: true,
-        pinSpacing: false
-      });
+        scrub: 1
+      }
     });
+
+    tl
+      // 1. Panel 1 fades in up
+      .to(first, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 1 })
+      // 2. Hold panel 1 in place for a beat
+      .to(first, { autoAlpha: 1, duration: 0.6 })
+      // 3. Panel 1 fully fades out up — must finish before panel 2 appears
+      //    (no overlap: the panels never share the screen)
+      .to(first, { autoAlpha: 0, y: -40, ease: 'power2.in', duration: 1 })
+      // 4. Only now does panel 2 fade in up
+      .to(second, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 1 })
+      // 5. Hold panel 2 in place to close the sequence
+      .to(second, { autoAlpha: 1, duration: 0.6 });
   }
 }

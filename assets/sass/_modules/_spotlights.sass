@@ -1,0 +1,12 @@
+// Spotlights — stacked panels cross-fade while the section is pinned (see gsap.js)
+.section-spotlights
+  // The inner container becomes a single-cell grid so both panels overlap
+  .theme-container
+    display: grid
+
+  // Stack every panel into the same grid cell — they share one space and the
+  // row height matches the tallest panel automatically
+  .spotlight-panel
+    grid-area: 1 / 1
+    // Hidden by default; GSAP reveals them (avoids a flash before JS runs)
+    visibility: hidden
