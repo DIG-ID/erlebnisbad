@@ -86,7 +86,9 @@ $news-ticker-mask-desktop: url("data:image/svg+xml,<svg xmlns='http://www.w3.org
 
 
 .section-hero
-
+  @apply w-full h-svh max-h-[1045px] flex flex-col transition-all duration-300 ease-in-out
+  &--simple
+    @apply max-h-[480px] md:max-h-[680px]
   &.has-ticker
     height: 107svh
 

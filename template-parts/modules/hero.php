@@ -15,7 +15,7 @@ $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
 $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_ticker' ) : '';
 ?>
 
-<section class="section-hero w-full h-svh max-h-[1045px] flex flex-col transition-all duration-300 ease-in-out<?php echo $ticker_text ? ' has-ticker' : ''; ?>">
+<section class="section-hero<?php echo $id_fallback ? '' : ' section-hero--simple'; ?><?php echo $ticker_text ? ' has-ticker' : ''; ?>">
 
 	<div class="section-hero__media relative flex-1">
 
