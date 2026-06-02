@@ -26,16 +26,13 @@
     @apply hidden 2xl:flex items-center justify-center
 
   &__menu
-    @apply flex items-center gap-x-16 list-none m-0 p-0
+    @apply flex items-center gap-x-4 list-none m-0 p-0
 
     li
       @apply m-0 p-0
 
     a
-      @apply font-dmSans text-base font-normal text-white leading-none transition-colors duration-200
-      &:hover,
-      &:focus-visible
-        @apply text-Red
+      @apply font-dmSans text-base font-normal text-white leading-none px-5 py-3 rounded-full  border border-transparent transition-all duration-300 hover:bg-black/20 hover:text-white  hover:border-Red hover:backdrop-blur-sm focus-visible:bg-black/20 focus-visible:text-white focus-visible:border-Red focus-visible:backdrop-blur-sm
 
     .current-menu-item > a,
     .current-page-ancestor > a
