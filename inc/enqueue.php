@@ -104,51 +104,6 @@ endif;
 add_action( 'wp_enqueue_scripts', 'erlebnisbad_enqueue_google_maps' );
 
 
-if ( ! function_exists( 'erlebnisbad_enqueue_feratel_widget' ) ) :
-	/**
-	 * Enqueues the feratel/Deskline experience widget on the Tickets page template.
-	 *
-	 * Loads the async widget loader and prepends its inline configuration. The
-	 * widget language follows the active WPML language when available.
-	 *
-	 * @return void
-	 */
-	function erlebnisbad_enqueue_feratel_widget() {
-		if ( ! is_page_template( 'page-templates/page-tickets.php' ) ) {
-			return;
-		}
-
-		// WPML-aware language; falls back to site locale, then "de"
-		$lang = defined( 'ICL_LANGUAGE_CODE' ) ? ICL_LANGUAGE_CODE : substr( get_locale(), 0, 2 );
-		$lang = $lang ? $lang : 'de';
-
-		$widget_id = '6c270a38-b1b9-4d78-82d8-4b63559fb495';
-
-		wp_enqueue_script(
-			'feratel-widget',
-			'https://web5.deskline.net/start/ACCOLENK/' . $widget_id . '/index.js',
-			array(),
-			null,
-			array( 'in_footer' => true, 'strategy' => 'async' )
-		);
-
-		// Config must run before the loader; the dw.q queue makes the order safe.
-		$config = sprintf(
-			'window.dw = window.dw || function () { (dw.q = dw.q || []).push(arguments); };' .
-			'dw("settings", %s, { lang: %s, target: "tickets-widget", profileOverrides: ["teaser=false"],' .
-			' context: { targetRoute: [' .
-			'"/experiences/GRI/ef9a6c35-12a2-44b7-bf0a-067289badef0",' .
-			'"/erlebnisse/GRI/ef9a6c35-12a2-44b7-bf0a-067289badef0",' .
-			'"/esperienze/GRI/ef9a6c35-12a2-44b7-bf0a-067289badef0" ] } });',
-			wp_json_encode( $widget_id ),
-			wp_json_encode( $lang )
-		);
-
-		wp_add_inline_script( 'feratel-widget', $config, 'before' );
-	}
-	add_action( 'wp_enqueue_scripts', 'erlebnisbad_enqueue_feratel_widget' );
-endif;
-
 /**
  * Registers and enqueues the theme's main CSS and JS.
  */
