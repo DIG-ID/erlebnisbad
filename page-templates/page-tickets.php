@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: Impressum Template
+ * Template Name: Tickets Template
  *
  * @package erlebnisbad
  * @subpackage Template
@@ -13,8 +13,10 @@ if ( have_posts() ) :
 	while ( have_posts() ) :
 		the_post();
 		do_action( 'before_main_content' );
+
 			get_template_part( 'template-parts/modules/hero' );
-			get_template_part( 'template-parts/pages/impressum/content' );
+			get_template_part( 'template-parts/pages/tickets/widget' );
+
 		do_action( 'after_main_content' );
 	endwhile;
 endif;
