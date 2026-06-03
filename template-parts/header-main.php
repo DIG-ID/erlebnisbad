@@ -97,7 +97,7 @@ $tickets_link  = get_field( 'general_tickets_btn', 'option' );
     <!-- Tickets CTA -->
     <?php if ( $tickets_link ) : ?>
       <div class="header-sticky__cta-wrapper hidden 2xl:block">
-        <a class="btn btn-primary !py-2 !font-normal header-sticky__cta" href="<?php echo esc_url( $tickets_link['url'] ); ?>" target="<?php echo esc_attr( $tickets_link['target'] ? $tickets_link['target'] : '_self' ); ?>">
+        <a class="btn btn-primary btn-primary__cta" href="<?php echo esc_url( $tickets_link['url'] ); ?>" target="<?php echo esc_attr( $tickets_link['target'] ? $tickets_link['target'] : '_self' ); ?>">
           <?php echo esc_html( $tickets_link['title'] ); ?>
         </a>
       </div>
