@@ -80,8 +80,10 @@ if (document.querySelector('.section-spotlights')) {
     if (container && panels.length >= 2) {
       const [first, second] = panels;
 
-      // Initial states — both hidden and pushed down, ready to fade in up
-      gsap.set([first, second], { autoAlpha: 0, y: 40 });
+      // Initial states — panel 1 already visible (CSS hides it by default);
+      // only panel 2 starts hidden and pushed down, ready to fade in up
+      gsap.set(first, { autoAlpha: 1, y: 0 });
+      gsap.set(second, { autoAlpha: 0, y: 40 });
 
       // Single scrubbed timeline driven by the pinned container.
       // The container is pinned (not the panels); the panels are stacked
@@ -99,16 +101,14 @@ if (document.querySelector('.section-spotlights')) {
       });
 
       tl
-        // 1. Panel 1 fades in up
-        .to(first, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 1 })
-        // 2. Hold panel 1 in place for a beat
+        // 1. Hold panel 1 (already visible) for a beat after the pin starts
         .to(first, { autoAlpha: 1, duration: 0.6 })
-        // 3. Panel 1 fully fades out up — must finish before panel 2 appears
+        // 2. Panel 1 fully fades out up — must finish before panel 2 appears
         //    (no overlap: the panels never share the screen)
-        .to(first, { autoAlpha: 0, y: -40, ease: 'power2.in', duration: 1 })
-        // 4. Only now does panel 2 fade in up
+        .to(first, { autoAlpha: 0, y: -40, ease: 'power2.in', duration: 0.4 })
+        // 3. Only now does panel 2 fade in up
         .to(second, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 1 })
-        // 5. Hold panel 2 in place to close the sequence
+        // 4. Hold panel 2 in place to close the sequence
         .to(second, { autoAlpha: 1, duration: 0.6 });
     }
   });
