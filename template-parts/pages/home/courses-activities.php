@@ -65,8 +65,8 @@
                     $courses_btn_title  = $courses_image_button['title'];
                     $courses_btn_target = $courses_image_button['target'] ? $courses_image_button['target'] : '_self';
                     ?>
-                    <div class="flex justify-center pt-10 md:pt-14 xl:pt-16">
-                        <a class="btn btn-primary" href="<?php echo esc_url( $courses_btn_url ); ?>" target="<?php echo esc_attr( $courses_btn_target ); ?>"><?php echo esc_html( $courses_btn_title ); ?></a>
+                    <div class="flex justify-center pt-10 md:pt-10 xl:pt-12">
+                        <a class="btn btn-tertiary" href="<?php echo esc_url( $courses_btn_url ); ?>" target="<?php echo esc_attr( $courses_btn_target ); ?>"><?php echo esc_html( $courses_btn_title ); ?></a>
                     </div>
                 <?php endif; ?>
             </div>

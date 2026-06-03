@@ -57,11 +57,12 @@ if ( empty( $gallery_images ) ) {
 						<?php endforeach; ?>
 					</div>
 				</div>
+
 			</div>
 
 		</div>
 
-		<div class="slider-posts__mobile-nav md:hidden">
+		<div class="slider-posts__mobile-nav">
 			<button class="swiper-button-prev slider-posts__prev" aria-label="<?php esc_attr_e( 'Previous', 'digid' ); ?>">
 				<?php echo erlebnisbad_get_svg( 'arrow-left' ); ?>
 			</button>

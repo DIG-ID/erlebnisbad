@@ -65,6 +65,17 @@ $arrow-svg: url("../../assets/svg/button-arrow.svg")
             &::after
                 @apply opacity-100
 
+    &-tertiary
+        @apply flex flex-col gap-2 px-0 py-1 bg-transparent text-Black font-normal text-2xl leading-9
+
+        &::after
+            @extend %btn-arrow-icon
+            @apply transition-opacity duration-200 ease-in-out text-Red
+
+        &:hover,
+        &:active
+            @apply text-Red
+
 // Standalone arrow icon (e.g. inside link wrappers).
 .btn-arrow
     @extend %btn-arrow-icon
