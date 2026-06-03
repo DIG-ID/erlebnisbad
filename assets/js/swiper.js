@@ -16,7 +16,9 @@ document.querySelectorAll( '.intro-slider__swiper' ).forEach( ( el ) => {
 
 // Posts slider — reusable across pages
 document.querySelectorAll( '.posts-slider__swiper' ).forEach( ( el ) => {
-	const section = el.closest( '.posts-slider' );
+	const section     = el.closest( '.posts-slider' );
+	const slideCount = el.querySelectorAll( '.swiper-slide' ).length;
+
 	new Swiper( el, {
 		grabCursor:    true,
 		slidesPerView: 1,
@@ -27,24 +29,24 @@ document.querySelectorAll( '.posts-slider__swiper' ).forEach( ( el ) => {
 		},
 		breakpoints: {
 			768: {
-				slidesPerView:    1.8,
-				spaceBetween:     20,
-				slidesOffsetAfter: 20,
+				slidesPerView:     1.8,
+				spaceBetween:      20,
+				slidesOffsetAfter: slideCount > 1 ? 20 : 0,
 			},
 			1024: {
-				slidesPerView:    2.8,
-				spaceBetween:     20,
-				slidesOffsetAfter: 20,
+				slidesPerView:     2.8,
+				spaceBetween:      20,
+				slidesOffsetAfter: slideCount > 2 ? 20 : 0,
 			},
 			1280: {
-				slidesPerView:    2.8,
-				spaceBetween:     32,
-				slidesOffsetAfter: 64,
+				slidesPerView:     2.8,
+				spaceBetween:      32,
+				slidesOffsetAfter: slideCount > 3 ? 64 : 0,
 			},
 			1536: {
-				slidesPerView:    3.8,
-				spaceBetween:     32,
-				slidesOffsetAfter: 64,
+				slidesPerView:     3.8,
+				spaceBetween:      32,
+				slidesOffsetAfter: slideCount > 3 ? 64 : 0,
 			},
 		},
 	} );
