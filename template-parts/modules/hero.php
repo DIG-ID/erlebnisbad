@@ -51,7 +51,7 @@ $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_t
 		</figure>
 
 		<div class="section-hero__content absolute inset-0 flex items-end text-white">
-			<div class="theme-container flex flex-col gap-4 pb-32">
+			<div class="theme-container flex flex-col gap-4 pb-16 md:pb-32">
 
 				<div class="xl:flex xl:justify-between xl:items-center">
 					

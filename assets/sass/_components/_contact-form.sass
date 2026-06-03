@@ -20,14 +20,14 @@
     // Mobile/tablet: flatten so all 4 fields are direct grid children (allows reordering via `order`)
     // Desktop (xl): restore the inputs flex-column on the left
     .cf-grid__inputs
-        display: contents
+        @apply flex flex-col
         @screen xl
             @apply flex flex-col gap-0
 
     // Mobile/tablet: textarea also becomes a direct grid child
     // Desktop (xl): textarea owns its column and fills the height
     .cf-grid__textarea
-        display: contents
+        @apply flex flex-col
         @screen xl
             @apply block h-full
 
