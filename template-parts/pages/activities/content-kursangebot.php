@@ -21,7 +21,7 @@ if ( ! $kursangebot_query->have_posts() ) {
 	return;
 }
 ?>
-<section id="kursangebot-slider" class="posts-slider">
+<section id="kursangebot" class="posts-slider">
 
 	<div class="theme-container">
 		<div class="theme-grid posts-slider__header">

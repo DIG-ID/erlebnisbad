@@ -21,7 +21,7 @@ if ( ! $besonderes_query->have_posts() ) {
 	return;
 }
 ?>
-<section id="besonderes-erlebnis-slider" class="posts-slider">
+<section id="besonderes-erlebnis" class="posts-slider">
 
 	<div class="theme-container">
 		<div class="theme-grid posts-slider__header">

@@ -21,7 +21,7 @@ if ( ! $angebot_query->have_posts() ) {
 	return;
 }
 ?>
-<section id="angebot-slider" class="posts-slider">
+<section id="angebot" class="posts-slider">
 
 	<div class="theme-container">
 		<div class="theme-grid posts-slider__header">
