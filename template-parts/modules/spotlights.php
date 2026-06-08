@@ -23,7 +23,7 @@
 				<h2 class="title-main text-Black pb-8"><?php the_field( 'spotlight_title' ); ?></h2>
 				<p class="text-Black pb-8"><?php the_field( 'spotlight_text' ); ?></p>
 				<?php
-				$hero_button = get_field( 'hero_button' );
+				$hero_button = get_field( 'spotlight_button' );
 				if ( $hero_button ) :
 					$link_url    = $hero_button['url'];
 					$link_title  = $hero_button['title'];
