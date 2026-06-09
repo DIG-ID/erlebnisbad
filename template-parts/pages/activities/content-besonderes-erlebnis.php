@@ -61,10 +61,10 @@ if ( ! $besonderes_query->have_posts() ) {
 		</div>
 
 		<div class="posts-slider__nav">
-			<button class="swiper-button-prev posts-slider__prev" aria-label="<?php esc_attr_e( 'Previous', 'digid' ); ?>">
+			<button class="swiper-button-prev posts-slider__prev" aria-label="<?php esc_attr_e( 'Previous', 'erlebnisbad' ); ?>">
 				<?php echo erlebnisbad_get_svg( 'arrow-left' ); ?>
 			</button>
-			<button class="swiper-button-next posts-slider__next" aria-label="<?php esc_attr_e( 'Next', 'digid' ); ?>">
+			<button class="swiper-button-next posts-slider__next" aria-label="<?php esc_attr_e( 'Next', 'erlebnisbad' ); ?>">
 				<?php echo erlebnisbad_get_svg( 'arrow-right' ); ?>
 			</button>
 		</div>

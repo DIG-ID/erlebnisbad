@@ -20,20 +20,20 @@ do_action( 'before_main_content' );
 		</div>
 		<div class="section-404__content flex flex-col items-center gap-12 md:gap-20 bg-Mint3 pt-12 pb-20">
 			<h1 class="font-raleway text-4xl md:text-[80px] font-bold leading-10 md:leading-[80px] text-Mint max-w-[28rem] md:max-w-[700px] xl:max-w-[57rem]">
-				<?php esc_html_e( 'Seite konnte nicht gefunden werden', 'digid' ); ?>
+				<?php esc_html_e( 'Seite konnte nicht gefunden werden', 'erlebnisbad' ); ?>
 			</h1>
 
 			<div class="text-DarkGreen text-left grid grid-cols-1 md:grid-cols-2 gap-5 max-w-80 md:max-w-[700px] xl:max-w-5xl">
 				<p>
-					<?php esc_html_e( 'Da ist wohl jemand vom Beckenrand direkt ins digitale Nirgendwo gesprungen. Die gesuchte Seite hat sich entweder versteckt, ist umgezogen oder gönnt sich gerade eine kleine Auszeit im Whirlpool.', 'digid' ); ?>
+					<?php esc_html_e( 'Da ist wohl jemand vom Beckenrand direkt ins digitale Nirgendwo gesprungen. Die gesuchte Seite hat sich entweder versteckt, ist umgezogen oder gönnt sich gerade eine kleine Auszeit im Whirlpool.', 'erlebnisbad' ); ?>
 				</p>
 				<p>
-					<?php esc_html_e( 'Am besten geht es zurück zur Startseite – dort warten wieder alle Informationen rund um Schwimmen, Wellness, Bistro und Auszeiten im Erlebnisbad Wallbach.', 'digid' ); ?>
+					<?php esc_html_e( 'Am besten geht es zurück zur Startseite – dort warten wieder alle Informationen rund um Schwimmen, Wellness, Bistro und Auszeiten im Erlebnisbad Wallbach.', 'erlebnisbad' ); ?>
 				</p>
 			</div>
 
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-primary mt-2">
-				<?php esc_html_e( 'Zur Startseite', 'digid' ); ?>
+				<?php esc_html_e( 'Zur Startseite', 'erlebnisbad' ); ?>
 			</a>
 
 		</div>

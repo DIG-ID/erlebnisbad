@@ -63,10 +63,10 @@ if ( empty( $gallery_images ) ) {
 		</div>
 
 		<div class="slider-posts__mobile-nav">
-			<button class="swiper-button-prev slider-posts__prev" aria-label="<?php esc_attr_e( 'Previous', 'digid' ); ?>">
+			<button class="swiper-button-prev slider-posts__prev" aria-label="<?php esc_attr_e( 'Previous', 'erlebnisbad' ); ?>">
 				<?php echo erlebnisbad_get_svg( 'arrow-left' ); ?>
 			</button>
-			<button class="swiper-button-next slider-posts__next" aria-label="<?php esc_attr_e( 'Next', 'digid' ); ?>">
+			<button class="swiper-button-next slider-posts__next" aria-label="<?php esc_attr_e( 'Next', 'erlebnisbad' ); ?>">
 				<?php echo erlebnisbad_get_svg( 'arrow-right' ); ?>
 			</button>
 		</div>

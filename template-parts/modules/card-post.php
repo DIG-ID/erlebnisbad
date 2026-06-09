@@ -43,7 +43,7 @@ $link        = $args['link'] ?? '#';
 		<?php endif; ?>
 
 		<a class="btn btn-primary post-card__btn mx-auto" href="<?php echo esc_url( $link ); ?>">
-			<?php esc_html_e( 'Mehr Erfahren', 'digid' ); ?>
+			<?php esc_html_e( 'Mehr Erfahren', 'erlebnisbad' ); ?>
 		</a>
 	</div>
 

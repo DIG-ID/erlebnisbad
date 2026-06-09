@@ -28,7 +28,7 @@ $widget_url = add_query_arg(
 			<iframe
 				class="tickets-widget__frame"
 				src="<?php echo esc_url( $widget_url ); ?>"
-				title="<?php esc_attr_e( 'Tickets &amp; Buchung', 'digid' ); ?>"
+				title="<?php esc_attr_e( 'Tickets &amp; Buchung', 'erlebnisbad' ); ?>"
 				loading="lazy"
 				allow="payment"
 				referrerpolicy="strict-origin-when-cross-origin"

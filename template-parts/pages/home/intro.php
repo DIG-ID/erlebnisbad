@@ -59,12 +59,12 @@
 
           </div>
           <div class="intro-slider__pagination">
-              <button class="intro-slider__prev" aria-label="<?php esc_attr_e( 'Previous', 'digid' ); ?>">
+              <button class="intro-slider__prev" aria-label="<?php esc_attr_e( 'Previous', 'erlebnisbad' ); ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none" class="scale-x-[-1]" aria-hidden="true">
                   <path d="M13.6394 4.95379C17.7041 3.57604 15.0846 0.418682 17.6137 0.0168392C19.016 -0.205953 21.9956 1.82167 25.1956 3.74824C27.7675 5.29659 30.666 6.86343 30.9761 8.39817C31.318 10.0898 27.9222 11.551 24.8343 13.4499C21.6348 15.4175 18.8083 17.4962 17.6134 16.8943C15.2652 15.7115 17.6137 12.5888 12.8264 11.8425C4.697 10.8092 -5.16121e-07 11.0963 -7.51996e-07 8.39817C-9.87871e-07 5.70007 9.57465 6.33154 13.6394 4.95379Z" fill="currentColor"/>
                 </svg>
               </button>
-              <button class="intro-slider__next" aria-label="<?php esc_attr_e( 'Next', 'digid' ); ?>">
+              <button class="intro-slider__next" aria-label="<?php esc_attr_e( 'Next', 'erlebnisbad' ); ?>">
                 <svg xmlns="http://www.w3.org/2000/svg" width="31" height="17" viewBox="0 0 31 17" fill="none" aria-hidden="true">
                   <path d="M13.6394 4.95379C17.7041 3.57604 15.0846 0.418682 17.6137 0.0168392C19.016 -0.205953 21.9956 1.82167 25.1956 3.74824C27.7675 5.29659 30.666 6.86343 30.9761 8.39817C31.318 10.0898 27.9222 11.551 24.8343 13.4499C21.6348 15.4175 18.8083 17.4962 17.6134 16.8943C15.2652 15.7115 17.6137 12.5888 12.8264 11.8425C4.697 10.8092 -5.16121e-07 11.0963 -7.51996e-07 8.39817C-9.87871e-07 5.70007 9.57465 6.33154 13.6394 4.95379Z" fill="currentColor"/>
                 </svg>
