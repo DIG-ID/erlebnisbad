@@ -55,12 +55,14 @@ $intro-top-mask-desktop: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2
       @apply w-full
 
   .intro-slider
+    overflow: hidden
+
     &__pagination
-      @apply absolute bottom-[190px] md:bottom-auto md:top-1/2 xl:top-1/2 -translate-y-1/2 z-10 w-full flex items-center justify-center gap-4
+      @apply absolute bottom-[190px] lg:bottom-auto lg:top-1/2 -translate-y-1/2 z-10 inset-x-0 flex items-center justify-center gap-4
 
     &__prev,
     &__next
-      @apply md:absolute top-3/4 md:top-1/2 -translate-y-1/2 z-10
+      @apply lg:absolute lg:top-1/2 -translate-y-1/2 z-10
       @apply flex items-center justify-center text-white transition-colors duration-200 cursor-pointer
 
       &:hover
@@ -70,10 +72,10 @@ $intro-top-mask-desktop: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2
         @apply opacity-40 cursor-not-allowed pointer-events-none text-white
 
     &__prev
-      @apply left-4 md:left-2 xl:left-10
+      @apply left-4 lg:left-8 xl:left-14
 
     &__next
-      @apply right-4 md:right-2 xl:right-10
+      @apply right-4 lg:right-8 xl:right-14
 
 
   .panels-container
