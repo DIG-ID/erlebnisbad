@@ -34,13 +34,13 @@
 				<?php
 				$phone = get_field( 'maps_contact_phone' );
 				if ( $phone ) :
-					?><p class="text-Black pb-4 xl:pb-14"><span><?php esc_html_e( 'Telefon ', 'erlebnisbad' ); ?></span> <a class="" href="tel:<?php echo esc_attr( $phone ); ?>" target="_blank"><?php echo esc_html( $phone ); ?></a></p><?php
+					?><p class="text-Black pb-4 xl:pb-14"><span><?php esc_html_e( 'Telefon ', 'erlebnisbad' ); ?></span> <a class="underline hover:text-Red transition-colors" href="tel:<?php echo esc_attr( $phone ); ?>" target="_blank"><?php echo esc_html( $phone ); ?></a></p><?php
 				endif;
 				?>
 				<?php
 				$email = get_field( 'maps_contact_email' );
 				if ( $email ) :
-					?><p class="text-Black pb-4 xl:pb-14"><span><?php esc_html_e( 'E-Mail ', 'erlebnisbad' ); ?></span> <a class="" href="mailto:<?php echo esc_attr( $email ); ?>" target="_blank"><?php echo esc_html( $email ); ?></a></p><?php
+					?><p class="text-Black pb-4 xl:pb-14"><span><?php esc_html_e( 'E-Mail ', 'erlebnisbad' ); ?></span> <a class="underline hover:text-Red transition-colors" href="mailto:<?php echo esc_attr( $email ); ?>" target="_blank"><?php echo esc_html( $email ); ?></a></p><?php
 				endif;
 				?>
 			</div>
