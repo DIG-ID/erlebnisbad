@@ -92,3 +92,14 @@ function erlebnisbad_lower_yoast_metabox_priority() {
 }
 
 add_filter( 'wpseo_metabox_prio', 'erlebnisbad_lower_yoast_metabox_priority' );
+
+/**
+ * Register translatable anchor strings for WPML String Translation.
+ */
+function erlebnisbad_register_wpml_strings() {
+	do_action( 'wpml_register_single_string', 'erlebnisbad', 'anchor_angebot', 'angebot' );
+	do_action( 'wpml_register_single_string', 'erlebnisbad', 'anchor_besonderes_erlebnis', 'besonderes-erlebnis' );
+	do_action( 'wpml_register_single_string', 'erlebnisbad', 'anchor_kursangebot', 'kursangebot' );
+}
+
+add_action( 'init', 'erlebnisbad_register_wpml_strings' );
