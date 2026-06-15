@@ -20,8 +20,11 @@ $angebot_query = new WP_Query(
 if ( ! $angebot_query->have_posts() ) {
 	return;
 }
+
+do_action( 'wpml_register_single_string', 'erlebnisbad', 'anchor_angebot', 'angebot' );
+$section_anchor = apply_filters( 'wpml_translate_single_string', 'angebot', 'erlebnisbad', 'anchor_angebot' );
 ?>
-<section id="angebot" class="posts-slider">
+<section id="<?php echo esc_attr( $section_anchor ); ?>" class="posts-slider">
 
 	<div class="theme-container">
 		<div class="theme-grid posts-slider__header">

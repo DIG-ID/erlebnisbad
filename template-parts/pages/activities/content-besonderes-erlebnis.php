@@ -20,8 +20,11 @@ $besonderes_query = new WP_Query(
 if ( ! $besonderes_query->have_posts() ) {
 	return;
 }
+
+do_action( 'wpml_register_single_string', 'erlebnisbad', 'anchor_besonderes_erlebnis', 'besonderes-erlebnis' );
+$section_anchor = apply_filters( 'wpml_translate_single_string', 'besonderes-erlebnis', 'erlebnisbad', 'anchor_besonderes_erlebnis' );
 ?>
-<section id="besonderes-erlebnis" class="posts-slider">
+<section id="<?php echo esc_attr( $section_anchor ); ?>" class="posts-slider">
 
 	<div class="theme-container">
 		<div class="theme-grid posts-slider__header">
