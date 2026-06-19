@@ -12,17 +12,18 @@ $id_desktop   = ! empty( $images['desktop'] ) ? $images['desktop'] : null;
 $id_tablet    = ! empty( $images['tablet'] )  ? $images['tablet']  : $id_desktop;
 $id_mobile    = ! empty( $images['mobile'] )  ? $images['mobile']  : $id_tablet;
 $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
+$hero_video   = get_field( 'video' );
+$has_media    = $hero_video || $id_fallback;
 $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_ticker' ) : '';
 ?>
 
-<section class="section-hero<?php echo $id_fallback ? '' : ' section-hero--simple'; ?><?php echo $ticker_text ? ' has-ticker' : ''; ?>">
+<section class="section-hero<?php echo $has_media ? '' : ' section-hero--simple'; ?><?php echo $ticker_text ? ' has-ticker' : ''; ?>">
 
 	<div class="section-hero__media relative flex-1">
 
 		<figure class="section-hero__figure absolute inset-0 bg-[#0C3B39]">
 
-			<?php if ( $id_fallback ) : ?>
-			<?php $hero_video = get_field( 'video' ); ?>
+			<?php if ( $has_media ) : ?>
 			<?php if ( $hero_video ) : ?>
 			<video
 				class="section-hero__video"
@@ -30,7 +31,7 @@ $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_t
 				muted
 				loop
 				playsinline
-				poster="<?php echo esc_url( wp_get_attachment_image_url( $id_fallback, 'full' ) ); ?>"
+				<?php if ( $id_fallback ) : ?>poster="<?php echo esc_url( wp_get_attachment_image_url( $id_fallback, 'full' ) ); ?>"<?php endif; ?>
 			>
 				<source src="<?php echo esc_url( $hero_video['url'] ); ?>" type="<?php echo esc_attr( $hero_video['mime_type'] ); ?>">
 			</video>
