@@ -38,7 +38,7 @@ $widget_url = add_query_arg(
 </div>
 <div class="theme-container">
 	<div class="theme-grid">
-		<div class="col-span-12 flex justify-center items-center py-32">
+		<div class="col-span-12 flex justify-center items-center py-16 md:py-32">
 			<?php
 			$link = get_field( 'link' );
 			if( $link ):
