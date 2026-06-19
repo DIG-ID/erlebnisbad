@@ -36,3 +36,18 @@ $widget_url = add_query_arg(
 		</div>
 	</div>
 </div>
+<div class="theme-container">
+	<div class="theme-grid">
+		<div class="col-span-12 flex justify-center items-center py-32">
+			<?php
+			$link = get_field( 'link' );
+			if( $link ):
+				$link_url = $link['url'];
+				$link_title = $link['title'];
+				$link_target = $link['target'] ? $link['target'] : '_self';
+				?>
+				<a class="btn btn-primary" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+			<?php endif; ?>
+		</div>
+	</div>
+</div>
