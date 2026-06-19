@@ -22,6 +22,19 @@ $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_t
 		<figure class="section-hero__figure absolute inset-0 bg-[#0C3B39]">
 
 			<?php if ( $id_fallback ) : ?>
+			<?php $hero_video = get_field( 'video' ); ?>
+			<?php if ( $hero_video ) : ?>
+			<video
+				class="section-hero__video"
+				autoplay
+				muted
+				loop
+				playsinline
+				poster="<?php echo esc_url( wp_get_attachment_image_url( $id_fallback, 'full' ) ); ?>"
+			>
+				<source src="<?php echo esc_url( $hero_video['url'] ); ?>" type="<?php echo esc_attr( $hero_video['mime_type'] ); ?>">
+			</video>
+			<?php else : ?>
 			<picture class="section-hero__picture">
 				<source
 					media="(max-width: 767px)"
@@ -45,6 +58,7 @@ $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_t
 				);
 				?>
 			</picture>
+			<?php endif; ?>
 			<div class="section-hero__overlay" aria-hidden="true"></div>
 			<?php endif; ?>
 
