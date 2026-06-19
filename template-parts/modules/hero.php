@@ -12,7 +12,7 @@ $id_desktop   = ! empty( $images['desktop'] ) ? $images['desktop'] : null;
 $id_tablet    = ! empty( $images['tablet'] )  ? $images['tablet']  : $id_desktop;
 $id_mobile    = ! empty( $images['mobile'] )  ? $images['mobile']  : $id_tablet;
 $id_fallback  = $id_desktop ?? $id_tablet ?? $id_mobile;
-$hero_video   = get_field( 'video' );
+$hero_video   = get_field( 'hero_video' );
 $has_media    = $hero_video || $id_fallback;
 $ticker_text  = get_field( 'hero_enable_news_ticker' ) ? get_field( 'hero_news_ticker' ) : '';
 ?>
