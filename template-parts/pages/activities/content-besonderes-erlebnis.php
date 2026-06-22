@@ -24,7 +24,6 @@ if ( ! $besonderes_query->have_posts() ) {
 do_action( 'wpml_register_single_string', 'erlebnisbad', 'anchor_besonderes_erlebnis', 'besonderes-erlebnis' );
 $section_anchor = apply_filters( 'wpml_translate_single_string', 'besonderes-erlebnis', 'erlebnisbad', 'anchor_besonderes_erlebnis' );
 ?>
-<?php /* Posts-slider gallery commented out on request. Remove this wrapper to re-enable.
 <section id="<?php echo esc_attr( $section_anchor ); ?>" class="posts-slider">
 
 	<div class="theme-container">
@@ -75,4 +74,3 @@ $section_anchor = apply_filters( 'wpml_translate_single_string', 'besonderes-erl
 	</div>
 
 </section>
-*/ ?>

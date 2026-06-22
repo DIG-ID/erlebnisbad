@@ -7,6 +7,9 @@
  * @since 1.0.0
  */
 
+// Image gallery hidden on request. Remove this return to re-enable.
+return;
+
 $gallery_images = get_field( 'gallery_images' );
 if ( empty( $gallery_images ) ) {
 	return;

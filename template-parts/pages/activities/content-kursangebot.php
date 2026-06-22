@@ -24,7 +24,6 @@ if ( ! $kursangebot_query->have_posts() ) {
 do_action( 'wpml_register_single_string', 'erlebnisbad', 'anchor_kursangebot', 'kursangebot' );
 $section_anchor = apply_filters( 'wpml_translate_single_string', 'kursangebot', 'erlebnisbad', 'anchor_kursangebot' );
 ?>
-<?php /* Posts-slider gallery commented out on request. Remove this wrapper to re-enable.
 <section id="<?php echo esc_attr( $section_anchor ); ?>" class="posts-slider">
 
 	<div class="theme-container">
@@ -75,4 +74,3 @@ $section_anchor = apply_filters( 'wpml_translate_single_string', 'kursangebot', 
 	</div>
 
 </section>
-*/ ?>
