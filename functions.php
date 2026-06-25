@@ -31,4 +31,5 @@ require get_template_directory() . '/inc/helpers.php';
 // Performance optimizations.
 require get_template_directory() . '/inc/performance.php';
 
-
+// Yoast SEO Open Graph hero image fallback.
+require_once get_template_directory() . '/inc/yoast-og-hero-fallback.php';
