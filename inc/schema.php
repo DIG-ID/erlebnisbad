@@ -9,10 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-add_action( 'wp_head', 'erlebnisbad_custom_schema', 30 );
+add_action( 'wp_head', 'erlebnisbad_custom_schema', 99 );
 
 function erlebnisbad_custom_schema() {
-
+    echo '<!-- erlebnisbad_custom_schema fired -->';
 	if ( is_front_page() ) {
 		erlebnisbad_local_business_schema();
 	}
