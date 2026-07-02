@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'wp_head', 'erlebnisbad_custom_schema', 99 );
 
 function erlebnisbad_custom_schema() {
-    echo '<!-- erlebnisbad_custom_schema fired -->';
+
 	if ( is_front_page() ) {
 		erlebnisbad_local_business_schema();
 	}
@@ -171,13 +171,15 @@ function erlebnisbad_restaurant_schema() {
  */
 function erlebnisbad_faq_schema() {
 
-	if ( ! function_exists( 'have_rows' ) || ! have_rows( 'faq' ) ) {
+	$page_id = get_queried_object_id();
+
+	if ( ! function_exists( 'have_rows' ) || ! have_rows( 'faq', $page_id ) ) {
 		return;
 	}
 
 	$questions = array();
 
-	while ( have_rows( 'faq' ) ) {
+	while ( have_rows( 'faq', $page_id ) ) {
 		the_row();
 
 		$question = trim( wp_strip_all_tags( get_sub_field( 'question' ) ) );
@@ -204,8 +206,8 @@ function erlebnisbad_faq_schema() {
 	$data = array(
 		'@context'   => 'https://schema.org',
 		'@type'      => 'FAQPage',
-		'@id'        => get_permalink() . '#faq',
-		'url'        => get_permalink(),
+		'@id'        => get_permalink( $page_id ) . '#faq',
+		'url'        => get_permalink( $page_id ),
 		'mainEntity' => $questions,
 	);
 
@@ -230,6 +232,7 @@ function erlebnisbad_spa_schema() {
 		'email'     => $b['email'],
 		'address'   => $b['address'],
 		'geo'       => $b['geo'],
+		'openingHoursSpecification' => $b['opening_hours'],
 
 		'parentOrganization' => array(
 			'@id' => home_url( '/#organization' ),
