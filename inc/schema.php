@@ -173,17 +173,21 @@ function erlebnisbad_faq_schema() {
 
 	$page_id = get_queried_object_id();
 
-	if ( ! function_exists( 'have_rows' ) || ! have_rows( 'faq', $page_id ) ) {
+	if ( ! function_exists( 'get_field' ) ) {
+		return;
+	}
+
+	$faq_items = get_field( 'faq_faq', $page_id );
+
+	if ( empty( $faq_items ) || ! is_array( $faq_items ) ) {
 		return;
 	}
 
 	$questions = array();
 
-	while ( have_rows( 'faq', $page_id ) ) {
-		the_row();
-
-		$question = trim( wp_strip_all_tags( get_sub_field( 'question' ) ) );
-		$answer   = trim( wp_strip_all_tags( get_sub_field( 'answer' ) ) );
+	foreach ( $faq_items as $item ) {
+		$question = isset( $item['question'] ) ? trim( wp_strip_all_tags( $item['question'] ) ) : '';
+		$answer   = isset( $item['answer'] ) ? trim( wp_strip_all_tags( $item['answer'] ) ) : '';
 
 		if ( empty( $question ) || empty( $answer ) ) {
 			continue;
