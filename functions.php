@@ -35,4 +35,5 @@ require get_template_directory() . '/inc/performance.php';
 require_once get_template_directory() . '/inc/yoast-og-hero-fallback.php';
 
 // Load custom Schema.org JSON-LD definitions.
+echo '<!-- functions.php reached schema include -->';
 require_once get_template_directory() . '/inc/schema.php';
