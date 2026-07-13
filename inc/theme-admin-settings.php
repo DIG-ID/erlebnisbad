@@ -22,14 +22,34 @@ function erlebnisbad_disable_default_dashboard_widgets() {
 add_action( 'wp_dashboard_setup', 'erlebnisbad_disable_default_dashboard_widgets', 999 );
 
 /**
- * Enqueues the custom login page stylesheet.
+ * Enqueues the custom login page stylesheet (wp-login.php screens only).
  */
 function erlebnisbad_login_css() {
-	$theme_version = wp_get_theme()->get( 'Version' );
-	wp_enqueue_style( 'admin-login-css', get_theme_file_uri( '/dist/css/admin-login.css' ), array(), $theme_version );
+	wp_enqueue_style(
+		'admin-login-css',
+		get_theme_file_uri( '/dist/css/admin-login.css' ),
+		array(),
+		erlebnisbad_asset_version( '/css/admin-login.css' )
+	);
 }
 
 add_action( 'login_enqueue_scripts', 'erlebnisbad_login_css', 10 );
+
+/**
+ * Enqueues the custom admin stylesheet (wp-admin screens only).
+ *
+ * @since 1.0.0
+ */
+function erlebnisbad_admin_css() {
+	wp_enqueue_style(
+		'admin-dashboard-css',
+		get_theme_file_uri( '/dist/css/admin-dashboard.css' ),
+		array(),
+		erlebnisbad_asset_version( '/css/admin-dashboard.css' )
+	);
+}
+
+add_action( 'admin_enqueue_scripts', 'erlebnisbad_admin_css', 10 );
 
 /**
  * Changes the login logo link to point to the site homepage.

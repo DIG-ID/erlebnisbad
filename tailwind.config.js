@@ -43,6 +43,12 @@ module.exports = {
         'LightGray': '#E7E5E5',
         'OffWhite': '#F3F3F3',
         'BgLight': '#F0F0F0',
+        // digid colors
+        'digid-turquoise': '#00CCCC',
+        'digid-light-grey': '#F8F8F8',
+        'digid-pink': '#EA526C',
+        'digid-black': '#12232B',
+        'digid-grey': '#5B7376',
       },
       transitionTimingFunction: {
         'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
