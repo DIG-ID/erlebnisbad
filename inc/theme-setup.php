@@ -103,3 +103,24 @@ function erlebnisbad_register_wpml_strings() {
 }
 
 add_action( 'init', 'erlebnisbad_register_wpml_strings' );
+
+/**
+ * Hide the reCAPTCHA badge globally; show it only on the Arrival & Contact page.
+ */
+function erlebnisbad_recaptcha_badge_visibility() {
+	$contact_template = 'page-templates/page-arrival-contact.php';
+	$visibility       = get_page_template_slug() === $contact_template ? 'visible' : 'hidden';
+	echo '<style>.grecaptcha-badge { visibility: ' . esc_attr( $visibility ) . ' !important; }</style>';
+}
+add_action( 'wp_head', 'erlebnisbad_recaptcha_badge_visibility' );
+
+/**
+ * Load CF7 scripts and styles only on the Arrival & Contact page template.
+ *
+ * @return bool
+ */
+function erlebnisbad_cf7_load_on_contact() {
+	return get_page_template_slug() === 'page-templates/page-arrival-contact.php';
+}
+add_filter( 'wpcf7_load_js', 'erlebnisbad_cf7_load_on_contact' );
+add_filter( 'wpcf7_load_css', 'erlebnisbad_cf7_load_on_contact' );

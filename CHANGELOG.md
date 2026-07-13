@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/) (`MAJOR.M
 - **MINOR** (`1.0.0` → `1.1.0`) — new features / implementations (new template, new CPT, new section).
 - **PATCH** (`1.0.0` → `1.0.1`) — bug fixes and small adjustments that do not add functionality.
 
+## [1.0.2] — 2026-07-13
+
+### Added
+- reCAPTCHA badge hidden site-wide; shown only on the Arrival & Contact page
+  (`page-templates/page-arrival-contact.php`).
+- CF7 scripts and styles conditionally loaded on the contact page only.
+- WPML string registration for translatable section anchors (`angebot`,
+  `besonderes-erlebnis`, `kursangebot`) centralised in the `init` hook.
+
 ## [1.0.1] — 2026-07-13
 
 ### Changed
