@@ -25,14 +25,21 @@ commitar. Nunca deixar `dist/` de desenvolvimento ir para produção.
    - Confirmar que `dist/mix-manifest.json` e os ficheiros em `dist/` foram
      regenerados (hashes/minificação). Se o build falhar, parar e reportar.
 
-3. **Lint**
+3. **Lint + smoke-check** *(evita partir o site live)*
    - Correr `npm run php:lint`. Se falhar, tentar `npm run php:fix` e voltar a
      correr; reportar o que não for auto-corrigível e parar até estar limpo.
+   - Correr `php -l` a cada `.php` alterado (`git diff --name-only`).
+   - **Verificar símbolos por definir**: para cada função nova chamada no diff
+     (ex.: `erlebnisbad_asset_version()`), confirmar com `grep` que existe um
+     `function <nome>` no tema. Uma função chamada mas não definida é um fatal
+     error em produção — parar e resolver antes de continuar.
 
 4. **Versionamento** (SemVer)
-   - Se **não existem tags nem `CHANGELOG.md`** → é a primeira ida a produção:
-     versão **`1.0.0`**, criar `CHANGELOG.md`.
-   - Caso contrário, propor bump com base no diff desde a última tag/versão:
+   - Regras de bump: ver a legenda no topo do `CHANGELOG.md` (MAJOR/MINOR/PATCH)
+     — é a fonte de verdade do projecto.
+   - Se **não existe nenhuma secção `[X.Y.Z]` no `CHANGELOG.md` nem tags** → é a
+     primeira ida a produção: versão **`1.0.0`**.
+   - Caso contrário, propor bump com base no diff desde a última versão:
      - só correcções/ajustes → **PATCH**
      - funcionalidade nova → **MINOR**
      - breaking change → **MAJOR**

@@ -73,18 +73,6 @@ function erlebnisbad_login_title() {
 
 add_filter( 'login_headertext', 'erlebnisbad_login_title' );
 
-/**
- * Outputs the custom logo image on the login page via inline CSS.
- */
-function erlebnisbad_login_logo() {
-	echo '<style type="text/css">
-	h1 a {
-		background-image: url(' . esc_url( get_template_directory_uri() ) . '/assets/logos/LOGO-DARK.png) !important;
-	}
-	</style>';
-}
-
-add_action( 'login_head', 'erlebnisbad_login_logo' );
 
 /**
  * Replaces the admin footer text with the agency credit.

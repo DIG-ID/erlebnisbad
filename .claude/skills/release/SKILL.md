@@ -5,8 +5,12 @@ description: Fecha uma versão do tema - corre o lint, valida/actualiza CHANGELO
 
 # Fechar uma versão (starter ou projecto)
 
-Automatiza o Flow A do `WORKFLOW.md` (passos 2–6). Funciona tanto no repo do
-starter como num repo de projecto criado a partir dele.
+Fecha uma versão do tema. Funciona tanto no repo do starter como num repo de
+projecto criado a partir dele.
+
+> **Nota:** para pôr um site em **produção** (deploy por push a `main`), usar o
+> skill `/go-live` — esse compila `npm run prod` e trata do deploy. Este skill
+> só fecha a versão (não compila nem faz deploy).
 
 ## Processo
 
@@ -14,7 +18,7 @@ starter como num repo de projecto criado a partir dele.
    voltar a correr; reportar o que não for auto-corrigível e parar até estar limpo.
 2. **Analisar o diff**: `git status` + `git diff` (e commits desde a última tag,
    se existirem) para perceber o que mudou.
-3. **Propor a versão** segundo a tabela do `CLAUDE.md`:
+3. **Propor a versão** segundo a legenda SemVer no topo do `CHANGELOG.md`:
    - só correcções/ajustes → PATCH; funcionalidade nova → MINOR; breaking → MAJOR.
    - Confirmar com o utilizador antes de aplicar.
 4. **CHANGELOG.md**: criar/completar a secção `## [X.Y.Z] — YYYY-MM-DD` com as
