@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/) (`MAJOR.M
 - **MINOR** (`1.0.0` → `1.1.0`) — new features / implementations (new template, new CPT, new section).
 - **PATCH** (`1.0.0` → `1.0.1`) — bug fixes and small adjustments that do not add functionality.
 
+## [1.0.4] — 2026-07-14
+
+### Fixed
+- Intro section icons no longer appear blank on mobile: excluded from WP Rocket
+  LazyLoad (`data-no-lazy` + eager) so they load without waiting for delayed JS.
+- Spotlights images excluded from WP Rocket LazyLoad so the pinned section is
+  measured at the correct height without needing a resize.
+
 ## [1.0.3] — 2026-07-14
 
 ### Fixed

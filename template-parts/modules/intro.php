@@ -24,11 +24,18 @@
             <?php if ( $intro_icon_id ) : ?>
               <div class="section-intro__icon flex items-end justify-center h-[140px] md:h-[180px] xl:h-[220px] pb-4 md:pb-6 xl:pb-8">
                 <?php
+                // Load eagerly and opt out of WP Rocket LazyLoad: these small icons
+                // are delayed-JS lazy-loaded otherwise and show blank on mobile until
+                // the user interacts. data-no-lazy + loading=eager both exclude them.
                 echo wp_get_attachment_image(
                   $intro_icon_id,
                   'full',
                   false,
-                  array( 'class' => 'object-contain max-h-full w-auto' )
+                  array(
+                    'class'        => 'object-contain max-h-full w-auto',
+                    'loading'      => 'eager',
+                    'data-no-lazy' => '1',
+                  )
                 );
                 ?>
               </div>
