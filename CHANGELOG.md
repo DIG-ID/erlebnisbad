@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/) (`MAJOR.M
 - **MINOR** (`1.0.0` → `1.1.0`) — new features / implementations (new template, new CPT, new section).
 - **PATCH** (`1.0.0` → `1.0.1`) — bug fixes and small adjustments that do not add functionality.
 
+## [1.0.3] — 2026-07-14
+
+### Fixed
+- Spotlights section pinned height: refresh ScrollTrigger once the panel images
+  have loaded, so the pin spacer is measured correctly with WP Rocket lazyload
+  and delayed JS (previously the section only sized correctly after a resize).
+
 ## [1.0.2] — 2026-07-13
 
 ### Added

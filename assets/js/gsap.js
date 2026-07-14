@@ -110,6 +110,25 @@ if (document.querySelector('.section-spotlights')) {
         .to(second, { autoAlpha: 1, y: 0, ease: 'power2.out', duration: 1 })
         // 4. Hold panel 2 in place to close the sequence
         .to(second, { autoAlpha: 1, duration: 0.6 });
+
+      // WP Rocket lazy-loads images and delays JS, so the spotlight images
+      // often have no height when ScrollTrigger first measures the pinned
+      // section — the pin spacer comes out too short until a resize forces a
+      // refresh. Refresh once each image has actually loaded (covers both the
+      // lazyload swap and the delay-JS timing, when window.load already fired).
+      const imgs = container.querySelectorAll('img');
+      let pending = imgs.length;
+      const refreshWhenDone = () => {
+        if (--pending <= 0) ScrollTrigger.refresh();
+      };
+      imgs.forEach((img) => {
+        if (img.complete && img.naturalHeight > 0) {
+          refreshWhenDone();
+        } else {
+          img.addEventListener('load', refreshWhenDone, { once: true });
+          img.addEventListener('error', refreshWhenDone, { once: true });
+        }
+      });
     }
   });
 }
