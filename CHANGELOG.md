@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/) (`MAJOR.M
 - **MINOR** (`1.0.0` → `1.1.0`) — new features / implementations (new template, new CPT, new section).
 - **PATCH** (`1.0.0` → `1.0.1`) — bug fixes and small adjustments that do not add functionality.
 
+## [1.0.5] — 2026-07-17
+
+### Changed
+- Contact map default zoom reduced to 12 (desktop) and 10 (mobile) for a wider
+  area view on the Arrival & Contact page.
+
 ## [1.0.4] — 2026-07-14
 
 ### Fixed

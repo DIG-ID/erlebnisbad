@@ -19,7 +19,7 @@
 			<div class="col-span-2 md:col-start-1 md:col-span-6 xl:col-start-2 xl:col-span-10 rounded-2xl border-2 border-Mint overflow-hidden">
 				<?php $location = get_field( 'maps_contact_location' ); ?>
 				<?php if ( $location && ! empty( $location['lat'] ) && ! empty( $location['lng'] ) ) : ?>
-				<div class="acf-map" data-zoom="17" data-zoom-mobile="16">
+				<div class="acf-map" data-zoom="12" data-zoom-mobile="10">
 					<div class="marker"
 						data-lat="<?php echo esc_attr( $location['lat'] ); ?>"
 						data-lng="<?php echo esc_attr( $location['lng'] ); ?>">
