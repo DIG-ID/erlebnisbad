@@ -36,3 +36,6 @@ require_once get_template_directory() . '/inc/yoast-og-hero-fallback.php';
 
 // Load custom Schema.org JSON-LD definitions.
 require_once get_template_directory() . '/inc/schema.php';
+
+// Security hardening.
+require_once get_template_directory() . '/inc/security.php';

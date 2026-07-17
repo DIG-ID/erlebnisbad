@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/) (`MAJOR.M
 - **MINOR** (`1.0.0` → `1.1.0`) — new features / implementations (new template, new CPT, new section).
 - **PATCH** (`1.0.0` → `1.0.1`) — bug fixes and small adjustments that do not add functionality.
 
+## [1.0.6] — 2026-07-17
+
+### Security
+- Added `inc/security.php`: disables XML-RPC and pingback, blocks REST API user
+  enumeration, author archive enumeration and oEmbed author leakage, disables
+  front-end search, removes users from core sitemaps, enforces generic login
+  errors, disables application passwords, and sends HTTP security headers
+  (X-Frame-Options, X-Content-Type-Options, Referrer-Policy,
+  Permissions-Policy, HSTS on SSL).
+
 ## [1.0.5] — 2026-07-17
 
 ### Changed
