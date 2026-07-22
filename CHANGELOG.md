@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/) (`MAJOR.M
 - **MINOR** (`1.0.0` → `1.1.0`) — new features / implementations (new template, new CPT, new section).
 - **PATCH** (`1.0.0` → `1.0.1`) — bug fixes and small adjustments that do not add functionality.
 
+## [1.0.7] — 2026-07-22
+
+### Changed
+- Updated the wp-login logo to the current brand mark and adjusted its dimensions.
+
 ## [1.0.6] — 2026-07-17
 
 ### Security
