@@ -21,6 +21,7 @@ import './sticky-header.js';
 import './mega-menu.js';
 import './tabs.js';
 import './opening-hours.js';
+import './tickets-widget.js';
 
 // =============================================================================
 // DOM ready
